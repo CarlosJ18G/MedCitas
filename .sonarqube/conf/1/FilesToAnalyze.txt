@@ -1,0 +1,2 @@
+﻿C:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Repositories\InMemoryPacienteRepository.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Services\FakeEmailService.cs

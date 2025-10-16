@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xunit;
+using MedCitas.Core.Entities;
+using MedCitas.Core.Interfaces;
+using MedCitas.Core.Services;
+using MedCitas.Infrastructure.Repositories;
+using Moq;
+
+namespace MedCitas.Tests.Services
+{
+    public class PacienteServiceTests
+    {
+        private readonly Mock<IPacienteRepository> _pacienteRepoMock;
+        private readonly Mock<IEmailService> _emailServiceMock;
+        private readonly PacienteService _service;
+
+        public PacienteServiceTests()
+        {
+            _pacienteRepoMock = new Mock<IPacienteRepository>();
+            _emailServiceMock = new Mock<IEmailService>();
+            _service = new PacienteService(_pacienteRepoMock.Object, _emailServiceMock.Object);
+        }
+
+        [Fact]
+        public void RegistrarPaciente_DeberiaRegistrarExitosamente()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "123456789",
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = "3015559999",
+                CorreoElectronico = "carlos@example.com",
+                PasswordHash = "Prueba123!"
+            };
+
+            _pacienteRepoMock.Setup(r => r.ExistePorDocumento("123456789")).Returns(false);
+            _pacienteRepoMock.Setup(r => r.ExistePorCorreo("carlos@example.com")).Returns(false);
+
+            // Act
+            var resultado = _service.RegistrarPaciente(paciente);
+
+            // Assert
+            Assert.True(resultado.Exito);
+            Assert.Equal("Registro exitoso. Verifica tu correo electrónico.", resultado.Mensaje);
+            _emailServiceMock.Verify(e => e.EnviarCorreoVerificacion(It.IsAny<string>(), It.IsAny<string>()), Times.Once);
+        }
+
+        [Fact]
+        public void RegistrarPaciente_DeberiaFallarSiCorreoYaExiste()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos",
+                Correo = "carlos@example.com",
+                NumeroDocumento = "123",
+                Contraseña = "Prueba123!"
+            };
+
+            _pacienteRepoMock.Setup(r => r.ExistePorCorreo("carlos@example.com")).Returns(true);
+
+            // Act
+            var resultado = _service.RegistrarPaciente(paciente);
+
+            // Assert
+            Assert.False(resultado.Exito);
+            Assert.Equal("El correo electrónico ya está registrado.", resultado.Mensaje);
+        }
+
+        [Fact]
+        public void RegistrarPaciente_DeberiaFallarSiDocumentoYaExiste()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos",
+                Correo = "nuevo@example.com",
+                NumeroDocumento = "123",
+                Contraseña = "Prueba123!"
+            };
+
+            _pacienteRepoMock.Setup(r => r.ExistePorDocumento("123")).Returns(true);
+
+            // Act
+            var resultado = _service.RegistrarPaciente(paciente);
+
+            // Assert
+            Assert.False(resultado.Exito);
+            Assert.Equal("El número de documento ya está registrado.", resultado.Mensaje);
+        }
+
+        [Theory]
+        [InlineData("1234567")]           // muy corta
+        [InlineData("password")]          // sin mayúsculas, números o símbolos
+        [InlineData("PASSWORD123")]       // sin minúsculas ni símbolos
+        [InlineData("Passwor")]           // sin número ni símbolo
+        public void RegistrarPaciente_DeberiaFallarSiContraseñaNoValida(string contraseña)
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos",
+                Correo = "nuevo@example.com",
+                NumeroDocumento = "123",
+                Contraseña = contraseña
+            };
+
+            _pacienteRepoMock.Setup(r => r.ExistePorDocumento("123")).Returns(false);
+            _pacienteRepoMock.Setup(r => r.ExistePorCorreo("nuevo@example.com")).Returns(false);
+
+            // Act
+            var resultado = _service.RegistrarPaciente(paciente);
+
+            // Assert
+            Assert.False(resultado.Exito);
+            Assert.Equal("La contraseña no cumple con los requisitos de seguridad.", resultado.Mensaje);
+        }
+    }
+}
+

@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\services\\pacienteservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\services\\pacienteservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.core\\interfaces\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\interfaces\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.core\\entities\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\entities\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPacienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
+              "RelativeDocumentMoniker": "MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
+              "RelativeToolTip": "MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T18:25:20.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PacienteServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T18:22:14.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Entities\\Paciente.cs",
+              "RelativeDocumentMoniker": "MedCitas.Core\\Entities\\Paciente.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Entities\\Paciente.cs",
+              "RelativeToolTip": "MedCitas.Core\\Entities\\Paciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T17:18:39.742Z"
             }
           ]
         }

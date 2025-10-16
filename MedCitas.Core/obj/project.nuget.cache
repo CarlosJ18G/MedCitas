@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jxBFPWZyftY=",
+  "dgSpecHash": "X0XfcFs/5pI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Carlos\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

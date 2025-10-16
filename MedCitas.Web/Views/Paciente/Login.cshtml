@@ -1,0 +1,16 @@
+﻿<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <label>Correo</label>
+    <input name="correoElectronico" /><br>
+
+    <label>Contraseña</label>
+    <input type="password" name="password" /><br>
+
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red;">@ViewBag.Error</p>
+}

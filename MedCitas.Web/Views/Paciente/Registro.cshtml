@@ -1,0 +1,34 @@
+﻿@model MedCitas.Core.Entities.Paciente
+
+<h2>Registro de Paciente</h2>
+
+<form asp-action="Registro" method="post">
+    <label>Nombre Completo</label>
+    <input asp-for="NombreCompleto" /><br>
+
+    <label>Correo</label>
+    <input asp-for="CorreoElectronico" /><br>
+
+    <label>Documento</label>
+    <input asp-for="NumeroDocumento" /><br>
+
+    <label>Teléfono</label>
+    <input asp-for="Telefono" /><br>
+
+    <label>Contraseña</label>
+    <input type="password" name="password" /><br>
+
+    <label>Confirmar Contraseña</label>
+    <input type="password" name="confirmarPassword" /><br>
+
+    <button type="submit">Registrar</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red;">@ViewBag.Error</p>
+}
+@if (ViewBag.Mensaje != null)
+{
+    <p style="color:green;">@ViewBag.Mensaje</p>
+}

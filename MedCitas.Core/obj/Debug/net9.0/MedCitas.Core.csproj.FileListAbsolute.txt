@@ -1,0 +1,13 @@
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\bin\Debug\net9.0\MedCitas.Core.deps.json
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\bin\Debug\net9.0\MedCitas.Core.dll
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\bin\Debug\net9.0\MedCitas.Core.pdb
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.AssemblyInfoInputs.cache
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.AssemblyInfo.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.sourcelink.json
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.dll
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\refint\MedCitas.Core.dll
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.pdb
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\ref\MedCitas.Core.dll
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.csproj.AssemblyReference.cache

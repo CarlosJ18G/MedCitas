@@ -1,0 +1,4 @@
+﻿C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Entities\Paciente.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Services\PacienteService.cs
