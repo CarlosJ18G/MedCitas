@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\medcitas.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\medcitas.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\NEW_COVERAGE_TESTS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NEW_COVERAGE_TESTS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-new-tests.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:verify-new-tests.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\FINAL_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FINAL_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\controllers\\homecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\controllers\\homecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\services\\fakeemailservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\services\\fakeemailservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\services\\pacienteservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +33,74 @@
     {
       "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.core\\entities\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\entities\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\TESTING_BEST_PRACTICES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TESTING_BEST_PRACTICES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\COVERAGE_SCRIPTS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:COVERAGE_SCRIPTS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-tests-coverage.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:run-tests-coverage.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\medcitas.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\medcitas.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\README_TESTING.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README_TESTING.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\sonar-project.properties||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sonar-project.properties||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-sonarqube-analysis.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:run-sonarqube-analysis.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\QUICK_START.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QUICK_START.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\RESUMEN_EJECUTIVO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RESUMEN_EJECUTIVO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\README_BADGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README_BADGES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.core\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\SECURITY_COVERAGE_FIXES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SECURITY_COVERAGE_FIXES.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-fixes.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:verify-fixes.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carlos\\source\\repos\\MedCitas\\FIXES_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FIXES_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\models\\errorviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\models\\errorviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\carlos\\source\\repos\\medcitas\\medcitas.tests\\repositories\\inmemorypacienterepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\repositories\\inmemorypacienterepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +110,314 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FINAL_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\FINAL_SUMMARY.md",
+              "RelativeDocumentMoniker": "FINAL_SUMMARY.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\FINAL_SUMMARY.md",
+              "RelativeToolTip": "FINAL_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T05:05:30.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "verify-new-tests.ps1",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-new-tests.ps1",
+              "RelativeDocumentMoniker": "verify-new-tests.ps1",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-new-tests.ps1",
+              "RelativeToolTip": "verify-new-tests.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T05:04:04.09Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NEW_COVERAGE_TESTS.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\NEW_COVERAGE_TESTS.md",
+              "RelativeDocumentMoniker": "NEW_COVERAGE_TESTS.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\NEW_COVERAGE_TESTS.md",
+              "RelativeToolTip": "NEW_COVERAGE_TESTS.md",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T05:03:51.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "InMemoryPacienteRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Repositories\\InMemoryPacienteRepositoryTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Repositories\\InMemoryPacienteRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Repositories\\InMemoryPacienteRepositoryTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Repositories\\InMemoryPacienteRepositoryTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T05:03:00.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAmwHkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T05:02:31.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ErrorViewModelTests.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T05:02:12.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PacienteService.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Services\\PacienteService.cs",
+              "RelativeDocumentMoniker": "MedCitas.Core\\Services\\PacienteService.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Services\\PacienteService.cs",
+              "RelativeToolTip": "MedCitas.Core\\Services\\PacienteService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T04:49:44.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FakeEmailServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\FakeEmailServiceTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\FakeEmailServiceTests.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\FakeEmailServiceTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Services\\FakeEmailServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T03:45:42.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SECURITY_COVERAGE_FIXES.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\SECURITY_COVERAGE_FIXES.md",
+              "RelativeDocumentMoniker": "SECURITY_COVERAGE_FIXES.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\SECURITY_COVERAGE_FIXES.md",
+              "RelativeToolTip": "SECURITY_COVERAGE_FIXES.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T04:51:24.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "verify-fixes.ps1",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-fixes.ps1",
+              "RelativeDocumentMoniker": "verify-fixes.ps1",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-fixes.ps1",
+              "RelativeToolTip": "verify-fixes.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T04:52:18.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FIXES_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\FIXES_SUMMARY.md",
+              "RelativeDocumentMoniker": "FIXES_SUMMARY.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\FIXES_SUMMARY.md",
+              "RelativeToolTip": "FIXES_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T04:52:51.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "COVERAGE_SCRIPTS.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\COVERAGE_SCRIPTS.md",
+              "RelativeDocumentMoniker": "COVERAGE_SCRIPTS.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\COVERAGE_SCRIPTS.md",
+              "RelativeToolTip": "COVERAGE_SCRIPTS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:46:41.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TESTING_BEST_PRACTICES.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\TESTING_BEST_PRACTICES.md",
+              "RelativeDocumentMoniker": "TESTING_BEST_PRACTICES.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\TESTING_BEST_PRACTICES.md",
+              "RelativeToolTip": "TESTING_BEST_PRACTICES.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:45:22.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PacienteServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "ViewState": "AgIAAOgCAAAAAAAAAAAAAAwBAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T18:22:14.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "run-tests-coverage.ps1",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-tests-coverage.ps1",
+              "RelativeDocumentMoniker": "run-tests-coverage.ps1",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-tests-coverage.ps1",
+              "RelativeToolTip": "run-tests-coverage.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T03:47:04.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MedCitas.Tests",
               "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\MedCitas.Tests.csproj",
               "RelativeDocumentMoniker": "MedCitas.Tests\\MedCitas.Tests.csproj",
               "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\MedCitas.Tests.csproj",
               "RelativeToolTip": "MedCitas.Tests\\MedCitas.Tests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwCAAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-16T18:32:21.758Z",
+              "WhenOpened": "2025-10-20T03:47:18.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T03:47:37.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "README_TESTING.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\README_TESTING.md",
+              "RelativeDocumentMoniker": "README_TESTING.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\README_TESTING.md",
+              "RelativeToolTip": "README_TESTING.md",
+              "ViewState": "AgIAAOMAAAAAAAAAAABBwPcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:48:26.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "sonar-project.properties",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\sonar-project.properties",
+              "RelativeDocumentMoniker": "sonar-project.properties",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\sonar-project.properties",
+              "RelativeToolTip": "sonar-project.properties",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T03:48:37.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "README_BADGES.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\README_BADGES.md",
+              "RelativeDocumentMoniker": "README_BADGES.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\README_BADGES.md",
+              "RelativeToolTip": "README_BADGES.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:51:03.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RESUMEN_EJECUTIVO.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\RESUMEN_EJECUTIVO.md",
+              "RelativeDocumentMoniker": "RESUMEN_EJECUTIVO.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\RESUMEN_EJECUTIVO.md",
+              "RelativeToolTip": "RESUMEN_EJECUTIVO.md",
+              "ViewState": "AgIAABABAAAAAAAAAABBwBMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:50:17.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "QUICK_START.md",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\QUICK_START.md",
+              "RelativeDocumentMoniker": "QUICK_START.md",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\QUICK_START.md",
+              "RelativeToolTip": "QUICK_START.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:49:26.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "run-sonarqube-analysis.ps1",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-sonarqube-analysis.ps1",
+              "RelativeDocumentMoniker": "run-sonarqube-analysis.ps1",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-sonarqube-analysis.ps1",
+              "RelativeToolTip": "run-sonarqube-analysis.ps1",
+              "ViewState": "AgIAAJcAAAAAAAAAAABBwJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T03:49:00.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IPacienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
               "RelativeDocumentMoniker": "MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
@@ -51,29 +425,11 @@
               "RelativeToolTip": "MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T18:25:20.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T18:25:20.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PacienteServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "RelativeToolTip": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T18:22:14.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Paciente.cs",
               "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\Entities\\Paciente.cs",
               "RelativeDocumentMoniker": "MedCitas.Core\\Entities\\Paciente.cs",
@@ -81,8 +437,7 @@
               "RelativeToolTip": "MedCitas.Core\\Entities\\Paciente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T17:18:39.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T17:18:39.742Z"
             }
           ]
         }

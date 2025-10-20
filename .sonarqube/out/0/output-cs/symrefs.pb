@@ -1,4 +1,34 @@
-°
+
+OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
+
+		 "
+
+ *
+
+2 >
+
+G XÃ
+UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+
+
+
+ (
+
+ 0
+
+8 G
+
+ -
+
+5 F
+
+ 
+
+% -
+
+ %
+
+- >å
 OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Services\PacienteService.cs
 
   F
@@ -23,39 +53,10 @@ OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Services\PacienteService.cs
 OO  2
 OO: ?QQ* /TT2 7
 ZZ "   2
-ZZ, -\\* +__  bb  ee  
-ZZ6 >hh kk '
-ZZG Phh %Ã
-UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
-
-
-
- (
-
- 0
-
-8 G
-
- -
-
-5 F
-
- 
-
-% -
-
- %
-
-- >
-OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
-
-		 "
-
- *
-
-2 >
-
-G Xþ
+ZZ, -__* +bb  ee  hh  
+ZZ6 >kk nn '
+ZZG Pkk %3
+]] bbO [eeM Yhhf r	nnw ƒþ
 HC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Entities\Paciente.cs
 
 		 

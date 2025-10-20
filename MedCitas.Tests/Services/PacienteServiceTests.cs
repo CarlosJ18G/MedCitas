@@ -321,7 +321,52 @@ namespace MedCitas.Tests.Services
 
         #endregion
 
+        #region Registro - Validaciones de Null
+
+        [Fact]
+        public async Task RegistrarPaciente_DeberiaFallarSiPacienteEsNull()
+        {
+            // Arrange
+            Paciente? paciente = null;
+            var password = "Prueba123!";
+            var confirmarPassword = "Prueba123!";
+
+            // Act & Assert
+            await Assert.ThrowsAsync<ArgumentNullException>(
+                () => _service.RegistrarAsync(paciente!, password, confirmarPassword));
+        }
+
+        #endregion
+
         #region Login
+
+        [Fact]
+        public async Task LoginAsync_DeberiaFallarSiCorreoEsNullOVacio()
+        {
+            // Arrange
+            string correo = "";
+            var password = "Prueba123!";
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ArgumentException>(
+                () => _service.LoginAsync(correo, password));
+            
+            Assert.Contains("Correo y contraseña son obligatorios", exception.Message);
+        }
+
+        [Fact]
+        public async Task LoginAsync_DeberiaFallarSiPasswordEsNullOVacio()
+        {
+            // Arrange
+            var correo = "carlos@example.com";
+            string password = "";
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ArgumentException>(
+                () => _service.LoginAsync(correo, password));
+            
+            Assert.Contains("Correo y contraseña son obligatorios", exception.Message);
+        }
 
         [Fact]
         public async Task LoginAsync_DeberiaRetornarPacienteSiCredencialesSonCorrectas()
@@ -465,6 +510,276 @@ namespace MedCitas.Tests.Services
                 () => _service.ActivarCuentaAsync(token));
             
             Assert.Equal("Token inválido.", exception.Message);
+        }
+
+        [Fact]
+        public async Task ActivarCuentaAsync_DeberiaFallarSiTokenEsNull()
+        {
+            // Arrange
+            string? token = null;
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ArgumentException>(
+                () => _service.ActivarCuentaAsync(token!));
+            
+            Assert.Equal("Token inválido.", exception.Message);
+        }
+
+        [Fact]
+        public async Task ActivarCuentaAsync_DeberiaFallarSiTokenEsSoloEspacios()
+        {
+            // Arrange
+            var token = "   ";
+
+            // Act & Assert
+            var exception = await Assert.ThrowsAsync<ArgumentException>(
+                () => _service.ActivarCuentaAsync(token));
+            
+            Assert.Equal("Token inválido.", exception.Message);
+        }
+
+        #endregion
+
+        #region Registro - Edge Cases Adicionales
+
+        [Fact]
+        public async Task RegistrarPaciente_DeberiaAsignarFechaRegistroCorrectamente()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "123456789",
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = "3015559999",
+                CorreoElectronico = "carlos@example.com"
+            };
+
+            var password = "Prueba123!";
+            var confirmarPassword = "Prueba123!";
+
+            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync("123456789"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync("carlos@example.com"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
+            var antes = DateTime.UtcNow;
+
+            // Act
+            var resultado = await _service.RegistrarAsync(paciente, password, confirmarPassword);
+
+            var despues = DateTime.UtcNow;
+
+            // Assert
+            Assert.True(resultado.FechaRegistro >= antes && resultado.FechaRegistro <= despues);
+        }
+
+        [Theory]
+        [InlineData("1234567890")]        // 10 dígitos
+        [InlineData("12345678901")]       // 11 dígitos
+        [InlineData("123456789012345")]   // 15 dígitos
+        public async Task RegistrarPaciente_DeberiaAceptarDocumentosDeVariasLongitudes(string documento)
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = documento,
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = "3015559999",
+                CorreoElectronico = "carlos@example.com"
+            };
+
+            var password = "Prueba123!";
+            var confirmarPassword = "Prueba123!";
+
+            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync(documento))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync("carlos@example.com"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var resultado = await _service.RegistrarAsync(paciente, password, confirmarPassword);
+
+            // Assert
+            Assert.NotNull(resultado);
+            Assert.Equal(documento, resultado.NumeroDocumento);
+        }
+
+        [Theory]
+        [InlineData("user@example.com")]
+        [InlineData("user.name@example.com")]
+        [InlineData("user+tag@example.co.uk")]
+        [InlineData("user_name@example-domain.com")]
+        public async Task RegistrarPaciente_DeberiaAceptarCorreosValidos(string correo)
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "123456789",
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = "3015559999",
+                CorreoElectronico = correo
+            };
+
+            var password = "Prueba123!";
+            var confirmarPassword = "Prueba123!";
+
+            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync("123456789"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync(correo))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var resultado = await _service.RegistrarAsync(paciente, password, confirmarPassword);
+
+            // Assert
+            Assert.NotNull(resultado);
+            Assert.Equal(correo, resultado.CorreoElectronico);
+        }
+
+        [Theory]
+        [InlineData("1234567")]           // 7 dígitos (mínimo)
+        [InlineData("12345678")]          // 8 dígitos
+        [InlineData("123456789012345")]   // 15 dígitos (máximo)
+        public async Task RegistrarPaciente_DeberiaAceptarTelefonosValidos(string telefono)
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "123456789",
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = telefono,
+                CorreoElectronico = "carlos@example.com"
+            };
+
+            var password = "Prueba123!";
+            var confirmarPassword = "Prueba123!";
+
+            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync("123456789"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync("carlos@example.com"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var resultado = await _service.RegistrarAsync(paciente, password, confirmarPassword);
+
+            // Assert
+            Assert.NotNull(resultado);
+            Assert.Equal(telefono, resultado.Telefono);
+        }
+
+        [Theory]
+        [InlineData("Prueba123!")]
+        [InlineData("MiPassword2024@")]
+        [InlineData("Segura#Pass123")]
+        [InlineData("P@ssw0rd!")]
+        public async Task RegistrarPaciente_DeberiaAceptarContraseñasValidas(string password)
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "123456789",
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = "3015559999",
+                CorreoElectronico = "carlos@example.com"
+            };
+
+            var confirmarPassword = password;
+
+            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync("123456789"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync("carlos@example.com"))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var resultado = await _service.RegistrarAsync(paciente, password, confirmarPassword);
+
+            // Assert
+            Assert.NotNull(resultado);
+            Assert.NotNull(resultado.PasswordHash);
+            Assert.NotEqual(password, resultado.PasswordHash); // Hash debe ser diferente
+        }
+
+        [Fact]
+        public async Task RegistrarPaciente_DeberiaGenerarTokenVerificacionUnico()
+        {
+            // Arrange
+            var paciente1 = new Paciente
+            {
+                NombreCompleto = "Carlos Jimenez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "123456789",
+                FechaNacimiento = new DateTime(2003, 10, 15),
+                Sexo = "M",
+                Telefono = "3015559999",
+                CorreoElectronico = "carlos1@example.com"
+            };
+
+            var paciente2 = new Paciente
+            {
+                NombreCompleto = "Maria Lopez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "987654321",
+                FechaNacimiento = new DateTime(2000, 5, 20),
+                Sexo = "F",
+                Telefono = "3025559999",
+                CorreoElectronico = "maria@example.com"
+            };
+
+            var password = "Prueba123!";
+            var confirmarPassword = "Prueba123!";
+
+            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync(It.IsAny<string>()))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync(It.IsAny<string>()))
+                .ReturnsAsync((Paciente?)null);
+            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
+            // Act
+            var resultado1 = await _service.RegistrarAsync(paciente1, password, confirmarPassword);
+            var resultado2 = await _service.RegistrarAsync(paciente2, password, confirmarPassword);
+
+            // Assert
+            Assert.NotNull(resultado1.TokenVerificacion);
+            Assert.NotNull(resultado2.TokenVerificacion);
+            Assert.NotEqual(resultado1.TokenVerificacion, resultado2.TokenVerificacion);
         }
 
         #endregion

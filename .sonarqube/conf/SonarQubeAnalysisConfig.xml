@@ -13,6 +13,8 @@
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>25.10.0.114319</SonarQubeVersion>
   <SonarProjectKey>MedCitasAPI</SonarProjectKey>
+  <SonarProjectVersion>1.0</SonarProjectVersion>
+  <SonarProjectName>MedCitas</SonarProjectName>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
@@ -148,10 +150,13 @@
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
     <Property Name="sonar.core.id">147B411E-AZnZ8RY5rmCOUqndDEdU</Property>
-    <Property Name="sonar.core.startTime">10/16/2025 1:47:51 PM</Property>
+    <Property Name="sonar.core.startTime">10/19/2025 10:38:38 PM</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">**/coverage.opencover.xml</Property>
+    <Property Name="sonar.coverage.exclusions">**/*Tests.cs,**/Program.cs,**/Migrations/**</Property>
+    <Property Name="sonar.exclusions">**/obj/**,**/bin/**,**/Migrations/**,**/*.Designer.cs,**/wwwroot/lib/**,**/coverage.opencover.xml</Property>
   </LocalSettings>
   <ScannerOptsSettings />
   <AnalyzersSettings>

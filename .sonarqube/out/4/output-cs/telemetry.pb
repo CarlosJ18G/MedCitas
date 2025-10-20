@@ -1,0 +1,1 @@
+^RHC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\MedCitas.Core.csproj¢net9.0òCSharp13

@@ -9,6 +9,7 @@ C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\MedCitas.Web
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\MedCitas.Web.pdb
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\BCrypt.Net-Next.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
@@ -149,4 +150,3 @@ C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\refint\MedCi
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.pdb
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.genruntimeconfig.cache
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\ref\MedCitas.Web.dll
-C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\bin\Debug\net9.0\BCrypt.Net-Next.dll

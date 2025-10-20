@@ -18,6 +18,7 @@ C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\MedCitas.T
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\MedCitas.Tests.pdb
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\BCrypt.Net-Next.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\Castle.Core.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\FluentAssertions.dll
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -163,4 +164,3 @@ C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\obj\Debug\net9.0\refint\Med
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\obj\Debug\net9.0\MedCitas.Tests.pdb
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\obj\Debug\net9.0\MedCitas.Tests.genruntimeconfig.cache
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\obj\Debug\net9.0\ref\MedCitas.Tests.dll
-C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\bin\Debug\net9.0\BCrypt.Net-Next.dll

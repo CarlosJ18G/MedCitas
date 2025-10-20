@@ -10,11 +10,19 @@
     },
     {
       "key": "sonar.scanner.bootstrapStartTime",
-      "value": "1760640504000"
+      "value": "1760936866000"
     },
     {
       "key": "sonar.projectKey",
       "value": "MedCitasAPI"
+    },
+    {
+      "key": "sonar.projectName",
+      "value": "MedCitas"
+    },
+    {
+      "key": "sonar.projectVersion",
+      "value": "1.0"
     },
     {
       "key": "sonar.working.directory",
@@ -30,7 +38,7 @@
     },
     {
       "key": "sonar.sources",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.vs\\MedCitas\\config\\applicationhost.config,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.vs\\MedCitas\\v17\\DocumentLayout.backup.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.vs\\MedCitas\\v17\\DocumentLayout.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.vs\\MedCitas\\config\\applicationhost.config,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.vs\\MedCitas\\v17\\DocumentLayout.backup.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.vs\\MedCitas\\v17\\DocumentLayout.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-sonarqube-analysis.ps1,C:\\Users\\Carlos\\source\\repos\\MedCitas\\run-tests-coverage.ps1,C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-fixes.ps1,C:\\Users\\Carlos\\source\\repos\\MedCitas\\verify-new-tests.ps1"
     },
     {
       "key": "sonar.tests",
@@ -70,15 +78,15 @@
     },
     {
       "key": "E31FB772-43D8-4998-9A1E-100878C47F56.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\0"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\0,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\4"
     },
     {
       "key": "E31FB772-43D8-4998-9A1E-100878C47F56.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\0\\Issues.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\0\\Issues.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\4\\Issues.json"
     },
     {
       "key": "E31FB772-43D8-4998-9A1E-100878C47F56.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\0\\Telemetry.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\0\\Telemetry.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\4\\Telemetry.json"
     },
     {
       "key": "9850EBA2-BB12-4613-9E1D-FE60BBD4B217.sonar.projectKey",
@@ -110,15 +118,15 @@
     },
     {
       "key": "9850EBA2-BB12-4613-9E1D-FE60BBD4B217.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\1"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\1,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\5"
     },
     {
       "key": "9850EBA2-BB12-4613-9E1D-FE60BBD4B217.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\1\\Issues.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\1\\Issues.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\5\\Issues.json"
     },
     {
       "key": "9850EBA2-BB12-4613-9E1D-FE60BBD4B217.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\1\\Telemetry.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\1\\Telemetry.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\5\\Telemetry.json"
     },
     {
       "key": "4F6C835D-6540-43D0-9889-48C911BC3AC6.sonar.projectKey",
@@ -150,15 +158,15 @@
     },
     {
       "key": "4F6C835D-6540-43D0-9889-48C911BC3AC6.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\2"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\2,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\6"
     },
     {
       "key": "4F6C835D-6540-43D0-9889-48C911BC3AC6.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\2\\Issues.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\2\\Issues.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\6\\Issues.json"
     },
     {
       "key": "4F6C835D-6540-43D0-9889-48C911BC3AC6.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\2\\Telemetry.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\2\\Telemetry.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\6\\Telemetry.json"
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.projectKey",
@@ -186,19 +194,19 @@
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.tests",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\obj\\MedCitas.Tests.csproj.nuget.dgspec.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\obj\\project.assets.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.Development.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.deps.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.runtimeconfig.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.deps.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.runtimeconfig.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.endpoints.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.runtime.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\obj\\Debug\\net9.0\\MedCitas.Tests.sourcelink.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\coverage\\coverage.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\obj\\MedCitas.Tests.csproj.nuget.dgspec.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\obj\\project.assets.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.Development.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.deps.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.runtimeconfig.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.deps.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.runtimeconfig.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.endpoints.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.runtime.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\obj\\Debug\\net9.0\\MedCitas.Tests.sourcelink.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Repositories\\InMemoryPacienteRepositoryTests.cs,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\FakeEmailServiceTests.cs,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\coverage\\coverage.opencover.xml,C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Tests\\TestResults\\2c26ff33-2511-424a-ad63-df34ab65152c\\coverage.cobertura.xml"
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.cs.analyzer.projectOutPaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\3"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\3,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\7"
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.cs.roslyn.reportFilePaths",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\3\\Issues.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\3\\Issues.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\7\\Issues.json"
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.cs.scanner.telemetry",
-      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\3\\Telemetry.json"
+      "value": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\3\\Telemetry.json,C:\\Users\\Carlos\\source\\repos\\MedCitas\\.sonarqube\\out\\7\\Telemetry.json"
     },
     {
       "key": "sonar.token",
@@ -207,6 +215,18 @@
     {
       "key": "sonar.host.url",
       "value": "http://localhost:9000"
+    },
+    {
+      "key": "sonar.cs.opencover.reportsPaths",
+      "value": "**/coverage.opencover.xml"
+    },
+    {
+      "key": "sonar.coverage.exclusions",
+      "value": "**/*Tests.cs,**/Program.cs,**/Migrations/**"
+    },
+    {
+      "key": "sonar.exclusions",
+      "value": "**/obj/**,**/bin/**,**/Migrations/**,**/*.Designer.cs,**/wwwroot/lib/**,**/coverage.opencover.xml"
     },
     {
       "key": "sonar.visualstudio.enable",

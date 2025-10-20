@@ -89,22 +89,25 @@ namespace MedCitas.Core.Services
         // -----------------------------------------
         private void ValidarCampos(Paciente p, string password, string confirmar)
         {
+            // Timeout de 100ms para prevenir ReDoS (Regular Expression Denial of Service)
+            var regexTimeout = TimeSpan.FromMilliseconds(100);
+
             if (string.IsNullOrWhiteSpace(p.NombreCompleto))
                 throw new ArgumentException("El nombre completo es obligatorio.");
 
-            if (!Regex.IsMatch(p.NumeroDocumento, @"^\d+$"))
+            if (!Regex.IsMatch(p.NumeroDocumento, @"^\d+$", RegexOptions.None, regexTimeout))
                 throw new ArgumentException("El número de documento solo debe contener números.");
 
-            if (!Regex.IsMatch(p.Telefono, @"^\d{7,15}$"))
+            if (!Regex.IsMatch(p.Telefono, @"^\d{7,15}$", RegexOptions.None, regexTimeout))
                 throw new ArgumentException("El teléfono debe contener entre 7 y 15 dígitos.");
 
-            if (!Regex.IsMatch(p.CorreoElectronico, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            if (!Regex.IsMatch(p.CorreoElectronico, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.None, regexTimeout))
                 throw new ArgumentException("Formato de correo inválido.");
 
             if (password != confirmar)
                 throw new ArgumentException("Las contraseñas no coinciden.");
 
-            if (!Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$"))
+            if (!Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$", RegexOptions.None, regexTimeout))
                 throw new ArgumentException("La contraseña debe tener mínimo 8 caracteres, con mayúscula, minúscula, número y carácter especial.");
         }
     }

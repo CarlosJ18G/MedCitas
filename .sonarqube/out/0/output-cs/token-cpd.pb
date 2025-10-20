@@ -1,4 +1,95 @@
-ÂD
+ú
+OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
+	namespace 	
+MedCitas
+ 
+. 
+Core 
+. 
+
+Interfaces "
+{ 
+public		 
+
+	interface		 
+IEmailService		 "
+{
+
+ 
+Task )
+EnviarCorreoVerificacionAsync *
+(* +
+string+ 1
+destinatario2 >
+,> ?
+string@ F
+tokenVerificacionG X
+)X Y
+;Y Z
+} 
+} »
+UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+	namespace 	
+MedCitas
+ 
+. 
+Core 
+. 
+
+Interfaces "
+{		 
+public
+
+ 
+
+	interface
+
+ 
+IPacienteRepository
+
+ (
+{ 
+Task 
+< 
+Paciente 
+? 
+> $
+ObtenerPorDocumentoAsync 0
+(0 1
+string1 7
+numeroDocumento8 G
+)G H
+;H I
+Task 
+< 
+Paciente 
+? 
+> !
+ObtenerPorCorreoAsync -
+(- .
+string. 4
+correoElectronico5 F
+)F G
+;G H
+Task 
+RegistrarAsync 
+( 
+Paciente $
+paciente% -
+)- .
+;. /
+Task 
+< 
+bool 
+> 
+ActivarCuentaAsync %
+(% &
+string& ,
+tokenVerificacion- >
+)> ?
+;? @
+} 
+} ÚI
 OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Services\PacienteService.cs
 	namespace 	
 MedCitas
@@ -357,46 +448,35 @@ LoginAsync==% /
 stringZZ@ F
 	confirmarZZG P
 )ZZP Q
-{[[ 	
-if\\ 
-(\\ 
-string\\ 
-.\\ 
-IsNullOrWhiteSpace\\ )
-(\\) *
-p\\* +
-.\\+ ,
-NombreCompleto\\, :
-)\\: ;
-)\\; <
-throw]] 
-new]] 
-ArgumentException]] +
-(]]+ ,
-$str]], P
-)]]P Q
-;]]Q R
+{[[ 	
+var]] 
+regexTimeout]] 
+=]] 
+TimeSpan]] '
+.]]' (
+FromMilliseconds]]( 8
+(]]8 9
+$num]]9 <
+)]]< =
+;]]= >
 if__ 
-(__ 
-!__ 
-Regex__ 
-.__ 
-IsMatch__ 
-(__ 
-p__  
-.__  !
-NumeroDocumento__! 0
-,__0 1
-$str__2 :
+(__ 
+string__ 
+.__ 
+IsNullOrWhiteSpace__ )
+(__) *
+p__* +
+.__+ ,
+NombreCompleto__, :
 )__: ;
 )__; <
 throw`` 
 new`` 
 ArgumentException`` +
 (``+ ,
-$str``, `
-)``` a
-;``a b
+$str``, P
+)``P Q
+;``Q R
 ifbb 
 (bb 
 !bb 
@@ -405,19 +485,25 @@ LoginAsync==% /
 IsMatchbb 
 (bb 
 pbb  
-.bb  !
-Telefonobb! )
-,bb) *
-$strbb+ 8
-)bb8 9
-)bb9 :
+.bb  !
+NumeroDocumentobb! 0
+,bb0 1
+$strbb2 :
+,bb: ;
+RegexOptionsbb< H
+.bbH I
+NonebbI M
+,bbM N
+regexTimeoutbbO [
+)bb[ \
+)bb\ ]
 throwcc 
 newcc 
 ArgumentExceptioncc +
 (cc+ ,
-$strcc, ]
-)cc] ^
-;cc^ _
+$strcc, `
+)cc` a
+;cca b
 ifee 
 (ee 
 !ee 
@@ -426,147 +512,97 @@ LoginAsync==% /
 IsMatchee 
 (ee 
 pee  
-.ee  !
-CorreoElectronicoee! 2
-,ee2 3
-$stree4 Q
-)eeQ R
-)eeR S
+.ee  !
+Telefonoee! )
+,ee) *
+$stree+ 8
+,ee8 9
+RegexOptionsee: F
+.eeF G
+NoneeeG K
+,eeK L
+regexTimeouteeM Y
+)eeY Z
+)eeZ [
 throwff 
 newff 
 ArgumentExceptionff +
 (ff+ ,
-$strff, I
-)ffI J
-;ffJ K
+$strff, ]
+)ff] ^
+;ff^ _
 ifhh 
-(hh 
-passwordhh 
-!=hh 
-	confirmarhh %
-)hh% &
+(hh 
+!hh 
+Regexhh 
+.hh 
+IsMatchhh 
+(hh 
+phh  
+.hh  !
+CorreoElectronicohh! 2
+,hh2 3
+$strhh4 Q
+,hhQ R
+RegexOptionshhS _
+.hh_ `
+Nonehh` d
+,hhd e
+regexTimeouthhf r
+)hhr s
+)hhs t
 throwii 
 newii 
 ArgumentExceptionii +
 (ii+ ,
-$strii, K
-)iiK L
-;iiL M
+$strii, I
+)iiI J
+;iiJ K
 ifkk 
-(kk 
-!kk 
-Regexkk 
-.kk 
-IsMatchkk 
-(kk 
-passwordkk '
-,kk' (
-$strkk) b
-)kkb c
-)kkc d
+(kk 
+passwordkk 
+!=kk 
+	confirmarkk %
+)kk% &
 throwll 
 newll 
 ArgumentExceptionll +
-(ll+ ,
-$str	ll, ë
+(ll+ ,
+$strll, K
+)llK L
+;llL M
+ifnn 
+(nn 
+!nn 
+Regexnn 
+.nn 
+IsMatchnn 
+(nn 
+passwordnn '
+,nn' (
+$strnn) b
+,nnb c
+RegexOptionsnnd p
+.nnp q
+Nonennq u
+,nnu v
+regexTimeout	nnw É
 )
-llë í
+nnÉ Ñ
+)
+nnÑ Ö
+throwoo 
+newoo 
+ArgumentExceptionoo +
+(oo+ ,
+$str	oo, ë
+)
+ooë í
 ;
-llí ì
-}mm 	
-}nn 
-}oo »
-UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
-	namespace 	
-MedCitas
- 
-. 
-Core 
-. 
-
-Interfaces "
-{		 
-public
-
- 
-
-	interface
-
- 
-IPacienteRepository
-
- (
-{ 
-Task 
-< 
-Paciente 
-? 
-> $
-ObtenerPorDocumentoAsync 0
-(0 1
-string1 7
-numeroDocumento8 G
-)G H
-;H I
-Task 
-< 
-Paciente 
-? 
-> !
-ObtenerPorCorreoAsync -
-(- .
-string. 4
-correoElectronico5 F
-)F G
-;G H
-Task 
-RegistrarAsync 
-( 
-Paciente $
-paciente% -
-)- .
-;. /
-Task 
-< 
-bool 
-> 
-ActivarCuentaAsync %
-(% &
-string& ,
-tokenVerificacion- >
-)> ?
-;? @
-} 
-} ú
-OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
-	namespace 	
-MedCitas
- 
-. 
-Core 
-. 
-
-Interfaces "
-{ 
-public		 
-
-	interface		 
-IEmailService		 "
-{
-
- 
-Task )
-EnviarCorreoVerificacionAsync *
-(* +
-string+ 1
-destinatario2 >
-,> ?
-string@ F
-tokenVerificacionG X
-)X Y
-;Y Z
-} 
-} ‚
+ooí ì
+}pp 	
+}qq 
+}rr ‚
 HC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Entities\Paciente.cs
 	namespace 	
 MedCitas
