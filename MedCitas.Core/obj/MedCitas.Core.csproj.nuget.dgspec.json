@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj": {}
+    "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj": {
+    "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
         "projectName": "MedCitas.Core",
-        "projectPath": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
-        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos\\source\\repos\\MedCitas\\MedCitas.Core\\obj\\",
+        "projectPath": "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
+        "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

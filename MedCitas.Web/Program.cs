@@ -2,6 +2,8 @@ using MedCitas.Core.Interfaces;
 using MedCitas.Core.Services;
 using MedCitas.Infrastructure.Repositories;
 using MedCitas.Infrastructure.Services;
+using MedCitas.Infrastructure.DataDb;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +18,13 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Services.AddDbContext<MedCitasDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 // ---------------------------------------------------------
 // INYECCIÓN DE DEPENDENCIAS
 // ---------------------------------------------------------
-builder.Services.AddSingleton<IPacienteRepository, InMemoryPacienteRepository>();
+builder.Services.AddScoped<IPacienteRepository, EfPacienteRepositorio>();
 builder.Services.AddScoped<IEmailService, FakeEmailService>();
 builder.Services.AddScoped<PacienteService>();
 
