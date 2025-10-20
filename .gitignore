@@ -1,33 +1,17 @@
-# Coverage reports
-coverage/
-coverage-report/
-**/coverage/
-**/TestResults/
-*.coverage
-*.coveragexml
-
-# Coverage files
-coverage.json
-coverage.opencover.xml
-coverage.info
-
-# Test Results
-TestResult.xml
-test-results/
-
-# Visual Studio Code
-.vscode/
-
-# Rider
-.idea/
-
-# User-specific files
-*.suo
+# Visual Studio
+.vs/
 *.user
+*.suo
 *.userosscache
 *.sln.docstates
 
 # Build results
+bin/
+obj/
+Debug/
+Release/
+[Bb]uild/
+artifacts/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -42,6 +26,55 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Copilot / VS cache
+.vscode/
+.vsidx
+*.vsidx
+.vs/MedCitas/
+
+# Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+**/packages/*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# Compression outputs
+*.gz
+
+# Tests and coverage
+TestResults/
+**/TestResults/
+test-results/
+*.coverage
+*.coveragexml
+coverage/
+coverage-report/
+**/coverage/
+coverage.json
+coverage.opencover.xml
+coverage.info
+TestResult.xml
+
+# Others
+*.dll
+*.pdb
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
 # Visual Studio cache/options
 .vs/
 
@@ -49,13 +82,3 @@ bld/
 project.lock.json
 project.fragment.lock.json
 artifacts/
-
-# NuGet Packages
-*.nupkg
-*.snupkg
-**/packages/*
-
-# Backup files
-*.bak
-*.tmp
-*~
