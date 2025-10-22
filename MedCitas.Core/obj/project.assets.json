@@ -56,23 +56,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Janus\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
       "projectName": "MedCitas.Core",
-      "projectPath": "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
-      "packagesPath": "C:\\Users\\Janus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Janus\\OneDrive - IUE\\SEMESTRE 2025-2\\Calidad de software\\Proyecto MedCitas\\MedCitas\\MedCitas.Core\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\MedCitas.Core.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Janus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

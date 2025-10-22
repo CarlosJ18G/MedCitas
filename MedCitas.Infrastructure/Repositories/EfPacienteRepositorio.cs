@@ -38,5 +38,33 @@ namespace MedCitas.Infrastructure.Repositories
             await _db.SaveChangesAsync();
             return true;
         }
+
+        public async Task<bool> VerificarOTPAsync(string correo, string codigoOTP)
+        {
+            var paciente = await ObtenerPorCorreoAsync(correo);
+            if (paciente == null) return false;
+
+            if (paciente.CodigoOTP != codigoOTP ||
+                paciente.OTPExpiracion == null ||
+                DateTime.UtcNow > paciente.OTPExpiracion)
+            {
+                paciente.IntentosOTPFallidos++;
+                await _db.SaveChangesAsync();
+                return false;
+            }
+
+            paciente.EstaVerificado = true;
+            paciente.CodigoOTP = null;
+            paciente.OTPExpiracion = null;
+            paciente.IntentosOTPFallidos = 0;
+            await _db.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task ActualizarOTPAsync(Paciente paciente)
+        {
+            _db.Pacientes.Update(paciente);
+            await _db.SaveChangesAsync();
+        }
     }
 }

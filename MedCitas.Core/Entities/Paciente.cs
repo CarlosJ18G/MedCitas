@@ -26,13 +26,13 @@ namespace MedCitas.Core.Entities
         [Required]
         public string Sexo { get; set; } = string.Empty;
 
-        [Required, MaxLength(10)]
+        [Required, MaxLength(15)] // ✅ Cambiado de 10 a 15
         public string Telefono { get; set; } = string.Empty;
 
         [Required, EmailAddress]
         public string CorreoElectronico { get; set; } = string.Empty;
 
-        [Required, MaxLength(64)]
+        [MaxLength(100)] // ✅ Cambiado de 64 a 100 para BCrypt
         public string PasswordHash { get; set; } = string.Empty;
 
         [Required]
@@ -41,16 +41,53 @@ namespace MedCitas.Core.Entities
         [Required]
         public string TipoSangre { get; set; } = string.Empty;
 
+        // Agregar estas propiedades a la clase Paciente:
+        public string? CodigoOTP { get; set; }
+        public DateTime? OTPExpiracion { get; set; }
+        public int IntentosOTPFallidos { get; set; } = 0;
+
         public bool EstaVerificado { get; set; } = false;
         public string? TokenVerificacion { get; set; }
         public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
+
+
 
         public string ToString()
         {
             return $"Paciente: {NombreCompleto}, Documento: {TipoDocumento} {NumeroDocumento}, Nacimiento: {FechaNacimiento.ToShortDateString()}, Sexo: {Sexo}, Teléfono: {Telefono}, Correo: {CorreoElectronico}, EPS: {Eps}, Tipo de Sangre: {TipoSangre}, Verificado: {EstaVerificado}, Fecha de Registro: {FechaRegistro}";
         }
+
+        public int CalcularEdad()
+        {
+            var hoy = DateTime.Today;
+            var edad = hoy.Year - FechaNacimiento.Year;
+            if (FechaNacimiento.Date > hoy.AddYears(-edad)) edad--;
+            return edad;
+        }
+
+        public bool EsMayorDeEdad()
+        {
+            return CalcularEdad() >= 18;
+        }
+
+        public bool EsPacientePreferencial()
+        {
+            var edad = CalcularEdad();
+            return edad >= 65 || edad <= 12;
+        }
+
+        public string ObtenerResumenContacto()
+        {
+            return $"{NombreCompleto} - Tel: {Telefono}, Email: {CorreoElectronico}";
+        }
+
+        public void ActualizarDatosContacto(string telefono, string correo)
+        {
+            Telefono = telefono;
+            CorreoElectronico = correo;
+        }
+
     }
 
 }
-
 

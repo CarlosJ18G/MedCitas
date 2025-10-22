@@ -1,0 +1,46 @@
+@page
+@model MedCitas.Web.Pages.Cuenta.VerificarOTPModel
+@{
+    ViewData["Title"] = "Verificar Código OTP";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Verificar tu cuenta</h3>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.Mensaje))
+                    {
+                        <div class="alert alert-@(Model.Exitoso ? "success" : "danger")">
+                            @Model.Mensaje
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Correo" class="form-label">Correo Electrónico</label>
+                            <input asp-for="Correo" class="form-control" readonly />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="CodigoOTP" class="form-label">Código de Verificación</label>
+                            <input asp-for="CodigoOTP" class="form-control" maxlength="6" placeholder="123456" />
+                            <span asp-validation-for="CodigoOTP" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Verificar</button>
+                    </form>
+
+                    <div class="mt-3 text-center">
+                        <button type="button" class="btn btn-link" asp-page-handler="Reenviar">
+                            ¿No recibiste el código? Reenviar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

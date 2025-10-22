@@ -1,2 +1,7 @@
-﻿C:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Repositories\InMemoryPacienteRepository.cs
-C:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Services\FakeEmailService.cs
+﻿C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\DataDb\MedCitasDbContext.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.Designer.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\MedCitasDbContextModelSnapshot.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\InMemoryPacienteRepository.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Services\FakeEmailService.cs

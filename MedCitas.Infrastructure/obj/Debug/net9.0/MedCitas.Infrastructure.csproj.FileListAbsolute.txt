@@ -34,3 +34,21 @@ C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCi
 C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.pdb
 C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.genruntimeconfig.cache
 C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\ref\MedCitas.Infrastructure.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\bin\Debug\net9.0\MedCitas.Infrastructure.deps.json
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\bin\Debug\net9.0\MedCitas.Infrastructure.runtimeconfig.json
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\bin\Debug\net9.0\MedCitas.Infrastructure.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\bin\Debug\net9.0\MedCitas.Infrastructure.pdb
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\bin\Debug\net9.0\MedCitas.Core.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\bin\Debug\net9.0\MedCitas.Core.pdb
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.sourcelink.json
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.70544FB7.Up2Date
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\refint\MedCitas.Infrastructure.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.pdb
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\MedCitas.Infrastructure.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\obj\Debug\net9.0\ref\MedCitas.Infrastructure.dll

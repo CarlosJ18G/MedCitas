@@ -13,6 +13,8 @@ namespace MedCitas.Core.Interfaces
         Task<Paciente?> ObtenerPorCorreoAsync(string correoElectronico);
         Task RegistrarAsync(Paciente paciente);
         Task<bool> ActivarCuentaAsync(string tokenVerificacion);
+        Task<bool> VerificarOTPAsync(string correo, string codigoOTP);
+        Task ActualizarOTPAsync(Paciente paciente);
     }
 }
 

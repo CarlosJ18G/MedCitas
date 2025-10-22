@@ -1,5 +1,5 @@
-Ä
-UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.csMedCitas.Tests^
+Ö
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.csMedCitas.Tests^
 ,MedCitas.Tests.Services.PacienteServiceTests.RegistrarPaciente_DeberiaRegistrarExitosamente_
 ,MedCitas.Tests.Services.PacienteServiceTests/RegistrarPaciente_DeberiaFallarSiCorreoYaExisteb
 ,MedCitas.Tests.Services.PacienteServiceTests2RegistrarPaciente_DeberiaFallarSiDocumentoYaExisted
@@ -26,16 +26,22 @@ UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTe
 ,MedCitas.Tests.Services.PacienteServiceTests.RegistrarPaciente_DeberiaAceptarCorreosValidos`
 ,MedCitas.Tests.Services.PacienteServiceTests0RegistrarPaciente_DeberiaAceptarTelefonosValidosc
 ,MedCitas.Tests.Services.PacienteServiceTests3RegistrarPaciente_DeberiaAceptarContrase√±asValidasf
-,MedCitas.Tests.Services.PacienteServiceTests6RegistrarPaciente_DeberiaGenerarTokenVerificacionUnico¨
-VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.csMedCitas.Testsi
+,MedCitas.Tests.Services.PacienteServiceTests6RegistrarPaciente_DeberiaGenerarTokenVerificacionUnico’
+WC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.csMedCitas.Tests`
+)MedCitas.Tests.Models.ErrorViewModelTests3ShowRequestId_ConRequestIdNull_DeberiaRetornarFalsea
+)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdVacio_DeberiaRetornarFalsea
+)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdValido_DeberiaRetornarTruef
+)MedCitas.Tests.Models.ErrorViewModelTests9ShowRequestId_ConDiferentesRequestIds_DeberiaRetornarTrueZ
+)MedCitas.Tests.Models.ErrorViewModelTests-RequestId_DeberiaPermitirAsignarYObtenerValor±
+[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.csMedCitas.Testsi
 -MedCitas.Tests.Services.FakeEmailServiceTests8EnviarCorreoVerificacionAsync_DeberiaCompletarseSinErrorÇ
 -MedCitas.Tests.Services.FakeEmailServiceTestsQEnviarCorreoVerificacionAsync_ConDestinatarioValido_DeberiaRetornarTaskCompletado|
 -MedCitas.Tests.Services.FakeEmailServiceTestsKEnviarCorreoVerificacionAsync_ConDiferentesDestinatarios_DeberiaCompletarsev
 -MedCitas.Tests.Services.FakeEmailServiceTestsEEnviarCorreoVerificacionAsync_ConDestinatarioVacio_DeberiaCompletarseo
 -MedCitas.Tests.Services.FakeEmailServiceTests>EnviarCorreoVerificacionAsync_ConTokenVacio_DeberiaCompletarseÅ
 -MedCitas.Tests.Services.FakeEmailServiceTestsPEnviarCorreoVerificacionAsync_LlamadasMultiples_DeberiasCompletarseTodasSinErrorg
--MedCitas.Tests.Services.FakeEmailServiceTests6EnviarCorreoVerificacionAsync_DeberiaEscribirEnConsola†
-dC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.csMedCitas.Testsl
+-MedCitas.Tests.Services.FakeEmailServiceTests6EnviarCorreoVerificacionAsync_DeberiaEscribirEnConsola•
+iC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.csMedCitas.Testsl
 ;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests-RegistrarAsync_DeberiaAgregarPacienteALaListag
 ;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests(RegistrarAsync_DeberiaAsignarIdSiEsEmptyn
 ;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests/RegistrarAsync_NoDeberiaModificarIdSiYaTieneUnoÖ
@@ -46,14 +52,8 @@ dC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\InMemoryPacie
 ;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests>ObtenerPorCorreoAsync_ConCorreoNoExistente_DeberiaRetornarNullu
 ;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests6ActivarCuentaAsync_ConTokenValido_DeberiaActivarCuentaw
 ;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests8ActivarCuentaAsync_ConTokenInvalido_DeberiaRetornarFalses
-;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests4RegistrarAsync_VariasPacientes_DeberiaAlmacenarTodos–
-RC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.csMedCitas.Tests`
-)MedCitas.Tests.Models.ErrorViewModelTests3ShowRequestId_ConRequestIdNull_DeberiaRetornarFalsea
-)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdVacio_DeberiaRetornarFalsea
-)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdValido_DeberiaRetornarTruef
-)MedCitas.Tests.Models.ErrorViewModelTests9ShowRequestId_ConDiferentesRequestIds_DeberiaRetornarTrueZ
-)MedCitas.Tests.Models.ErrorViewModelTests-RequestId_DeberiaPermitirAsignarYObtenerValorò
-WC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csMedCitas.TestsQ
+;MedCitas.Tests.Repositories.InMemoryPacienteRepositoryTests4RegistrarAsync_VariasPacientes_DeberiaAlmacenarTodosù
+\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csMedCitas.TestsQ
 .MedCitas.Tests.Controllers.HomeControllerTestsIndex_DeberiaRetornarViewResultS
 .MedCitas.Tests.Controllers.HomeControllerTests!Privacy_DeberiaRetornarViewResultb
 .MedCitas.Tests.Controllers.HomeControllerTests0Error_DeberiaRetornarViewResultConErrorViewModel_

@@ -4,15 +4,15 @@
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
   <ProjectGuid>9850eba2-bb12-4613-9e1d-fe60bbd4b217</ProjectGuid>
-  <FullPath>C:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\MedCitas.Infrastructure.csproj</FullPath>
+  <FullPath>C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\MedCitas.Infrastructure.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResultFiles>
-    <AnalysisResultFile Id="FilesToAnalyze" Location="C:\Users\Carlos\source\repos\MedCitas\.sonarqube\conf\1\FilesToAnalyze.txt" />
+    <AnalysisResultFile Id="FilesToAnalyze" Location="C:\Users\Usuario\Desktop\medcitas\MedCitas\.sonarqube\conf\1\FilesToAnalyze.txt" />
   </AnalysisResultFiles>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\Carlos\source\repos\MedCitas\.sonarqube\out\1\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\Carlos\source\repos\MedCitas\.sonarqube\out\1</Property>
-    <Property Name="sonar.cs.scanner.telemetry">C:\Users\Carlos\source\repos\MedCitas\.sonarqube\out\1\Telemetry.json</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\Usuario\Desktop\medcitas\MedCitas\.sonarqube\out\1\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\Usuario\Desktop\medcitas\MedCitas\.sonarqube\out\1</Property>
+    <Property Name="sonar.cs.scanner.telemetry">C:\Users\Usuario\Desktop\medcitas\MedCitas\.sonarqube\out\1\Telemetry.json</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

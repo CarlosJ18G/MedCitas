@@ -4,14 +4,56 @@
   "runs": [
     {
       "tool": {
-        "name": "Microsoft (R) Visual C# Compiler",
+        "name": "Compilador de Microsoft (R) Visual C#",
         "version": "4.14.0.0",
         "fileVersion": "4.14.0-3.25465.8 (b0a9adbf)",
         "semanticVersion": "4.14.0",
-        "language": "en-US"
+        "language": "es-ES"
       },
       "results": [
-      ]
+        {
+          "ruleId": "CA1862",
+          "level": "note",
+          "message": "Prefiera usar \"string.Equals(string, StringComparison)\" para realizar una comparación sin distinción de mayúsculas y minúsculas, pero tenga en cuenta que esto puede provocar cambios sutiles en el comportamiento, por lo que asegúrese de realizar pruebas exhaustivas después de aplicar la sugerencia, o si no se requiere una comparación culturalmente confidencial, considere la posibilidad de usar \"StringComparison.OrdinalIgnoreCase\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Repositories/EfPacienteRepositorio.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 58,
+                  "endLine": 23,
+                  "endColumn": 118
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "LeftOffendingMethod": "ToLower",
+              "RightOffendingMethod": "ToLower"
+            }
+          }
+        }
+      ],
+      "rules": {
+        "CA1862": {
+          "id": "CA1862",
+          "shortDescription": "Use las sobrecargas del método \"StringComparison\" para realizar comparaciones de cadenas sin distinción de mayúsculas y minúsculas",
+          "fullDescription": "Evite llamar a \"ToLower\", \"ToUpper\", \"ToLowerInvariant\" y \"ToUpperInvariant\" para realizar comparaciones de cadenas sin distinción de mayúsculas y minúsculas, como en \"string.ToLower() == string.ToLower()\" porque dan lugar a una asignación. En su lugar, use \"string\". Equals(string, StringComparison)\" para realizar comparaciones sin distinción de mayúsculas y minúsculas. Si cambia a una sobrecarga que toma una \"StringComparison\", es posible que se produzcan cambios sutiles en el comportamiento, por lo que es importante realizar pruebas exhaustivas después de aplicar la sugerencia. Además, si no se requiere una comparación culturalmente confidencial, considere la posibilidad de usar \"StringComparison.OrdinalIgnoreCase\".",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1862",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        }
+      }
     }
   ]
 }

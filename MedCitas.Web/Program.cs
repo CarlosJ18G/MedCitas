@@ -21,6 +21,8 @@ builder.Services.AddSession(options =>
 builder.Services.AddDbContext<MedCitasDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<OtpService>();
+
 // ---------------------------------------------------------
 // INYECCIÓN DE DEPENDENCIAS
 // ---------------------------------------------------------

@@ -1,6 +1,7 @@
 ﻿using MedCitas.Core.Entities;
 using MedCitas.Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
@@ -37,13 +38,85 @@ namespace MedCitas.Web.Controllers
 
                 var nuevoPaciente = await _pacienteService.RegistrarAsync(model, password, confirmarPassword);
 
-                ViewBag.Mensaje = "Registro exitoso. Revisa tu correo para activar la cuenta.";
-                return View("RegistroExitoso", nuevoPaciente);
+                TempData["Mensaje"] = $"¡Registro exitoso! Te hemos enviado un código de verificación a {nuevoPaciente.CorreoElectronico}";
+                TempData["CorreoRegistrado"] = nuevoPaciente.CorreoElectronico;
+
+                return RedirectToAction("VerificarOTP");
+            }
+            catch (DbUpdateException dbEx)
+            {
+                // Error específico de base de datos
+                ViewBag.Error = $"Error de BD: {dbEx.InnerException?.Message ?? dbEx.Message}";
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = $"Error: {ex.Message}";
+                if (ex.InnerException != null)
+                    ViewBag.Error += $" | Inner: {ex.InnerException.Message}";
+                return View(model);
+            }
+        }
+
+        // -------------------------------------
+        // GET: /Paciente/VerificarOTP
+        // -------------------------------------
+        [HttpGet]
+        public IActionResult VerificarOTP()
+        {
+            ViewBag.Correo = TempData["CorreoRegistrado"]?.ToString() ?? "";
+            ViewBag.Mensaje = TempData["Mensaje"]?.ToString();
+            return View();
+        }
+
+        // -------------------------------------
+        // POST: /Paciente/VerificarOTP
+        // -------------------------------------
+        [HttpPost]
+        public async Task<IActionResult> VerificarOTP(string correo, string codigoOTP)
+        {
+            try
+            {
+                var resultado = await _pacienteService.VerificarOTPAsync(correo, codigoOTP);
+
+                if (resultado)
+                {
+                    TempData["MensajeExito"] = "¡Cuenta verificada exitosamente! Ya puedes iniciar sesión.";
+                    return RedirectToAction("Login");
+                }
+                else
+                {
+                    ViewBag.Error = "Código OTP inválido o expirado. Intenta nuevamente.";
+                    ViewBag.Correo = correo;
+                    return View();
+                }
             }
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return View(model);
+                ViewBag.Correo = correo;
+                return View();
+            }
+        }
+
+        // -------------------------------------
+        // POST: /Paciente/ReenviarOTP
+        // -------------------------------------
+        [HttpPost]
+        public async Task<IActionResult> ReenviarOTP(string correo)
+        {
+            try
+            {
+                await _pacienteService.ReenviarOTPAsync(correo);
+                ViewBag.Mensaje = "Código reenviado exitosamente. Revisa tu correo.";
+                ViewBag.Correo = correo;
+                return View("VerificarOTP");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                ViewBag.Correo = correo;
+                return View("VerificarOTP");
             }
         }
 
@@ -53,6 +126,7 @@ namespace MedCitas.Web.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            ViewBag.Mensaje = TempData["MensajeExito"]?.ToString();
             return View();
         }
 
@@ -85,7 +159,7 @@ namespace MedCitas.Web.Controllers
         }
 
         // -------------------------------------
-        // GET: /Paciente/VerificarCuenta/{token}
+        // GET: /Paciente/VerificarCuenta/{token} (método legacy)
         // -------------------------------------
         [HttpGet]
         [Route("Paciente/VerificarCuenta/{token}")]

@@ -1,5 +1,5 @@
-õq
-UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.cs
+†q
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.cs
  
  
  
@@ -779,8 +779,8 @@ UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTe
 ãã 
 åå 
 çç 
-éé Ã
-VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cs
+éé —
+[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cs
  
  
  
@@ -797,8 +797,8 @@ VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\FakeEmailServiceT
 ÜÜ .
 àà  
 ââ 
-ââ "¢
-dC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.cs
+ââ "ß
+iC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.cs
  
  
  
@@ -918,13 +918,13 @@ dC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\InMemoryPacie
 ‰‰ 
 ‰‰ )
 ÂÂ 
-ÂÂ &æ
-RC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.cs
+ÂÂ &√
+WC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.cs
  
  
  	 
-  $	 		 		     *      	       * "!! "" $$ %% ((	 )) )) ++ ,, ,, ,, *.. #11 22 44 55 88	 99	 99 ::	 :: $;;	 ;; << << <<N T>> ?? ?? ?? *DD EE GG HH KK	 LL LL NN OO OO$ 5PP PP PP *RR UU VV ◊
-WC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
+  $	 		 		     *      	       * "!! "" $$ %% ((	 )) )) ++ ,, ,, ,, *.. #11 22 44 55 88	 99	 99 ::	 :: $;;	 ;; << << <<N T>> ?? ?? ?? *DD EE GG HH KK	 LL LL NN OO OO$ 5PP PP PP *RR UU VV ‹
+\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
  
  
  

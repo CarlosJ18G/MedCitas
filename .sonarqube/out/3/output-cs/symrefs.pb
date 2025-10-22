@@ -1,5 +1,5 @@
-….
-UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.cs
+Š.
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.cs
 
  %î
 3 D + <// 11 33 @@ ]] ee {{ }} 
@@ -585,8 +585,32 @@ UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTe
 
 ‰‰ 
  %
-ŽŽ: DÞ
-VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cs
+ŽŽ: D§
+WC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.cs
+
+ $
+
+		 G
+  !
+  "
+
+ H
+ "" !
+"" %% "
+
+)) H
+,, 22 !
+22 55 !
+
+<< M
+<<U ^AA %
+?? EE !
+EE HH !
+
+LL A
+OO !SS /VV *
+PP SS VV, 1ã
+[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cs
 
 		 &\
 * 7  #)) $:: #JJ #ZZ #oo '
@@ -636,8 +660,8 @@ VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\FakeEmailServiceT
 ƒƒ 
 „„* 5
 ……# .
-††0 ;ø	
-dC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.cs
+††0 ;ý	
+iC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.cs
 
 		 0
 
@@ -739,32 +763,8 @@ dC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\InMemoryPacie
 
 áá 
 ãã %
-åå( 2¢
-RC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.cs
-
- $
-
-		 G
-  !
-  "
-
- H
- "" !
-"" %% "
-
-)) H
-,, 22 !
-22 55 !
-
-<< M
-<<U ^AA %
-?? EE !
-EE HH !
-
-LL A
-OO !SS /VV *
-PP SS VV, 1ï
-WC:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
+åå( 2ô
+\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
 
  $(
 7 B - 8ss0 ;d

@@ -1,5 +1,5 @@
-å
-OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Services\PacienteService.cs
+ê
+TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\PacienteService.cs
 
   F
 - 2 ##" '&& $22 BB! &TT 
@@ -26,8 +26,8 @@ OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Services\PacienteService.cs
 ZZ, -__* +bb  ee  hh  
 ZZ6 >kk nn '
 ZZG Pkk %3
-]] bbO [eeM Yhhf r	nnw ƒÃ
-UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+]] bbO [eeM Yhhf r	nnw ƒÈ
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
 
 
 
@@ -47,8 +47,8 @@ UC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IPacienteReposit
 
  %
 
-- >
-OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
+- >†
+TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
 
 		 "
 
@@ -56,35 +56,39 @@ OC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
 
 2 >
 
-G Xş
-HC:\Users\Carlos\source\repos\MedCitas\MedCitas.Core\Entities\Paciente.cs
+G Xõ
+MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs
 
-		 
+
+
+ 
 
- 
+ 
+ $22  .
+ #22= J
+ %22M \(
+ '22l {88" 199 
+ 
+22™ 
+ 
+22« ³
+!! '
+22¿ Ğ
 
- $
+$$ "
+'' 
+22Ù Ü
+**  
+22ğ ú
+,, "
+22Š ˜
 
- #
+-- (
+.. %
+22¯ ¼
 
- %
+00 
 
- '
-
- 
-
- 
-
- '
-
- "
-
- 
-
-  
-
- "
-
- (
-
- %
+55 
+77 88 99' *(
+88 995 999< @:: 

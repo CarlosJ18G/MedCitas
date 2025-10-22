@@ -9,5 +9,6 @@ namespace MedCitas.Core.Interfaces
     public interface IEmailService
     {
         Task EnviarCorreoVerificacionAsync(string destinatario, string tokenVerificacion);
+        Task EnviarOTPAsync(string correo, string codigoOTP, string nombreCompleto);
     }
 }

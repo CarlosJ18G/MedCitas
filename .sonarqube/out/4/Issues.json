@@ -4,13 +4,34 @@
   "runs": [
     {
       "tool": {
-        "name": "Microsoft (R) Visual C# Compiler",
+        "name": "Compilador de Microsoft (R) Visual C#",
         "version": "4.14.0.0",
         "fileVersion": "4.14.0-3.25465.8 (b0a9adbf)",
         "semanticVersion": "4.14.0",
-        "language": "en-US"
+        "language": "es-ES"
       },
       "results": [
+        {
+          "ruleId": "CS0114",
+          "level": "warning",
+          "message": "'Paciente.ToString()' oculta el miembro heredado 'object.ToString()'. Para hacer que el miembro actual invalide esa implementación, agregue la palabra clave override. Si no, agregue la palabra clave new.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Core/Entities/Paciente.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 23,
+                  "endLine": 48,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
         {
           "ruleId": "S2325",
           "level": "warning",
@@ -18,7 +39,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Core/Services/PacienteService.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Core/Services/PacienteService.cs",
                 "region": {
                   "startLine": 90,
                   "startColumn": 22,
@@ -35,11 +56,11 @@
         {
           "ruleId": "CA1510",
           "level": "note",
-          "message": "Use 'ArgumentNullException.ThrowIfNull' instead of explicitly throwing a new exception instance",
+          "message": "Use 'ArgumentNullException.ThrowIfNull' en lugar de iniciar explícitamente una nueva instancia de excepción",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Core/Services/PacienteService.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Core/Services/PacienteService.cs",
                 "region": {
                   "startLine": 30,
                   "startColumn": 13,
@@ -52,7 +73,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Core/Services/PacienteService.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Core/Services/PacienteService.cs",
                 "region": {
                   "startLine": 30,
                   "startColumn": 17,
@@ -69,11 +90,11 @@
         {
           "ruleId": "CA1822",
           "level": "note",
-          "message": "Member 'ValidarCampos' does not access instance data and can be marked as static",
+          "message": "El miembro \"ValidarCampos\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Core/Services/PacienteService.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Core/Services/PacienteService.cs",
                 "region": {
                   "startLine": 90,
                   "startColumn": 22,
@@ -91,8 +112,8 @@
       "rules": {
         "CA1510": {
           "id": "CA1510",
-          "shortDescription": "Use ArgumentNullException throw helper",
-          "fullDescription": "Throw helpers are simpler and more efficient than an if block constructing a new exception instance.",
+          "shortDescription": "Uso del asistente de inicio ArgumentNullException",
+          "fullDescription": "Los asistentes de inicio son más sencillos y eficaces que un bloque if que construye una nueva instancia de excepción.",
           "defaultLevel": "note",
           "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1510",
           "properties": {
@@ -106,8 +127,8 @@
         },
         "CA1822": {
           "id": "CA1822",
-          "shortDescription": "Mark members as static",
-          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
+          "shortDescription": "Marcar miembros como static",
+          "fullDescription": "Los miembros que no tienen acceso a datos de instancia o que llaman a métodos de instancia se pueden marcar como static. Después de marcar los métodos como static, el compilador emitirá los sitios de llamada no virtuales para estos miembros. Esto puede proporcionar una mejora apreciable del rendimiento del código sensible al rendimiento.",
           "defaultLevel": "note",
           "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
           "properties": {
@@ -117,6 +138,20 @@
               "PortedFromFxCop",
               "Telemetry",
               "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS0114": {
+          "id": "CS0114",
+          "shortDescription": "El miembro oculta el miembro heredado. Falta una contraseña de invalidación",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0114)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
             ]
           }
         },

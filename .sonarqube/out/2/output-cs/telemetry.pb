@@ -1,1 +1,1 @@
-\RFC:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\MedCitas.Web.csproj¢net9.0òCSharp13
+aRKC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\MedCitas.Web.csproj¢net9.0òCSharp13

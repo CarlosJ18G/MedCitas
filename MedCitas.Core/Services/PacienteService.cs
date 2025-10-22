@@ -42,15 +42,23 @@ namespace MedCitas.Core.Services
             nuevo.PasswordHash = BCrypt.Net.BCrypt.HashPassword(plainPassword);
 
             // Generar token de verificación
-            nuevo.TokenVerificacion = Guid.NewGuid().ToString();
+            // Generar OTP en lugar de token
+            var otpService = new OtpService();
+            nuevo.CodigoOTP = otpService.GenerarOTP();
+            nuevo.OTPExpiracion = otpService.ObtenerFechaExpiracion();
+            nuevo.IntentosOTPFallidos = 0;
             nuevo.EstaVerificado = false;
             nuevo.FechaRegistro = DateTime.UtcNow;
 
             // Guardar paciente
             await _repo.RegistrarAsync(nuevo);
 
-            // Enviar correo (simulado)
-            await _emailService.EnviarCorreoVerificacionAsync(nuevo.CorreoElectronico, nuevo.TokenVerificacion);
+            // Enviar OTP por correo
+            await _emailService.EnviarOTPAsync(
+                nuevo.CorreoElectronico,
+                nuevo.CodigoOTP,
+                nuevo.NombreCompleto
+            );
 
             return nuevo;
         }
@@ -109,6 +117,48 @@ namespace MedCitas.Core.Services
 
             if (!Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$", RegexOptions.None, regexTimeout))
                 throw new ArgumentException("La contraseña debe tener mínimo 8 caracteres, con mayúscula, minúscula, número y carácter especial.");
+        }
+
+        public async Task<bool> VerificarOTPAsync(string correo, string codigoOTP)
+        {
+            if (string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(codigoOTP))
+                throw new ArgumentException("Correo y código OTP son obligatorios.");
+
+            var paciente = await _repo.ObtenerPorCorreoAsync(correo);
+            if (paciente == null)
+                throw new InvalidOperationException("Usuario no encontrado.");
+
+            if (paciente.IntentosOTPFallidos >= 3)
+                throw new InvalidOperationException("Demasiados intentos fallidos. Solicita un nuevo código.");
+
+            var otpService = new OtpService();
+            if (!otpService.ValidarOTP(codigoOTP, paciente.CodigoOTP!, paciente.OTPExpiracion))
+            {
+                paciente.IntentosOTPFallidos++;
+                await _repo.ActualizarOTPAsync(paciente);
+                return false;
+            }
+
+            return await _repo.VerificarOTPAsync(correo, codigoOTP);
+        }
+
+        // Método para reenviar OTP
+        public async Task ReenviarOTPAsync(string correo)
+        {
+            var paciente = await _repo.ObtenerPorCorreoAsync(correo);
+            if (paciente == null)
+                throw new InvalidOperationException("Usuario no encontrado.");
+
+            if (paciente.EstaVerificado)
+                throw new InvalidOperationException("La cuenta ya está verificada.");
+
+            var otpService = new OtpService();
+            paciente.CodigoOTP = otpService.GenerarOTP();
+            paciente.OTPExpiracion = otpService.ObtenerFechaExpiracion();
+            paciente.IntentosOTPFallidos = 0;
+
+            await _repo.ActualizarOTPAsync(paciente);
+            await _emailService.EnviarOTPAsync(correo, paciente.CodigoOTP, paciente.NombreCompleto);
         }
     }
 }

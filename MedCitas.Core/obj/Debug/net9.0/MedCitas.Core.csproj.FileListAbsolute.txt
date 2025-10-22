@@ -24,3 +24,16 @@ C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCi
 C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\refint\MedCitas.Core.dll
 C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.pdb
 C:\Users\Janus\OneDrive - IUE\SEMESTRE 2025-2\Calidad de software\Proyecto MedCitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\ref\MedCitas.Core.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\bin\Debug\net9.0\MedCitas.Core.deps.json
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\bin\Debug\net9.0\MedCitas.Core.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\bin\Debug\net9.0\MedCitas.Core.pdb
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.sourcelink.json
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\refint\MedCitas.Core.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.pdb
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\ref\MedCitas.Core.dll

@@ -1,1 +1,1 @@
-C:\Users\Carlos\source\repos\MedCitas\.sonarqube\out\3
+C:\Users\Usuario\Desktop\medcitas\MedCitas\.sonarqube\out\3
