@@ -64,6 +64,7 @@ coverage.json
 coverage.opencover.xml
 coverage.info
 TestResult.xml
+.sonarqube
 
 # Others
 *.dll
