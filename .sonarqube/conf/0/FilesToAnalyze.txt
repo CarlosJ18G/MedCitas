@@ -1,4 +1,5 @@
 ﻿C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\OtpService.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\PacienteService.cs

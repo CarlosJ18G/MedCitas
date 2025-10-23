@@ -18,10 +18,10 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", false);
 builder.Services.AddDbContext<MedCitasDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<OtpService>();
 
 // ---------------------------------------------------------
 // INYECCIÓN DE DEPENDENCIAS
@@ -55,4 +55,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
 
-app.Run();
+await app.RunAsync();

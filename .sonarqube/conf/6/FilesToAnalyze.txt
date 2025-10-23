@@ -1,6 +1,7 @@
 ﻿C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Controllers\HomeController.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Controllers\PacienteController.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Models\ErrorViewModel.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Pages\Cuenta\VerificarOTP.cshtml.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Program.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.GlobalUsings.g.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
@@ -71,11 +72,13 @@ C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\wwwroot\lib\jquery\dist\
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\appsettings.Development.json
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\appsettings.json
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Pages\Cuenta\VerificarOTP.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Home\Index.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Home\Privacy.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Paciente\Login.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Paciente\Registro.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Paciente\VerificarCuenta.cshtml
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Paciente\VerificarOTP.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Shared\Error.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Shared\_Layout.cshtml
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Views\Shared\_ValidationScriptsPartial.cshtml

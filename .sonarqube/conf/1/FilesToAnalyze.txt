@@ -1,7 +1,12 @@
 ﻿C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\DataDb\MedCitasDbContext.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.Designer.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.Designer.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.Designer.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022032706_ConfigurarDateTimeUTC.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022032706_ConfigurarDateTimeUTC.Designer.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\MedCitasDbContextModelSnapshot.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
-C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\InMemoryPacienteRepository.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Services\FakeEmailService.cs

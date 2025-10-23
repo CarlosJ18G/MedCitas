@@ -10,30 +10,41 @@ namespace MedCitas.Infrastructure.Services
 {
     public class FakeEmailService : IEmailService
     {
+        private const string V = "----------------------------------------";
         private readonly ILogger<FakeEmailService> _logger;
 
         public FakeEmailService(ILogger<FakeEmailService> logger)
         {
             _logger = logger;
         }
+        
 
-        public Task EnviarCorreoVerificacionAsync(string correo, string tokenVerificacion)
+        public Task EnviarCorreoVerificacionAsync(string destinatario, string tokenVerificacion)
         {
-            _logger.LogWarning("========================================");
-            _logger.LogWarning("[EMAIL SIMULADO] Enviado a: {Correo}", correo);
-            _logger.LogWarning("Enlace de verificación: https://medcitas.com/verificar/{Token}", tokenVerificacion);
-            _logger.LogWarning("========================================");
+            // ✅ Un solo LogWarning con mensaje completo
+            var mensaje = new StringBuilder()
+                .AppendLine(V)
+                .AppendLine($"[EMAIL SIMULADO] Enviado a: {destinatario}")
+                .AppendLine($"Enlace de verificación: https://medcitas.com/verificar/{tokenVerificacion}")
+                .AppendLine(V)
+                .ToString();
+
+            _logger.LogWarning("{Mensaje}", mensaje);
             return Task.CompletedTask;
         }
 
         public Task EnviarOTPAsync(string correo, string codigoOTP, string nombreCompleto)
         {
-            _logger.LogWarning("========================================");
-            _logger.LogWarning("[EMAIL SIMULADO - OTP] Enviando a: {Correo}", correo);
-            _logger.LogWarning("Hola {Nombre},", nombreCompleto);
-            _logger.LogWarning("🔐 Tu código de verificación es: {CodigoOTP}", codigoOTP);
-            _logger.LogWarning("⏰ Este código expira en 15 minutos.");
-            _logger.LogWarning("========================================");
+            var mensaje = new StringBuilder()
+                .AppendLine(V)
+                .AppendLine($"[EMAIL SIMULADO - OTP] Enviando a: {correo}")
+                .AppendLine($"Hola {nombreCompleto},")
+                .AppendLine($"🔐 Tu código de verificación es: {codigoOTP}")
+                .AppendLine("⏰ Este código expira en 15 minutos.")
+                .AppendLine(V)
+                .ToString();
+
+            _logger.LogWarning("{Mensaje}", mensaje);
             return Task.CompletedTask;
         }
     }

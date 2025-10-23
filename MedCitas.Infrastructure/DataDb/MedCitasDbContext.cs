@@ -52,58 +52,5 @@ namespace MedCitas.Infrastructure.DataDb
 
             base.OnModelCreating(modelBuilder);
         }
-
-        // ✅ AGREGAR: Convertir automáticamente DateTime a UTC antes de guardar
-        public override int SaveChanges()
-        {
-            ConvertDateTimesToUtc();
-            return base.SaveChanges();
-        }
-
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            ConvertDateTimesToUtc();
-            return base.SaveChangesAsync(cancellationToken);
-        }
-
-        private void ConvertDateTimesToUtc()
-        {
-            var entries = ChangeTracker.Entries()
-                .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
-
-            foreach (var entry in entries)
-            {
-                foreach (var property in entry.Properties)
-                {
-                    if (property.Metadata.ClrType == typeof(DateTime))
-                    {
-                        var value = (DateTime)property.CurrentValue!;
-                        if (value.Kind == DateTimeKind.Unspecified)
-                        {
-                            property.CurrentValue = DateTime.SpecifyKind(value, DateTimeKind.Utc);
-                        }
-                        else if (value.Kind == DateTimeKind.Local)
-                        {
-                            property.CurrentValue = value.ToUniversalTime();
-                        }
-                    }
-                    else if (property.Metadata.ClrType == typeof(DateTime?))
-                    {
-                        var value = (DateTime?)property.CurrentValue;
-                        if (value.HasValue)
-                        {
-                            if (value.Value.Kind == DateTimeKind.Unspecified)
-                            {
-                                property.CurrentValue = DateTime.SpecifyKind(value.Value, DateTimeKind.Utc);
-                            }
-                            else if (value.Value.Kind == DateTimeKind.Local)
-                            {
-                                property.CurrentValue = value.Value.ToUniversalTime();
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }

@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MedCitas.Web.Pages.Cuenta
 {
-    public class VerificarOTPModel : PageModel
+    public class VerificarOtpModel : PageModel
     {
         private readonly PacienteService _pacienteService;
 
-        public VerificarOTPModel(PacienteService pacienteService)
+        public VerificarOtpModel(PacienteService pacienteService)
         {
             _pacienteService = pacienteService;
         }

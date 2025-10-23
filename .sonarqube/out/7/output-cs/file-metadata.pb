@@ -1,10 +1,9 @@
 v
 kC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\MedCitas.Tests.GlobalUsings.g.csutf-8t
 iC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\MedCitas.Tests.AssemblyInfo.csutf-8„
-yC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.csutf-8€
-uC:\Users\Usuario\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8c
-ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.csutf-8k
-[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cswindows-1252r
-iC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Repositories\InMemoryPacienteRepositoryTests.csutf-8`
+yC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.csutf-8c
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.csutf-8d
+[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.csutf-8€
+uC:\Users\Usuario\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8`
 WC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.csutf-8e
 \C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csutf-8

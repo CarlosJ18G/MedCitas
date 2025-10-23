@@ -27,7 +27,7 @@ namespace MedCitas.Core.Services
         public async Task<Paciente> RegistrarAsync(Paciente nuevo, string plainPassword, string confirmarPassword)
         {
             // Validaciones básicas
-            if (nuevo == null) throw new ArgumentNullException(nameof(nuevo));
+            ArgumentNullException.ThrowIfNull(nuevo);
 
             ValidarCampos(nuevo, plainPassword, confirmarPassword);
 
@@ -43,9 +43,8 @@ namespace MedCitas.Core.Services
 
             // Generar token de verificación
             // Generar OTP en lugar de token
-            var otpService = new OtpService();
-            nuevo.CodigoOTP = otpService.GenerarOTP();
-            nuevo.OTPExpiracion = otpService.ObtenerFechaExpiracion();
+            nuevo.CodigoOTP = OtpService.GenerarOTP();
+            nuevo.OTPExpiracion = OtpService.ObtenerFechaExpiracion();
             nuevo.IntentosOTPFallidos = 0;
             nuevo.EstaVerificado = false;
             nuevo.FechaRegistro = DateTime.UtcNow;
@@ -95,7 +94,7 @@ namespace MedCitas.Core.Services
         // -----------------------------------------
         // VALIDACIONES
         // -----------------------------------------
-        private void ValidarCampos(Paciente p, string password, string confirmar)
+        public static void ValidarCampos(Paciente p, string password, string confirmar)
         {
             // Timeout de 100ms para prevenir ReDoS (Regular Expression Denial of Service)
             var regexTimeout = TimeSpan.FromMilliseconds(100);
@@ -131,8 +130,7 @@ namespace MedCitas.Core.Services
             if (paciente.IntentosOTPFallidos >= 3)
                 throw new InvalidOperationException("Demasiados intentos fallidos. Solicita un nuevo código.");
 
-            var otpService = new OtpService();
-            if (!otpService.ValidarOTP(codigoOTP, paciente.CodigoOTP!, paciente.OTPExpiracion))
+            if (!OtpService.ValidarOTP(codigoOTP, paciente.CodigoOTP!, paciente.OTPExpiracion))
             {
                 paciente.IntentosOTPFallidos++;
                 await _repo.ActualizarOTPAsync(paciente);
@@ -152,9 +150,8 @@ namespace MedCitas.Core.Services
             if (paciente.EstaVerificado)
                 throw new InvalidOperationException("La cuenta ya está verificada.");
 
-            var otpService = new OtpService();
-            paciente.CodigoOTP = otpService.GenerarOTP();
-            paciente.OTPExpiracion = otpService.ObtenerFechaExpiracion();
+            paciente.CodigoOTP = OtpService.GenerarOTP();
+            paciente.OTPExpiracion = OtpService.ObtenerFechaExpiracion();
             paciente.IntentosOTPFallidos = 0;
 
             await _repo.ActualizarOTPAsync(paciente);

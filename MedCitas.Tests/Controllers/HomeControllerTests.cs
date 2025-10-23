@@ -1,8 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Moq;
 using Xunit;
 using MedCitas.Web.Controllers;
 using MedCitas.Web.Models;
@@ -11,13 +9,11 @@ namespace MedCitas.Tests.Controllers
 {
     public class HomeControllerTests
     {
-        private readonly Mock<ILogger<HomeController>> _loggerMock;
         private readonly HomeController _controller;
 
         public HomeControllerTests()
         {
-            _loggerMock = new Mock<ILogger<HomeController>>();
-            _controller = new HomeController(_loggerMock.Object);
+            _controller = new HomeController();
         }
 
         [Fact]
@@ -112,7 +108,7 @@ namespace MedCitas.Tests.Controllers
         public void Constructor_DeberiaInicializarController()
         {
             // Arrange & Act
-            var controller = new HomeController(_loggerMock.Object);
+            var controller = new HomeController();
 
             // Assert
             Assert.NotNull(controller);

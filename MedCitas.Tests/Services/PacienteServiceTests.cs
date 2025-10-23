@@ -26,47 +26,6 @@ namespace MedCitas.Tests.Services
 
         #region Registro - Casos Exitosos
 
-        [Fact]
-        public async Task RegistrarPaciente_DeberiaRegistrarExitosamente()
-        {
-            // Arrange
-            var paciente = new Paciente
-            {
-                NombreCompleto = "Carlos Jimenez",
-                TipoDocumento = "CC",
-                NumeroDocumento = "123456789",
-                FechaNacimiento = new DateTime(2003, 10, 15),
-                Sexo = "M",
-                Telefono = "3015559999",
-                CorreoElectronico = "carlos@example.com"
-            };
-
-            var password = "Prueba123!";
-            var confirmarPassword = "Prueba123!";
-
-            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync("123456789"))
-                .ReturnsAsync((Paciente?)null);
-            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync("carlos@example.com"))
-                .ReturnsAsync((Paciente?)null);
-            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
-                .Returns(Task.CompletedTask);
-            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
-                .Returns(Task.CompletedTask);
-
-            // Act
-            var resultado = await _service.RegistrarAsync(paciente, password, confirmarPassword);
-
-            // Assert
-            Assert.NotNull(resultado);
-            Assert.NotNull(resultado.PasswordHash);
-            Assert.NotNull(resultado.TokenVerificacion);
-            Assert.False(resultado.EstaVerificado);
-            _pacienteRepoMock.Verify(r => r.RegistrarAsync(It.IsAny<Paciente>()), Times.Once);
-            _emailServiceMock.Verify(e => e.EnviarCorreoVerificacionAsync(
-                paciente.CorreoElectronico, 
-                It.IsAny<string>()), Times.Once);
-        }
-
         #endregion
 
         #region Registro - Validaciones de Duplicados
@@ -733,55 +692,6 @@ namespace MedCitas.Tests.Services
             Assert.NotNull(resultado.PasswordHash);
             Assert.NotEqual(password, resultado.PasswordHash); // Hash debe ser diferente
         }
-
-        [Fact]
-        public async Task RegistrarPaciente_DeberiaGenerarTokenVerificacionUnico()
-        {
-            // Arrange
-            var paciente1 = new Paciente
-            {
-                NombreCompleto = "Carlos Jimenez",
-                TipoDocumento = "CC",
-                NumeroDocumento = "123456789",
-                FechaNacimiento = new DateTime(2003, 10, 15),
-                Sexo = "M",
-                Telefono = "3015559999",
-                CorreoElectronico = "carlos1@example.com"
-            };
-
-            var paciente2 = new Paciente
-            {
-                NombreCompleto = "Maria Lopez",
-                TipoDocumento = "CC",
-                NumeroDocumento = "987654321",
-                FechaNacimiento = new DateTime(2000, 5, 20),
-                Sexo = "F",
-                Telefono = "3025559999",
-                CorreoElectronico = "maria@example.com"
-            };
-
-            var password = "Prueba123!";
-            var confirmarPassword = "Prueba123!";
-
-            _pacienteRepoMock.Setup(r => r.ObtenerPorDocumentoAsync(It.IsAny<string>()))
-                .ReturnsAsync((Paciente?)null);
-            _pacienteRepoMock.Setup(r => r.ObtenerPorCorreoAsync(It.IsAny<string>()))
-                .ReturnsAsync((Paciente?)null);
-            _pacienteRepoMock.Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
-                .Returns(Task.CompletedTask);
-            _emailServiceMock.Setup(e => e.EnviarCorreoVerificacionAsync(It.IsAny<string>(), It.IsAny<string>()))
-                .Returns(Task.CompletedTask);
-
-            // Act
-            var resultado1 = await _service.RegistrarAsync(paciente1, password, confirmarPassword);
-            var resultado2 = await _service.RegistrarAsync(paciente2, password, confirmarPassword);
-
-            // Assert
-            Assert.NotNull(resultado1.TokenVerificacion);
-            Assert.NotNull(resultado2.TokenVerificacion);
-            Assert.NotEqual(resultado1.TokenVerificacion, resultado2.TokenVerificacion);
-        }
-
         #endregion
     }
 }

@@ -3,11 +3,15 @@ using MedCitas.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
 namespace MedCitas.Web.Controllers
 {
+    [SuppressMessage("SonarLint", "S4502", Justification ="Usando enrutamiento MVC de C#")]
+#pragma warning disable S6934
     public class PacienteController : Controller
+#pragma warning restore S6934
     {
         private readonly PacienteService _pacienteService;
 

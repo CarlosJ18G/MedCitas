@@ -33,8 +33,8 @@
                         <!-- Datos Personales -->
                         <div class="row mb-3">
                             <div class="col-md-12">
-                                <label asp-for="NombreCompleto" class="form-label">Nombre Completo *</label>
-                                <input asp-for="NombreCompleto" class="form-control" placeholder="Ej: Juan Pérez García" />
+                                <label asp-for="NombreCompleto" for="NombreCompleto" class="form-label">Nombre Completo *</label>
+                                <input asp-for="NombreCompleto" id="NombreCompleto" class="form-control" placeholder="Ej: Juan Pérez García" />
                                 <span asp-validation-for="NombreCompleto" class="text-danger"></span>
                             </div>
                         </div>
@@ -42,8 +42,8 @@
                         <!-- Tipo y Número de Documento -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label asp-for="TipoDocumento" class="form-label">Tipo de Documento *</label>
-                                <select asp-for="TipoDocumento" class="form-control">
+                                <label asp-for="TipoDocumento" for="TipoDocumento" class="form-label">Tipo de Documento *</label>
+                                <select asp-for="TipoDocumento" id="TipoDocumento" class="form-control">
                                     <option value="">Seleccione...</option>
                                     <option value="CC">Cédula de Ciudadanía</option>
                                     <option value="TI">Tarjeta de Identidad</option>
@@ -53,8 +53,8 @@
                                 <span asp-validation-for="TipoDocumento" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
-                                <label asp-for="NumeroDocumento" class="form-label">Número de Documento *</label>
-                                <input asp-for="NumeroDocumento" class="form-control" placeholder="Ej: 1234567890" />
+                                <label asp-for="NumeroDocumento" for="NumeroDocumento" class="form-label">Número de Documento *</label>
+                                <input asp-for="NumeroDocumento" id="NumeroDocumento" class="form-control" placeholder="Ej: 1234567890" />
                                 <span asp-validation-for="NumeroDocumento" class="text-danger"></span>
                             </div>
                         </div>
@@ -62,13 +62,13 @@
                         <!-- Fecha de Nacimiento y Sexo -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label asp-for="FechaNacimiento" class="form-label">Fecha de Nacimiento *</label>
-                                <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                                <label asp-for="FechaNacimiento" for="FechaNacimiento" class="form-label">Fecha de Nacimiento *</label>
+                                <input asp-for="FechaNacimiento" id="FechaNacimiento" type="date" class="form-control" />
                                 <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
-                                <label asp-for="Sexo" class="form-label">Sexo *</label>
-                                <select asp-for="Sexo" class="form-control">
+                                <label asp-for="Sexo" for="Sexo" class="form-label">Sexo *</label>
+                                <select asp-for="Sexo" id="Sexo" class="form-control">
                                     <option value="">Seleccione...</option>
                                     <option value="M">Masculino</option>
                                     <option value="F">Femenino</option>
@@ -81,13 +81,13 @@
                         <!-- Datos de Contacto -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label asp-for="Telefono" class="form-label">Teléfono *</label>
-                                <input asp-for="Telefono" class="form-control" placeholder="Ej: 3012345678" maxlength="10" />
+                                <label asp-for="Telefono" for="Telefono" class="form-label">Teléfono *</label>
+                                <input asp-for="Telefono" id="Telefono" class="form-control" placeholder="Ej: 3012345678" maxlength="10" />
                                 <span asp-validation-for="Telefono" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
-                                <label asp-for="CorreoElectronico" class="form-label">Correo Electrónico *</label>
-                                <input asp-for="CorreoElectronico" type="email" class="form-control" placeholder="ejemplo@correo.com" />
+                                <label asp-for="CorreoElectronico" for="CorreoElectronico" class="form-label">Correo Electrónico *</label>
+                                <input asp-for="CorreoElectronico" id="CorreoElectronico" type="email" class="form-control" placeholder="ejemplo@correo.com" />
                                 <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
                             </div>
                         </div>
@@ -95,8 +95,8 @@
                         <!-- Información Médica -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label asp-for="Eps" class="form-label">EPS *</label>
-                                <select asp-for="Eps" class="form-control">
+                                <label asp-for="Eps" for="Eps" class="form-label">EPS *</label>
+                                <select asp-for="Eps" id="Eps" class="form-control">
                                     <option value="">Seleccione...</option>
                                     <option value="Compensar">Compensar</option>
                                     <option value="Sanitas">Sanitas</option>
@@ -109,8 +109,8 @@
                                 <span asp-validation-for="Eps" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
-                                <label asp-for="TipoSangre" class="form-label">Tipo de Sangre *</label>
-                                <select asp-for="TipoSangre" class="form-control">
+                                <label asp-for="TipoSangre" for="TipoSangre" class="form-label">Tipo de Sangre *</label>
+                                <select asp-for="TipoSangre" id="TipoSangre" class="form-control">
                                     <option value="">Seleccione...</option>
                                     <option value="A+">A+</option>
                                     <option value="A-">A-</option>

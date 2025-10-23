@@ -51,9 +51,10 @@ namespace MedCitas.Core.Entities
         public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
 
 
-
-        public string ToString()
+        
+        public string ToStringPaciente()
         {
+            
             return $"Paciente: {NombreCompleto}, Documento: {TipoDocumento} {NumeroDocumento}, Nacimiento: {FechaNacimiento.ToShortDateString()}, Sexo: {Sexo}, Teléfono: {Telefono}, Correo: {CorreoElectronico}, EPS: {Eps}, Tipo de Sangre: {TipoSangre}, Verificado: {EstaVerificado}, Fecha de Registro: {FechaRegistro}";
         }
 

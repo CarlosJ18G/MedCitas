@@ -1,5 +1,5 @@
 @page
-@model MedCitas.Web.Pages.Cuenta.VerificarOTPModel
+@model MedCitas.Web.Pages.Cuenta.VerificarOtpModel
 @{
     ViewData["Title"] = "Verificar Código OTP";
 }
@@ -21,13 +21,13 @@
 
                     <form method="post">
                         <div class="mb-3">
-                            <label asp-for="Correo" class="form-label">Correo Electrónico</label>
-                            <input asp-for="Correo" class="form-control" readonly />
+                            <label asp-for="Correo" for="Correo" class="form-label">Correo Electrónico</label>
+                            <input asp-for="Correo" id="Correo" class="form-control" readonly />
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="CodigoOTP" class="form-label">Código de Verificación</label>
-                            <input asp-for="CodigoOTP" class="form-control" maxlength="6" placeholder="123456" />
+                            <label asp-for="CodigoOTP" for="CodigoOTP" class="form-label">Código de Verificación</label>
+                            <input asp-for="CodigoOTP" id="CodigoOTP" class="form-control" maxlength="6" placeholder="123456" />
                             <span asp-validation-for="CodigoOTP" class="text-danger"></span>
                         </div>
 
