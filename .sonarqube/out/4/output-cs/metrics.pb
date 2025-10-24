@@ -3,8 +3,8 @@ TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\PacienteServi
 OC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\OtpService.cs 8r	
  "#$%x‚ "r
 ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.csr	
-½
-MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs (8*j#,rD	
- !#$&')*-./12378:;=>?@ABCEFGHJKLMNPQRSUVWXY[]x‚!$'*3:?@ABGLMRWXg
+g
 TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.csr	
-
+½
+MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs (8*j#,rD	
+ !#$&')*-./12378:;=>?@ABCEFGHJKLMNPQRSUVWXY[]x‚!$'*3:?@ABGLMRWX

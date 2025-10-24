@@ -4,6 +4,6 @@ xC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\.NETC
 iC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\obj\Debug\net9.0\MedCitas.Core.GlobalUsings.g.csutf-8]
 TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\PacienteService.csutf-8X
 OC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\OtpService.csutf-8c
-ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.csutf-8V
-MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.csutf-8]
-TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.csutf-8
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.csutf-8]
+TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.csutf-8V
+MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.csutf-8

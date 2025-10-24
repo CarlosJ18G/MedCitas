@@ -540,4 +540,3 @@ C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\refint\
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.pdb
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\ref\MedCitas.Web.dll
-C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -21,11 +21,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Home_Index_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Pages_Cuenta_VerificarOTP_cshtml.g.cs",
                 "region": {
-                  "startLine": 36,
+                  "startLine": 24,
                   "startColumn": 67,
-                  "endLine": 36,
+                  "endLine": 24,
                   "endColumn": 79
                 }
               }
@@ -45,11 +45,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Pages_Cuenta_VerificarOTP_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Home_Index_cshtml.g.cs",
                 "region": {
-                  "startLine": 24,
+                  "startLine": 36,
                   "startColumn": 67,
-                  "endLine": 24,
+                  "endLine": 36,
                   "endColumn": 79
                 }
               }
@@ -117,11 +117,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views__ViewImports_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared_Error_cshtml.g.cs",
                 "region": {
-                  "startLine": 36,
+                  "startLine": 44,
                   "startColumn": 67,
-                  "endLine": 36,
+                  "endLine": 44,
                   "endColumn": 79
                 }
               }
@@ -141,11 +141,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared_Error_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views__ViewImports_cshtml.g.cs",
                 "region": {
-                  "startLine": 44,
+                  "startLine": 36,
                   "startColumn": 67,
-                  "endLine": 44,
+                  "endLine": 36,
                   "endColumn": 79
                 }
               }
@@ -1838,30 +1838,6 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "El campo 'Views_Paciente_Login.__tagHelperStringValueBuffer' nunca se usa",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_Login_cshtml.g.cs",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 24,
-                  "endLine": 45,
-                  "endColumn": 52
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "CS0169",
-          "level": "warning",
           "message": "El campo 'Views_Paciente_VerificarOTP.__tagHelperStringValueBuffer' nunca se usa",
           "suppressionStates": [
             "suppressedInSource"
@@ -1898,6 +1874,30 @@
                   "startLine": 106,
                   "startColumn": 24,
                   "endLine": 106,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "El campo 'Views_Paciente_Login.__tagHelperStringValueBuffer' nunca se usa",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_Login_cshtml.g.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 24,
+                  "endLine": 45,
                   "endColumn": 52
                 }
               }
@@ -1953,27 +1953,6 @@
           ],
           "properties": {
             "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "S2068",
-          "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/appsettings.json",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 27,
-                  "endLine": 11,
-                  "endColumn": 110
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
           }
         },
         {
@@ -2043,22 +2022,6 @@
             "tags": [
               "Compiler",
               "Telemetry"
-            ]
-          }
-        },
-        "S2068": {
-          "id": "S2068",
-          "shortDescription": "Hard-coded credentials are security-sensitive",
-          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
-          "properties": {
-            "category": "Blocker Security Hotspot",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "SonarWay"
             ]
           }
         },

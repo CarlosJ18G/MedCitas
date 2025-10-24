@@ -76,38 +76,7 @@ OC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\OtpService.cs
  %
 - 9* 6"" 
 B O* 7""# 0
-[ e " ,„
-ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
-
-
-
- (
-
- 0
-
-8 G
-
- -
-
-5 F
-
- 
-
-% -
-
- %
-
-- >
-
- $
-
-, 2
-
-; D
-
- 
-
-) 1Û
+[ e " ,Û
 MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs
 
 
@@ -158,7 +127,38 @@ MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs
 
 UU +
 UU3 ;WW 
-UUD JXX  &¶
+UUD JXX  &„
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+
+
+
+ (
+
+ 0
+
+8 G
+
+ -
+
+5 F
+
+ 
+
+% -
+
+ %
+
+- >
+
+ $
+
+, 2
+
+; D
+
+ 
+
+) 1¶
 TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
 
 		 "

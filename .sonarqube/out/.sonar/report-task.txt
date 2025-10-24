@@ -2,5 +2,5 @@ projectKey=med_citas
 serverUrl=http://localhost:9000
 serverVersion=25.10.0.114319
 dashboardUrl=http://localhost:9000/dashboard?id=med_citas
-ceTaskId=60dddb34-636c-4b26-9e0c-b87245a5097a
-ceTaskUrl=http://localhost:9000/api/ce/task?id=60dddb34-636c-4b26-9e0c-b87245a5097a
+ceTaskId=cbd9263a-8860-4b4b-b9b1-d4eddec2e1a7
+ceTaskUrl=http://localhost:9000/api/ce/task?id=cbd9263a-8860-4b4b-b9b1-d4eddec2e1a7

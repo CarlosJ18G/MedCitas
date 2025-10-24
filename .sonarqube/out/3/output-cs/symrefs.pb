@@ -590,7 +590,42 @@ UC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\OtpServiceTe
 ¤¤2 ?
 
 ¤¤ 
-§§ "Ü
+§§ "Ê
+\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
+
+
+
+ $d
+( 3  '!! '-- 33 'CC II 'ZZ cc '
+
+ 3
+ & /
+
+ 5
+!! $$& /
+
+(( D
+++ ,, // )
+33 667 @
+66 776 @
+77 88  
+
+<< A(
+?? @@ JJ PP !
+BB EE )
+II MM7 @
+MM NN6 @
+NN OO  PP& +
+
+TT F
+WW YY* 9hh (
+XX YY \\ )
+cc ff7 @
+ff gg6 @
+gg hh* /
+
+ll <
+oo rr %Ü
 [C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cs
 
 
@@ -1522,39 +1557,4 @@ SC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Entities\PacienteTest
 ÔÔ 
 
 ØØ 
-ÛÛ& /Ê
-\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
-
-
-
- $d
-( 3  '!! '-- 33 'CC II 'ZZ cc '
-
- 3
- & /
-
- 5
-!! $$& /
-
-(( D
-++ ,, // )
-33 667 @
-66 776 @
-77 88  
-
-<< A(
-?? @@ JJ PP !
-BB EE )
-II MM7 @
-MM NN6 @
-NN OO  PP& +
-
-TT F
-WW YY* 9hh (
-XX YY \\ )
-cc ff7 @
-ff gg6 @
-gg hh* /
-
-ll <
-oo rr %
+ÛÛ& /
