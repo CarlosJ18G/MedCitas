@@ -88,4 +88,8 @@ artifacts/
 appsettings.Development.json
 appsettings.Production.json
 *.user
+
+# User Secrets
+**/appsettings.*.json
+!**/appsettings.json
 secrets.json

@@ -1,301 +1,392 @@
-# ?? MedCitas - Sistema de Gesti�n de Citas M�dicas
+﻿# 🏥 MedCitas - Sistema de Gestión de Citas Médicas
 
-![Tests](https://img.shields.io/badge/tests-85%20passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-65--70%25-brightgreen)
-![.NET](https://img.shields.io/badge/.NET-9.0-blue)
-![C#](https://img.shields.io/badge/C%23-13.0-blue)
-![Security](https://img.shields.io/badge/security%20hotspots-0-brightgreen)
+[![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-316192?logo=postgresql)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Sistema web para gesti�n de citas m�dicas, registro de pacientes y administraci�n de consultorios desarrollado con ASP.NET Core Razor Pages.
+Sistema web para la gestión de citas médicas desarrollado con **ASP.NET Core 9** (Razor Pages + MVC), **Entity Framework Core** y **PostgreSQL**.
 
----
+## 📋 Tabla de Contenidos
 
-## ?? Tabla de Contenidos
-
-- [Caracter�sticas](#-caracter�sticas)
-- [Requisitos](#-requisitos)
-- [Instalaci�n](#-instalaci�n)
-- [Testing](#-testing)
-- [Coverage](#-coverage)
-- [SonarQube](#-sonarqube)
+- [Características](#-características)
 - [Arquitectura](#-arquitectura)
+- [Tecnologías](#-tecnologías)
+- [Requisitos Previos](#-requisitos-previos)
+- [Instalación](#-instalación)
+- [Configuración](#-configuración)
+- [Ejecución](#-ejecución)
+- [Testing](#-testing)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Seguridad](#-seguridad)
 - [Contribuir](#-contribuir)
+- [Equipo](#-equipo)
 
 ---
 
-## ? Caracter�sticas
+## ✨ Características
 
-- ? Registro y autenticaci�n de pacientes
-- ? Verificaci�n de correo electr�nico
-- ? Gesti�n de citas m�dicas
-- ? Panel de administraci�n
-- ? Notificaciones por email
-- ? Seguridad con BCrypt
-- ? Validaciones robustas
-
----
-
-## ?? Requisitos
-
-- **.NET 9 SDK** - [Descargar](https://dotnet.microsoft.com/download/dotnet/9.0)
-- **SQL Server** (LocalDB o Express)
-- **Visual Studio 2022** o **VS Code**
-- **Git** para control de versiones
+- ✅ **Registro de Pacientes** con validación de datos
+- ✅ **Sistema de Autenticación** con contraseñas hasheadas (BCrypt)
+- ✅ **Verificación por OTP** (One-Time Password) vía email
+- ✅ **Gestión de Sesiones** segura
+- ✅ **Arquitectura en Capas** (Clean Architecture)
+- ✅ **Pruebas Unitarias** con cobertura >80%
+- ✅ **Análisis de Código** con SonarQube
+- ✅ **User Secrets** para manejo seguro de credenciales
 
 ---
 
-## ?? Instalaci�n
+## 🏗️ Arquitectura
+
+El proyecto sigue los principios de **Clean Architecture** con separación de responsabilidades:
+
+```
+┌─────────────────────────────────────────┐
+│         MedCitas.Web (UI Layer)         │
+│   Razor Pages + MVC Controllers         │
+└──────────────┬──────────────────────────┘
+               │
+┌──────────────▼──────────────────────────┐
+│      MedCitas.Core (Domain Layer)       │
+│   Entities, Services, Interfaces        │
+└──────────────┬──────────────────────────┘
+               │
+┌──────────────▼──────────────────────────┐
+│  MedCitas.Infrastructure (Data Layer)   │
+│   Repositories, DbContext, Migrations   │
+└─────────────────────────────────────────┘
+```
+
+### Capas del Proyecto
+
+| Capa | Responsabilidad | Dependencias |
+|------|----------------|--------------|
+| **MedCitas.Core** | Lógica de negocio, entidades, interfaces | Ninguna |
+| **MedCitas.Infrastructure** | Acceso a datos, servicios externos | Core |
+| **MedCitas.Web** | Presentación, controladores, Razor Pages | Core, Infrastructure |
+| **MedCitas.Tests** | Pruebas unitarias e integración | Todos |
+
+---
+
+## 🚀 Tecnologías
+
+### Backend
+- **.NET 9** - Framework principal
+- **C# 13** - Lenguaje de programación
+- **ASP.NET Core MVC + Razor Pages** - UI Framework
+- **Entity Framework Core 9** - ORM
+- **PostgreSQL 14+** - Base de datos
+- **Npgsql** - Provider para PostgreSQL
+
+### Seguridad
+- **BCrypt.Net** - Hash de contraseñas
+- **User Secrets** - Gestión de credenciales en desarrollo
+- **ASP.NET Core Identity** - Sesiones y autenticación
+
+### Testing & Quality
+- **xUnit** - Framework de pruebas
+- **Moq** - Mocking framework
+- **FluentAssertions** - Aserciones expresivas
+- **Coverlet** - Cobertura de código
+- **SonarQube** - Análisis estático de código
+
+---
+
+## 📦 Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) (versión 9.0.0 o superior)
+- [PostgreSQL 14+](https://www.postgresql.org/download/)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) o [VS Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
+
+### Verificar instalación
+
+```bash
+dotnet --version  # Debe mostrar 9.0.x
+psql --version    # Debe mostrar PostgreSQL 14.x o superior
+```
+
+---
+
+## 🛠️ Instalación
 
 ### 1. Clonar el repositorio
+
 ```bash
 git clone https://github.com/CarlosJ18G/MedCitas.git
 cd MedCitas
 ```
 
 ### 2. Restaurar dependencias
+
 ```bash
 dotnet restore
 ```
 
-### 3. Ejecutar migraciones
-```bash
-dotnet ef database update --project MedCitas.Infrastructure
-```
+### 3. Crear la base de datos
 
-### 4. Ejecutar la aplicaci�n
-```bash
-dotnet run --project MedCitas.Web
-```
+Conéctate a PostgreSQL y ejecuta:
 
-### 5. Abrir en navegador
-```
-https://localhost:5001
+```sql
+CREATE DATABASE medcitas_database;
 ```
 
 ---
 
-## ?? Testing
+## ⚙️ Configuración
 
-### Ejecutar todos los tests
-```powershell
+### 1. Configurar User Secrets (Desarrollo)
+
+Para evitar exponer credenciales, usa **User Secrets**:
+
+```bash
+# Inicializar User Secrets
+dotnet user-secrets init --project MedCitas.Web
+
+# Configurar contraseña de BD
+dotnet user-secrets set "ConnectionStrings:DbPassword" "tu_contraseña_postgres" --project MedCitas.Web
+```
+
+### 2. Verificar `appsettings.json`
+
+El archivo `MedCitas.Web/appsettings.json` debe verse así:
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=medcitas_database;Username=postgres"
+  }
+}
+```
+
+### 3. Aplicar Migraciones
+
+```bash
+cd MedCitas.Infrastructure
+dotnet ef database update --startup-project ../MedCitas.Web
+```
+
+Verifica que las tablas se hayan creado:
+
+```sql
+\dt  -- En psql, lista las tablas
+```
+
+---
+
+## ▶️ Ejecución
+
+### Modo Desarrollo
+
+```bash
+cd MedCitas.Web
+dotnet run
+```
+
+La aplicación estará disponible en:
+- **HTTPS:** https://localhost:7001
+- **HTTP:** http://localhost:5000
+
+---
+
+## 🧪 Testing
+
+### Ejecutar todas las pruebas
+
+```bash
 dotnet test
 ```
 
-### Ver tests espec�ficos
+### Ejecutar con cobertura de código
+
 ```powershell
-# Solo tests de PacienteService
-dotnet test --filter "FullyQualifiedName~PacienteServiceTests"
+# Usando el script PowerShell
+./run-tests-coverage.ps1
 
-# Solo tests de Repository
-dotnet test --filter "FullyQualifiedName~RepositoryTests"
-```
-
-### Tests con verbose
-```powershell
-dotnet test --logger "console;verbosity=detailed"
-```
-
----
-
-## ?? Coverage
-
-### Script automatizado (Recomendado)
-```powershell
-.\run-tests-coverage.ps1
-```
-
-Este script:
-1. Ejecuta todos los tests
-2. Genera reporte de coverage
-3. Abre el reporte HTML en el navegador
-
-### Coverage manual
-```powershell
-# Ejecutar con coverage
+# O manualmente
 dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-
-# Generar reporte HTML
-reportgenerator "-reports:MedCitas.Tests/coverage/coverage.opencover.xml" "-targetdir:coverage-report" "-reporttypes:Html"
-
-# Abrir reporte
-Start-Process "coverage-report/index.html"
 ```
 
-### M�tricas actuales
-| Proyecto | Line Coverage | Branch Coverage |
-|----------|---------------|-----------------|
-| MedCitas.Core | ~75-80% | ~70-75% |
-| MedCitas.Infrastructure | ~85% | ~75% |
-| MedCitas.Web | ~60% | ~50% |
-| **TOTAL** | **~65-70%** | **~60-65%** |
+### Ejecutar análisis de SonarQube
+
+```powershell
+./run-sonarqube-analysis.ps1
+```
+
+### Estructura de Tests
+
+```
+MedCitas.Tests/
+├── Controllers/          # Tests de controladores MVC
+│   ├── HomeControllerTests.cs
+│   └── PacienteControllerTests.cs
+├── Pages/               # Tests de Razor Pages
+│   └── VerificarOtpModelTests.cs
+├── Services/            # Tests de servicios
+│   ├── OtpServiceTests.cs
+│   ├── PacienteServiceTests.cs
+│   └── FakeEmailServiceTests.cs
+├── Repositories/        # Tests de repositorios
+│   └── EfPacienteRepositorioTests.cs
+└── Entities/           # Tests de entidades
+    └── PacienteTests.cs
+```
+
+**Cobertura actual:** ~85%
 
 ---
 
-## ?? SonarQube
+## 📁 Estructura del Proyecto
 
-### Instalaci�n con Docker (Recomendado)
-```powershell
-docker run -d --name sonarqube -p 9000:9000 sonarqube:latest
-```
-
-### Ejecutar an�lisis
-```powershell
-.\run-sonarqube-analysis.ps1 -SonarToken "TU_TOKEN_AQUI"
-```
-
-### Ver resultados
-```
-http://localhost:9000/dashboard?id=MedCitasAPI
-```
-
-### Quality Gate actual
-- ? Security: A Rating (0 hotspots)
-- ? Reliability: A Rating
-- ? Maintainability: A Rating
-- ? Coverage: ~65-70%
-
----
-
-## ??? Arquitectura
-
-### Estructura del Proyecto
 ```
 MedCitas/
-??? MedCitas.Core/              # L�gica de negocio
-?   ??? Entities/               # Entidades del dominio
-?   ??? Services/               # Servicios de negocio
-?   ??? Interfaces/             # Contratos
-?
-??? MedCitas.Infrastructure/    # Infraestructura
-?   ??? Repositories/           # Acceso a datos
-?   ??? Services/               # Servicios externos
-?
-??? MedCitas.Web/               # Presentaci�n (Razor Pages)
-?   ??? Pages/                  # P�ginas Razor
-?   ??? Controllers/            # Controladores MVC
-?   ??? Models/                 # ViewModels
-?
-??? MedCitas.Tests/             # Tests unitarios
-    ??? Services/               # Tests de servicios
-    ??? Repositories/           # Tests de repositorios
-    ??? Controllers/            # Tests de controladores
-    ??? Models/                 # Tests de modelos
-```
-
-### Tecnolog�as Utilizadas
-- **Framework**: ASP.NET Core 9.0 (Razor Pages)
-- **ORM**: Entity Framework Core
-- **Base de Datos**: SQL Server
-- **Testing**: xUnit + Moq
-- **Coverage**: Coverlet + ReportGenerator
-- **Quality**: SonarQube
-- **Password Hashing**: BCrypt.Net
-
----
-
-## ?? Estad�sticas del Proyecto
-
-### Tests
-- **Total**: 85 tests unitarios
-- **PacienteService**: 50 tests
-- **Repositories**: 14 tests
-- **Controllers**: 6 tests
-- **Models**: 5 tests
-- **Email Service**: 7 tests
-
-### Coverage
-- **L�neas cubiertas**: ~65-70%
-- **Ramas cubiertas**: ~60-65%
-- **M�todos cubiertos**: ~75%
-
-### Seguridad
-- **Security Hotspots**: 0
-- **Vulnerabilities**: 0
-- **Security Rating**: A
-
----
-
-## ??? Seguridad
-
-### Medidas Implementadas
-- ? Hash de contrase�as con BCrypt
-- ? Validaci�n de entrada con Regex + Timeout (prevenci�n ReDoS)
-- ? Tokens de verificaci�n �nicos (Guid)
-- ? Validaci�n de correo electr�nico
-- ? Validaci�n de contrase�as fuertes
-- ? Prevenci�n de duplicados
-
-### Validaciones de Contrase�a
-```
-Requisitos m�nimos:
-- Al menos 8 caracteres
-- Al menos 1 may�scula
-- Al menos 1 min�scula
-- Al menos 1 n�mero
-- Al menos 1 car�cter especial
+│
+├── MedCitas.Core/                    # 🎯 Capa de Dominio
+│   ├── Entities/
+│   │   └── Paciente.cs              # Entidad principal
+│   ├── Interfaces/
+│   │   ├── IPacienteRepository.cs
+│   │   └── IEmailService.cs
+│   └── Services/
+│       ├── PacienteService.cs       # Lógica de negocio
+│       └── OtpService.cs            # Generación de OTP
+│
+├── MedCitas.Infrastructure/          # 🗄️ Capa de Datos
+│   ├── DataDb/
+│   │   └── MedCitasDbContext.cs
+│   ├── Migrations/                   # Migraciones EF Core
+│   ├── Repositories/
+│   │   └── EfPacienteRepositorio.cs
+│   └── Services/
+│       └── FakeEmailService.cs
+│
+├── MedCitas.Web/                     # 🌐 Capa de Presentación
+│   ├── Controllers/
+│   │   ├── HomeController.cs
+│   │   └── PacienteController.cs
+│   ├── Pages/
+│   │   └── Cuenta/
+│   │       └── VerificarOTP.cshtml
+│   ├── Views/
+│   │   ├── Home/
+│   │   ├── Paciente/
+│   │   └── Shared/
+│   ├── wwwroot/                      # Archivos estáticos
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── MedCitas.Tests/                   # 🧪 Capa de Pruebas
+│   ├── Controllers/
+│   ├── Pages/
+│   ├── Services/
+│   ├── Repositories/
+│   └── Entities/
+│
+├── .gitignore
+├── MedCitas.sln
+└── README.md
 ```
 
 ---
 
-## ?? Documentaci�n
+## 🔒 Seguridad
 
-### Gu�as Disponibles
-- [Testing Best Practices](TESTING_BEST_PRACTICES.md) - Gu�a completa de testing
-- [Resumen Ejecutivo](RESUMEN_EJECUTIVO.md) - Overview del proyecto
-- [Final Summary](FINAL_SUMMARY.md) - Resumen de mejoras implementadas
+### Manejo de Credenciales
 
-### Scripts Disponibles
-- `run-tests-coverage.ps1` - Ejecutar tests con coverage
-- `run-sonarqube-analysis.ps1` - An�lisis completo con SonarQube
+| Entorno | Método |
+|---------|--------|
+| **Desarrollo** | User Secrets (`dotnet user-secrets`) |
+| **Staging/CI** | Variables de Entorno |
+| **Producción** | Azure Key Vault / AWS Secrets Manager |
 
----
+### Características de Seguridad
 
-## ?? Contribuir
+- ✅ Contraseñas hasheadas con **BCrypt** (factor de trabajo: 12)
+- ✅ Validación de OTP con expiración (15 minutos)
+- ✅ Límite de intentos fallidos (3 intentos)
+- ✅ Sesiones HttpOnly y SameSite
+- ✅ Protección HTTPS en producción
+- ✅ Validación de entrada con Data Annotations
+- ✅ Prevención de ReDoS con timeouts en regex
 
-### 1. Fork el proyecto
-```bash
-git clone https://github.com/TU_USUARIO/MedCitas.git
+### .gitignore
+
+Asegúrate de que estos archivos/carpetas estén excluidos:
+
+```
+# User Secrets
+**/appsettings.*.json
+!**/appsettings.json
+secrets.json
+
+# Build results
+bin/
+obj/
+.vs/
+
+# SonarQube
+.sonarqube/
 ```
 
-### 2. Crear rama
-```bash
-git checkout -b feature/nueva-caracteristica
-```
+---
 
-### 3. Commit cambios
-```bash
-git commit -am 'Agregar nueva caracter�stica'
-```
+## 🤝 Contribuir
 
-### 4. Push a la rama
-```bash
-git push origin feature/nueva-caracteristica
-```
+### Flujo de Trabajo
 
-### 5. Crear Pull Request
+1. **Fork** el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. **Escribe tests** para tu código
+4. Asegúrate de que todos los tests pasen (`dotnet test`)
+5. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+6. Push a la rama (`git push origin feature/AmazingFeature`)
+7. Abre un **Pull Request**
+
+### Estándares de Código
+
+- Sigue las convenciones de C# ([Microsoft Guidelines](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions))
+- Escribe tests unitarios para nueva funcionalidad
+- Mantén cobertura de código >80%
+- Documenta código complejo con comentarios XML
 
 ---
 
-## ?? Licencia
+## 👥 Equipo
 
-Este proyecto est� bajo la Licencia MIT - ver [LICENSE](LICENSE) para detalles.
+Desarrollado por estudiantes de **Ingeniería de Software** - Universidad IUE
 
----
-
-## ?? Autor
-
-**Carlos Jimenez**
-- GitHub: [@CarlosJ18G](https://github.com/CarlosJ18G)
-- Proyecto: [MedCitas](https://github.com/CarlosJ18G/MedCitas)
+- **Carlos Jiménez** - [@CarlosJ18G](https://github.com/CarlosJ18G)
+- **Juan Pablo Ríos Ortiz** - [@elrios893](https://github.com/elrios893)
 
 ---
 
-## ?? Agradecimientos
+---
 
-- ASP.NET Core Team
-- xUnit Contributors
-- SonarQube Community
+## 🎯 Roadmap
+
+- [ ] Implementar sistema de roles (Paciente, Doctor, Admin)
+- [ ] Módulo de agendamiento de citas
+- [ ] Historial médico de pacientes
+- [ ] Notificaciones push
+- [ ] Dashboard de administración
+- [ ] API REST para integración móvil
+- [ ] Integración con servicios de email reales (SendGrid, AWS SES)
 
 ---
 
-? Si te gusta este proyecto, �dale una estrella!
+<div align="center">
+
+**⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub ⭐**
+
+Hecho con ❤️ y ☕ por el equipo de MedCitas
+
+</div>

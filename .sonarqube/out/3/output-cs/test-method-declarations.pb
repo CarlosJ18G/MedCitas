@@ -35,14 +35,21 @@ UC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\OtpServiceTe
 'MedCitas.Tests.Services.OtpServiceTests1ValidarOTP_DeberiaRetornarFalse_CuandoOTPExpirado_
 'MedCitas.Tests.Services.OtpServiceTests4ValidarOTP_DeberiaRetornarFalse_CuandoParametrosNull\
 'MedCitas.Tests.Services.OtpServiceTests1FlujoCompleto_GenerarYValidarOTP_DeberiaFuncionarf
-'MedCitas.Tests.Services.OtpServiceTests;FlujoCompleto_GenerarYValidarConOTPIncorrecto_DeberiaFallarù
-\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csMedCitas.TestsQ
-.MedCitas.Tests.Controllers.HomeControllerTestsIndex_DeberiaRetornarViewResultS
-.MedCitas.Tests.Controllers.HomeControllerTests!Privacy_DeberiaRetornarViewResultb
-.MedCitas.Tests.Controllers.HomeControllerTests0Error_DeberiaRetornarViewResultConErrorViewModel_
-.MedCitas.Tests.Controllers.HomeControllerTests-Error_ConActivityActual_DeberiaUsarActivityIdd
-.MedCitas.Tests.Controllers.HomeControllerTests2Error_SinActivityActual_DeberiaUsarTraceIdentifierZ
-.MedCitas.Tests.Controllers.HomeControllerTests(Constructor_DeberiaInicializarControllerÏ
+'MedCitas.Tests.Services.OtpServiceTests;FlujoCompleto_GenerarYValidarConOTPIncorrecto_DeberiaFallar´
+
+SC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Entities\PacienteTests.csMedCitas.Testse
+%MedCitas.Tests.Entities.PacienteTests<CalcularEdad_ConDiferentesFechas_DeberiaRetornarEdadCorrectae
+%MedCitas.Tests.Entities.PacienteTests<CalcularEdad_CuandoCumplea√±osNoHaPasado_DeberiaRestarUnA√±om
+%MedCitas.Tests.Entities.PacienteTestsDCalcularEdad_CuandoEsElDiaDelCumplea√±os_DeberiaRetornarEdadCompletaV
+%MedCitas.Tests.Entities.PacienteTests-CalcularEdad_RecienNacido_DeberiaRetornarCerok
+%MedCitas.Tests.Entities.PacienteTestsBEsMayorDeEdad_ConDiferentesEdades_DeberiaRetornarResultadoCorrecto\
+%MedCitas.Tests.Entities.PacienteTests3EsMayorDeEdad_Con18A√±osExactos_DeberiaRetornarTrue]
+%MedCitas.Tests.Entities.PacienteTests4EsMayorDeEdad_Con17A√±os11Meses_DeberiaRetornarFalset
+%MedCitas.Tests.Entities.PacienteTestsKEsPacientePreferencial_ConDiferentesEdades_DeberiaRetornarResultadoCorrecto`
+%MedCitas.Tests.Entities.PacienteTests7EsPacientePreferencial_RecienNacido_DeberiaRetornarTruee
+%MedCitas.Tests.Entities.PacienteTests<EsPacientePreferencial_Con65A√±osExactos_DeberiaRetornarTruee
+%MedCitas.Tests.Entities.PacienteTests<EsPacientePreferencial_Con12A√±osExactos_DeberiaRetornarTrue_
+%MedCitas.Tests.Entities.PacienteTests6EsPacientePreferencial_Con13A√±os_DeberiaRetornarFalseÏ
 [C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.csMedCitas.Testsi
 -MedCitas.Tests.Services.FakeEmailServiceTests8EnviarCorreoVerificacionAsync_DeberiaCompletarseSinErrorÇ
 -MedCitas.Tests.Services.FakeEmailServiceTestsQEnviarCorreoVerificacionAsync_ConDestinatarioValido_DeberiaRetornarTaskCompletado|
@@ -94,21 +101,14 @@ XC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Page\VerificarOtpMode
 2MedCitas.Tests.Pages.Cuenta.VerificarOtpModelTestsDOnPostReenviarAsync_ConExcepcionGenerica_DeberiaRetornarPageConErrorl
 2MedCitas.Tests.Pages.Cuenta.VerificarOtpModelTests6PropiedadesBindProperty_DeberianValidarseCorrectamenteg
 2MedCitas.Tests.Pages.Cuenta.VerificarOtpModelTests1OnPostAsync_ConCorreoConEspacios_DeberiaFuncionard
-2MedCitas.Tests.Pages.Cuenta.VerificarOtpModelTests.OnPostAsync_LlamadaSimultanea_DeberiaFuncionar´
-
-SC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Entities\PacienteTests.csMedCitas.Testse
-%MedCitas.Tests.Entities.PacienteTests<CalcularEdad_ConDiferentesFechas_DeberiaRetornarEdadCorrectae
-%MedCitas.Tests.Entities.PacienteTests<CalcularEdad_CuandoCumplea√±osNoHaPasado_DeberiaRestarUnA√±om
-%MedCitas.Tests.Entities.PacienteTestsDCalcularEdad_CuandoEsElDiaDelCumplea√±os_DeberiaRetornarEdadCompletaV
-%MedCitas.Tests.Entities.PacienteTests-CalcularEdad_RecienNacido_DeberiaRetornarCerok
-%MedCitas.Tests.Entities.PacienteTestsBEsMayorDeEdad_ConDiferentesEdades_DeberiaRetornarResultadoCorrecto\
-%MedCitas.Tests.Entities.PacienteTests3EsMayorDeEdad_Con18A√±osExactos_DeberiaRetornarTrue]
-%MedCitas.Tests.Entities.PacienteTests4EsMayorDeEdad_Con17A√±os11Meses_DeberiaRetornarFalset
-%MedCitas.Tests.Entities.PacienteTestsKEsPacientePreferencial_ConDiferentesEdades_DeberiaRetornarResultadoCorrecto`
-%MedCitas.Tests.Entities.PacienteTests7EsPacientePreferencial_RecienNacido_DeberiaRetornarTruee
-%MedCitas.Tests.Entities.PacienteTests<EsPacientePreferencial_Con65A√±osExactos_DeberiaRetornarTruee
-%MedCitas.Tests.Entities.PacienteTests<EsPacientePreferencial_Con12A√±osExactos_DeberiaRetornarTrue_
-%MedCitas.Tests.Entities.PacienteTests6EsPacientePreferencial_Con13A√±os_DeberiaRetornarFalse’
+2MedCitas.Tests.Pages.Cuenta.VerificarOtpModelTests.OnPostAsync_LlamadaSimultanea_DeberiaFuncionarù
+\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csMedCitas.TestsQ
+.MedCitas.Tests.Controllers.HomeControllerTestsIndex_DeberiaRetornarViewResultS
+.MedCitas.Tests.Controllers.HomeControllerTests!Privacy_DeberiaRetornarViewResultb
+.MedCitas.Tests.Controllers.HomeControllerTests0Error_DeberiaRetornarViewResultConErrorViewModel_
+.MedCitas.Tests.Controllers.HomeControllerTests-Error_ConActivityActual_DeberiaUsarActivityIdd
+.MedCitas.Tests.Controllers.HomeControllerTests2Error_SinActivityActual_DeberiaUsarTraceIdentifierZ
+.MedCitas.Tests.Controllers.HomeControllerTests(Constructor_DeberiaInicializarController’
 `C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\PacienteControllerTests.csMedCitas.TestsU
 2MedCitas.Tests.Controllers.PacienteControllerTestsRegistroGet_DeberiaRetornarViewp
 2MedCitas.Tests.Controllers.PacienteControllerTests:RegistroPost_ConDatosValidos_DeberiaRedirigirAVerificarOTPk

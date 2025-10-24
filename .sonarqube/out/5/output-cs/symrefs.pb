@@ -14,7 +14,16 @@ _C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Services\Fak
 $$* 0((B H
 $$9 B**@ I
 $$K Y))$ 2
-&& //, 3Ø
+&& //, 3­
+wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
+
+ 0
+
+  "F
+4 D     )) 33 << 
+
+HH  $F
+HH6 FJJ SS ]] ff pp yy Ø
 hC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
 
  &x
@@ -51,16 +60,7 @@ uC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 4 D 
 
   $
-6 F ­
-wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
-
- 0
-
-  "F
-4 D     )) 33 << 
-
-HH  $F
-HH6 FJJ SS ]] ff pp yy ê
+6 F ê
 pC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
 
 		 )

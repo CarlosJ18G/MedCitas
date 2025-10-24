@@ -45,30 +45,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Home_Index_cshtml.g.cs",
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 67,
-                  "endLine": 36,
-                  "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "El método asincrónico carece de operadores \"await\" y se ejecutará de forma sincrónica. Puede usar el operador 'await' para esperar llamadas API que no sean de bloqueo o 'await Task.Run(...)' para hacer tareas enlazadas a la CPU en un subproceso en segundo plano.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Pages_Cuenta_VerificarOTP_cshtml.g.cs",
                 "region": {
                   "startLine": 24,
@@ -93,11 +69,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_VerificarCuenta_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared_Error_cshtml.g.cs",
                 "region": {
-                  "startLine": 36,
+                  "startLine": 44,
                   "startColumn": 67,
-                  "endLine": 36,
+                  "endLine": 44,
                   "endColumn": 79
                 }
               }
@@ -141,12 +117,84 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared_Error_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views__ViewStart_cshtml.g.cs",
                 "region": {
-                  "startLine": 44,
+                  "startLine": 36,
                   "startColumn": 67,
-                  "endLine": 44,
+                  "endLine": 36,
                   "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "El método asincrónico carece de operadores \"await\" y se ejecutará de forma sincrónica. Puede usar el operador 'await' para esperar llamadas API que no sean de bloqueo o 'await Task.Run(...)' para hacer tareas enlazadas a la CPU en un subproceso en segundo plano.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Home_Index_cshtml.g.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 67,
+                  "endLine": 36,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "El método asincrónico carece de operadores \"await\" y se ejecutará de forma sincrónica. Puede usar el operador 'await' para esperar llamadas API que no sean de bloqueo o 'await Task.Run(...)' para hacer tareas enlazadas a la CPU en un subproceso en segundo plano.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 236,
+                  "endLine": 61,
+                  "endColumn": 238
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "El método asincrónico carece de operadores \"await\" y se ejecutará de forma sincrónica. Puede usar el operador 'await' para esperar llamadas API que no sean de bloqueo o 'await Task.Run(...)' para hacer tareas enlazadas a la CPU en un subproceso en segundo plano.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 236,
+                  "endLine": 75,
+                  "endColumn": 238
                 }
               }
             }
@@ -213,60 +261,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views__ViewStart_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_VerificarCuenta_cshtml.g.cs",
                 "region": {
                   "startLine": 36,
                   "startColumn": 67,
                   "endLine": 36,
                   "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "El método asincrónico carece de operadores \"await\" y se ejecutará de forma sincrónica. Puede usar el operador 'await' para esperar llamadas API que no sean de bloqueo o 'await Task.Run(...)' para hacer tareas enlazadas a la CPU en un subproceso en segundo plano.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
-                "region": {
-                  "startLine": 61,
-                  "startColumn": 236,
-                  "endLine": 61,
-                  "endColumn": 238
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "El método asincrónico carece de operadores \"await\" y se ejecutará de forma sincrónica. Puede usar el operador 'await' para esperar llamadas API que no sean de bloqueo o 'await Task.Run(...)' para hacer tareas enlazadas a la CPU en un subproceso en segundo plano.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
-                "region": {
-                  "startLine": 75,
-                  "startColumn": 236,
-                  "endLine": 75,
-                  "endColumn": 238
                 }
               }
             }
@@ -1838,66 +1838,18 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "El campo 'Views_Paciente_Login.__tagHelperStringValueBuffer' nunca se usa",
+          "message": "El campo 'Views_Shared__ValidationScriptsPartial.__tagHelperStringValueBuffer' nunca se usa",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_Login_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
                 "region": {
-                  "startLine": 45,
+                  "startLine": 43,
                   "startColumn": 24,
-                  "endLine": 45,
-                  "endColumn": 52
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "CS0169",
-          "level": "warning",
-          "message": "El campo 'Views_Paciente_VerificarOTP.__tagHelperStringValueBuffer' nunca se usa",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_VerificarOTP_cshtml.g.cs",
-                "region": {
-                  "startLine": 44,
-                  "startColumn": 24,
-                  "endLine": 44,
-                  "endColumn": 52
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "CS0169",
-          "level": "warning",
-          "message": "El campo 'Views_Shared__Layout.__tagHelperStringValueBuffer' nunca se usa",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
-                "region": {
-                  "startLine": 55,
-                  "startColumn": 24,
-                  "endLine": 55,
+                  "endLine": 43,
                   "endColumn": 52
                 }
               }
@@ -1934,18 +1886,66 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "El campo 'Views_Shared__ValidationScriptsPartial.__tagHelperStringValueBuffer' nunca se usa",
+          "message": "El campo 'Views_Paciente_Login.__tagHelperStringValueBuffer' nunca se usa",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_Login_cshtml.g.cs",
                 "region": {
-                  "startLine": 43,
+                  "startLine": 45,
                   "startColumn": 24,
-                  "endLine": 43,
+                  "endLine": 45,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "El campo 'Views_Shared__Layout.__tagHelperStringValueBuffer' nunca se usa",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 24,
+                  "endLine": 55,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "El campo 'Views_Paciente_VerificarOTP.__tagHelperStringValueBuffer' nunca se usa",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Web/obj/Debug/net9.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Paciente_VerificarOTP_cshtml.g.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 24,
+                  "endLine": 44,
                   "endColumn": 52
                 }
               }
