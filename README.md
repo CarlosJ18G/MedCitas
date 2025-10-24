@@ -29,33 +29,11 @@ Sistema web para la gestión de citas médicas desarrollado con **ASP.NET Core 9
 - ✅ **Sistema de Autenticación** con contraseñas hasheadas (BCrypt)
 - ✅ **Verificación por OTP** (One-Time Password) vía email
 - ✅ **Gestión de Sesiones** segura
-- ✅ **Arquitectura en Capas** (Clean Architecture)
 - ✅ **Pruebas Unitarias** con cobertura >80%
 - ✅ **Análisis de Código** con SonarQube
 - ✅ **User Secrets** para manejo seguro de credenciales
 
 ---
-
-## 🏗️ Arquitectura
-
-El proyecto sigue los principios de **Clean Architecture** con separación de responsabilidades:
-
-```
-┌─────────────────────────────────────────┐
-│         MedCitas.Web (UI Layer)         │
-│   Razor Pages + MVC Controllers         │
-└──────────────┬──────────────────────────┘
-               │
-┌──────────────▼──────────────────────────┐
-│      MedCitas.Core (Domain Layer)       │
-│   Entities, Services, Interfaces        │
-└──────────────┬──────────────────────────┘
-               │
-┌──────────────▼──────────────────────────┐
-│  MedCitas.Infrastructure (Data Layer)   │
-│   Repositories, DbContext, Migrations   │
-└─────────────────────────────────────────┘
-```
 
 ### Capas del Proyecto
 
