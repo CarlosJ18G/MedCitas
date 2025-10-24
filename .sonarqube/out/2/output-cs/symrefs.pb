@@ -4,7 +4,32 @@ BC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Program.csN
  (
  #   
 1 8 b
-$$ )) ++ ,, // 00 11 22 33 55 :: 	É
+$$ )) ++ ,, // 00 11 22 33 55 :: 	µ
+[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Pages\Cuenta\VerificarOTP.cshtml.cs
+
+ "(
+
+
+) 9 **' 7EE &
+1 @ .(
+    **J PEE8 >
+ **R [<
+ .. 44 :: FF KK <
+ // 55 ;; GG LL 
+
+ 
+! '   
+
+##) 4
+** ,, 
+
+AA) <€
+PC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Models\ErrorViewModel.cs
+
+ 
+ 7 @
+
+ É
 YC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Controllers\PacienteController.cs
 
  #J
@@ -52,32 +77,7 @@ YC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Controllers\PacienteCon
 ¬¬C H
 
 ¬¬ 
-­­  &µ
-[C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Pages\Cuenta\VerificarOTP.cshtml.cs
-
- "(
-
-
-) 9 **' 7EE &
-1 @ .(
-    **J PEE8 >
- **R [<
- .. 44 :: FF KK <
- // 55 ;; GG LL 
-
- 
-! '   
-
-##) 4
-** ,, 
-
-AA) <€
-PC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Models\ErrorViewModel.cs
-
- 
- 7 @
-
- ‡
+­­  &‡
 UC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Controllers\HomeController.cs
 
  

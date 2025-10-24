@@ -51,16 +51,7 @@ uC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 4 D 
 
   $
-6 F ­
-wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
-
- 0
-
-  "F
-4 D     )) 33 << 
-
-HH  $F
-HH6 FJJ SS ]] ff pp yy ê
+6 F ê
 pC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
 
 		 )
@@ -69,7 +60,16 @@ pC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 4 D   
 
 ##  $(
-##6 F%% )) -- „
+##6 F%% )) -- ­
+wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
+
+ 0
+
+  "F
+4 D     )) 33 << 
+
+HH  $F
+HH6 FJJ SS ]] ff pp yy „
 mC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
 
 		 &

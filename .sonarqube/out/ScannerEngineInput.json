@@ -10,7 +10,7 @@
     },
     {
       "key": "sonar.scanner.bootstrapStartTime",
-      "value": "1761183078000"
+      "value": "1761283818000"
     },
     {
       "key": "sonar.projectKey",
@@ -194,7 +194,7 @@
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.tests",
-      "value": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\obj\\MedCitas.Tests.csproj.nuget.dgspec.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\obj\\project.assets.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.Development.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.deps.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.runtimeconfig.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.deps.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.runtimeconfig.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.endpoints.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.runtime.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\obj\\Debug\\net9.0\\MedCitas.Tests.sourcelink.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\FakeEmailServiceTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs"
+      "value": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\obj\\MedCitas.Tests.csproj.nuget.dgspec.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\obj\\project.assets.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.Development.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\appsettings.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.deps.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Tests.runtimeconfig.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.deps.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.runtimeconfig.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.endpoints.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\bin\\Debug\\net9.0\\MedCitas.Web.staticwebassets.runtime.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\obj\\Debug\\net9.0\\MedCitas.Tests.sourcelink.json,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\FakeEmailServiceTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs,C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\coverage\\coverage.opencover.xml"
     },
     {
       "key": "0104E170-D973-4D77-A89D-941F2479CF73.sonar.cs.analyzer.projectOutPaths",
@@ -218,15 +218,15 @@
     },
     {
       "key": "sonar.cs.opencover.reportsPaths",
-      "value": "coverage.opencover.xml"
+      "value": "**/coverage.opencover.xml"
     },
     {
       "key": "sonar.coverage.exclusions",
-      "value": "*/*Tests.cs,/Program.cs,/Migrations/*"
+      "value": "*/*Tests.cs,/Program.cs,/Migrations, *"
     },
     {
       "key": "sonar.exclusions",
-      "value": "*/obj/,/bin/,/Migrations/,/.Designer.cs,*/wwwroot/lib/*,coverage.opencover.xml"
+      "value": "*/obj/,/bin/,/Migrations/,/.Designer.cs,*/wwwroot/lib/*,**/coverage.opencover.xml"
     },
     {
       "key": "sonar.visualstudio.enable",

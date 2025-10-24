@@ -7,6 +7,34 @@
       "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\services\\pacienteservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.core\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\pages\\cuenta\\verificarotp.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\pages\\cuenta\\verificarotp.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\pages\\cuenta\\verificarotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\pages\\cuenta\\verificarotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.core\\services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\views\\paciente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\views\\paciente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.tests\\models\\errorviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\models\\errorviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.tests\\controllers\\homecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0104E170-D973-4D77-A89D-941F2479CF73}|MedCitas.Tests\\MedCitas.Tests.csproj|solutionrelative:medcitas.tests\\controllers\\homecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9850EBA2-BB12-4613-9E1D-FE60BBD4B217}|MedCitas.Infrastructure\\MedCitas.Infrastructure.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.infrastructure\\repositories\\efpacienterepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9850EBA2-BB12-4613-9E1D-FE60BBD4B217}|MedCitas.Infrastructure\\MedCitas.Infrastructure.csproj|solutionrelative:medcitas.infrastructure\\repositories\\efpacienterepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\views\\paciente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\views\\paciente\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\views\\paciente\\verificarotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -39,28 +59,12 @@
       "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\entities\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.core\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.core\\services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E31FB772-43D8-4998-9A1E-100878C47F56}|MedCitas.Core\\MedCitas.Core.csproj|solutionrelative:medcitas.core\\services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\pages\\cuenta\\verificarotp.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\pages\\cuenta\\verificarotp.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.web\\pages\\cuenta\\verificarotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F6C835D-6540-43D0-9889-48C911BC3AC6}|MedCitas.Web\\MedCitas.Web.csproj|solutionrelative:medcitas.web\\pages\\cuenta\\verificarotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9850EBA2-BB12-4613-9E1D-FE60BBD4B217}|MedCitas.Infrastructure\\MedCitas.Infrastructure.csproj|c:\\users\\usuario\\desktop\\medcitas\\medcitas\\medcitas.infrastructure\\services\\fakeemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,68 +114,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
-              "RelativeDocumentMoniker": "MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
-              "RelativeToolTip": "MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T23:21:05.402Z",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\Login.cshtml",
+              "RelativeDocumentMoniker": "MedCitas.Web\\Views\\Paciente\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\Login.cshtml",
+              "RelativeToolTip": "MedCitas.Web\\Views\\Paciente\\Login.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-22T22:49:57.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "MedCitas.Web\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "MedCitas.Web\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-22T22:38:49.281Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VerificarOTP.cshtml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
-              "RelativeDocumentMoniker": "MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
-              "RelativeToolTip": "MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T02:14:56.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PacienteController.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Controllers\\PacienteController.cs",
-              "RelativeDocumentMoniker": "MedCitas.Web\\Controllers\\PacienteController.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Controllers\\PacienteController.cs",
-              "RelativeToolTip": "MedCitas.Web\\Controllers\\PacienteController.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAqwK4AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PacienteServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAuwAMBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T02:14:13.425Z"
+              "WhenOpened": "2025-10-20T19:19:53.657Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
+              "Title": "PacienteService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\PacienteService.cs",
+              "RelativeDocumentMoniker": "MedCitas.Core\\Services\\PacienteService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\PacienteService.cs",
+              "RelativeToolTip": "MedCitas.Core\\Services\\PacienteService.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAIAwwE8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T01:33:25.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OtpService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\OtpService.cs",
+              "RelativeDocumentMoniker": "MedCitas.Core\\Services\\OtpService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\OtpService.cs",
+              "RelativeToolTip": "MedCitas.Core\\Services\\OtpService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwA8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T01:02:13.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "VerificarOTP.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml.cs",
               "RelativeDocumentMoniker": "MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml.cs",
               "RelativeToolTip": "MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T01:53:32.934Z"
+              "WhenOpened": "2025-10-22T01:53:32.934Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "VerificarOTP.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
+              "RelativeDocumentMoniker": "MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
+              "RelativeToolTip": "MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-22T01:52:29.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PacienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Controllers\\PacienteController.cs",
+              "RelativeDocumentMoniker": "MedCitas.Web\\Controllers\\PacienteController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Controllers\\PacienteController.cs",
+              "RelativeToolTip": "MedCitas.Web\\Controllers\\PacienteController.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAiwJAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T02:14:13.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Registro.cshtml",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\Registro.cshtml",
               "RelativeDocumentMoniker": "MedCitas.Web\\Views\\Paciente\\Registro.cshtml",
@@ -183,20 +217,61 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PacienteServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "RelativeToolTip": "MedCitas.Tests\\Services\\PacienteServiceTests.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "VerificarOTP.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
+              "RelativeDocumentMoniker": "MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
+              "RelativeToolTip": "MedCitas.Web\\Views\\Paciente\\VerificarOTP.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-22T02:14:56.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Controllers\\HomeControllerTests.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T19:19:53.657Z",
+              "WhenOpened": "2025-10-22T23:21:05.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "ErrorViewModelTests.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "RelativeDocumentMoniker": "MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "RelativeToolTip": "MedCitas.Tests\\Models\\ErrorViewModelTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T16:46:29.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "MedCitas.Web\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "MedCitas.Web\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-22T22:38:49.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MedCitas.Web\\Controllers\\HomeController.cs",
@@ -208,19 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\Login.cshtml",
-              "RelativeDocumentMoniker": "MedCitas.Web\\Views\\Paciente\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Views\\Paciente\\Login.cshtml",
-              "RelativeToolTip": "MedCitas.Web\\Views\\Paciente\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T22:49:57.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "EfPacienteRepositorio.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Infrastructure\\Repositories\\EfPacienteRepositorio.cs",
               "RelativeDocumentMoniker": "MedCitas.Infrastructure\\Repositories\\EfPacienteRepositorio.cs",
@@ -232,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Paciente.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Entities\\Paciente.cs",
               "RelativeDocumentMoniker": "MedCitas.Core\\Entities\\Paciente.cs",
@@ -244,19 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PacienteService.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\PacienteService.cs",
-              "RelativeDocumentMoniker": "MedCitas.Core\\Services\\PacienteService.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\PacienteService.cs",
-              "RelativeToolTip": "MedCitas.Core\\Services\\PacienteService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAQwFgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T01:33:25.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Program.cs",
               "RelativeDocumentMoniker": "MedCitas.Web\\Program.cs",
@@ -268,31 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OtpService.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\OtpService.cs",
-              "RelativeDocumentMoniker": "MedCitas.Core\\Services\\OtpService.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Services\\OtpService.cs",
-              "RelativeToolTip": "MedCitas.Core\\Services\\OtpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T01:02:13.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "VerificarOTP.cshtml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
-              "RelativeDocumentMoniker": "MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
-              "RelativeToolTip": "MedCitas.Web\\Pages\\Cuenta\\VerificarOTP.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T01:52:29.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "FakeEmailService.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Infrastructure\\Services\\FakeEmailService.cs",
               "RelativeDocumentMoniker": "MedCitas.Infrastructure\\Services\\FakeEmailService.cs",
@@ -304,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "FakeEmailServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Tests\\Services\\FakeEmailServiceTests.cs",
               "RelativeDocumentMoniker": "MedCitas.Tests\\Services\\FakeEmailServiceTests.cs",
@@ -316,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "MedCitasDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Infrastructure\\DataDb\\MedCitasDbContext.cs",
               "RelativeDocumentMoniker": "MedCitas.Infrastructure\\DataDb\\MedCitasDbContext.cs",
@@ -328,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MedCitasDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Infrastructure\\Migrations\\MedCitasDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "MedCitas.Infrastructure\\Migrations\\MedCitasDbContextModelSnapshot.cs",
@@ -340,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "IPacienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
               "RelativeDocumentMoniker": "MedCitas.Core\\Interfaces\\IPacienteRepository.cs",
@@ -352,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Core\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "MedCitas.Core\\Interfaces\\IEmailService.cs",
@@ -364,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\medcitas\\MedCitas\\MedCitas.Web\\appsettings.json",
               "RelativeDocumentMoniker": "MedCitas.Web\\appsettings.json",
@@ -373,10 +400,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-20T20:21:49.131Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

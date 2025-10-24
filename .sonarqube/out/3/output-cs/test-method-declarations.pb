@@ -1,10 +1,11 @@
-’
-WC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.csMedCitas.Tests`
-)MedCitas.Tests.Models.ErrorViewModelTests3ShowRequestId_ConRequestIdNull_DeberiaRetornarFalsea
-)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdVacio_DeberiaRetornarFalsea
-)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdValido_DeberiaRetornarTruef
-)MedCitas.Tests.Models.ErrorViewModelTests9ShowRequestId_ConDiferentesRequestIds_DeberiaRetornarTrueZ
-)MedCitas.Tests.Models.ErrorViewModelTests-RequestId_DeberiaPermitirAsignarYObtenerValorΩ
+ù
+\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csMedCitas.TestsQ
+.MedCitas.Tests.Controllers.HomeControllerTestsIndex_DeberiaRetornarViewResultS
+.MedCitas.Tests.Controllers.HomeControllerTests!Privacy_DeberiaRetornarViewResultb
+.MedCitas.Tests.Controllers.HomeControllerTests0Error_DeberiaRetornarViewResultConErrorViewModel_
+.MedCitas.Tests.Controllers.HomeControllerTests-Error_ConActivityActual_DeberiaUsarActivityIdd
+.MedCitas.Tests.Controllers.HomeControllerTests2Error_SinActivityActual_DeberiaUsarTraceIdentifierZ
+.MedCitas.Tests.Controllers.HomeControllerTests(Constructor_DeberiaInicializarControllerΩ
 ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.csMedCitas.Tests_
 ,MedCitas.Tests.Services.PacienteServiceTests/RegistrarPaciente_DeberiaFallarSiCorreoYaExisteb
 ,MedCitas.Tests.Services.PacienteServiceTests2RegistrarPaciente_DeberiaFallarSiDocumentoYaExisted
@@ -38,11 +39,10 @@ ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServ
 -MedCitas.Tests.Services.FakeEmailServiceTestsEEnviarCorreoVerificacionAsync_ConDestinatarioVacio_DeberiaCompletarseo
 -MedCitas.Tests.Services.FakeEmailServiceTests>EnviarCorreoVerificacionAsync_ConTokenVacio_DeberiaCompletarseÅ
 -MedCitas.Tests.Services.FakeEmailServiceTestsPEnviarCorreoVerificacionAsync_LlamadasMultiples_DeberiasCompletarseTodasSinErrorg
--MedCitas.Tests.Services.FakeEmailServiceTests6EnviarCorreoVerificacionAsync_DeberiaEscribirEnConsolaù
-\C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.csMedCitas.TestsQ
-.MedCitas.Tests.Controllers.HomeControllerTestsIndex_DeberiaRetornarViewResultS
-.MedCitas.Tests.Controllers.HomeControllerTests!Privacy_DeberiaRetornarViewResultb
-.MedCitas.Tests.Controllers.HomeControllerTests0Error_DeberiaRetornarViewResultConErrorViewModel_
-.MedCitas.Tests.Controllers.HomeControllerTests-Error_ConActivityActual_DeberiaUsarActivityIdd
-.MedCitas.Tests.Controllers.HomeControllerTests2Error_SinActivityActual_DeberiaUsarTraceIdentifierZ
-.MedCitas.Tests.Controllers.HomeControllerTests(Constructor_DeberiaInicializarController
+-MedCitas.Tests.Services.FakeEmailServiceTests6EnviarCorreoVerificacionAsync_DeberiaEscribirEnConsola’
+WC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.csMedCitas.Tests`
+)MedCitas.Tests.Models.ErrorViewModelTests3ShowRequestId_ConRequestIdNull_DeberiaRetornarFalsea
+)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdVacio_DeberiaRetornarFalsea
+)MedCitas.Tests.Models.ErrorViewModelTests4ShowRequestId_ConRequestIdValido_DeberiaRetornarTruef
+)MedCitas.Tests.Models.ErrorViewModelTests9ShowRequestId_ConDiferentesRequestIds_DeberiaRetornarTrueZ
+)MedCitas.Tests.Models.ErrorViewModelTests-RequestId_DeberiaPermitirAsignarYObtenerValor

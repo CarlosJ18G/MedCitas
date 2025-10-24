@@ -8,3 +8,4 @@ C:\Users\Usuario\.nuget\packages\microsoft.testplatform.testhost\17.12.0\build\n
 C:\Users\Usuario\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.visualstudio.testadapter.dll
 C:\Users\Usuario\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\Usuario\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\coverage\coverage.opencover.xml
