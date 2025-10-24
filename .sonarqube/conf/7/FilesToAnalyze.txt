@@ -1,6 +1,10 @@
 ﻿C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
-C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Controllers\PacienteControllerTests.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Entities\PacienteTests.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Page\VerificarOtpModelTests.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Repositories\EFPacienteRepositorioTests.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\FakeEmailServiceTests.cs
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\OtpServiceTests.cs
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.cs
 C:\Users\Usuario\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
 C:\Users\Usuario\.nuget\packages\microsoft.testplatform.testhost\17.12.0\build\netcoreapp3.1\x64\testhost.exe

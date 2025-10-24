@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using MedCitas.Core.Entities;
+using MedCitas.Core.Interfaces;
 using MedCitas.Core.Services;
 using MedCitas.Web.Controllers;
 using Microsoft.AspNetCore.Http;
@@ -13,19 +14,25 @@ namespace MedCitas.Tests.Controllers
 {
     public class PacienteControllerTests
     {
-        private readonly Mock<PacienteService> _pacienteServiceMock;
+        private readonly Mock<IPacienteRepository> _pacienteRepositoryMock;
+        private readonly Mock<IEmailService> _emailServiceMock;
+        private readonly PacienteService _pacienteService;
         private readonly PacienteController _controller;
 
         public PacienteControllerTests()
         {
-            _pacienteServiceMock = new Mock<PacienteService>(
-                Mock.Of<Core.Interfaces.IPacienteRepository>(),
-                Mock.Of<Core.Interfaces.IEmailService>());
+            _pacienteRepositoryMock = new Mock<IPacienteRepository>();
+            _emailServiceMock = new Mock<IEmailService>();
+            
+            _pacienteService = new PacienteService(
+                _pacienteRepositoryMock.Object,
+                _emailServiceMock.Object);
 
-            _controller = new PacienteController(_pacienteServiceMock.Object);
+            _controller = new PacienteController(_pacienteService);
 
             // Configurar HttpContext y TempData
             var httpContext = new DefaultHttpContext();
+            httpContext.Session = new Mock<ISession>().Object;
             var tempData = new TempDataDictionary(httpContext, Mock.Of<ITempDataProvider>());
             _controller.TempData = tempData;
             _controller.ControllerContext = new ControllerContext
@@ -57,12 +64,27 @@ namespace MedCitas.Tests.Controllers
             var paciente = new Paciente
             {
                 CorreoElectronico = "test@example.com",
-                NombreCompleto = "Test User"
+                NombreCompleto = "Test User",
+                NumeroDocumento = "12345678",
+                Telefono = "3001234567",
+                TipoDocumento = "CC"
             };
 
-            _pacienteServiceMock
-                .Setup(s => s.RegistrarAsync(It.IsAny<Paciente>(), It.IsAny<string>(), It.IsAny<string>()))
-                .ReturnsAsync(paciente);
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync(It.IsAny<string>()))
+                .ReturnsAsync((Paciente?)null);
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorDocumentoAsync(It.IsAny<string>()))
+                .ReturnsAsync((Paciente?)null);
+
+            _pacienteRepositoryMock
+                .Setup(r => r.RegistrarAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+
+            _emailServiceMock
+                .Setup(e => e.EnviarOTPAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var resultado = await _controller.Registro(paciente, "Password123!", "Password123!");
@@ -77,17 +99,25 @@ namespace MedCitas.Tests.Controllers
         public async Task RegistroPost_ConExcepcion_DeberiaRetornarViewConError()
         {
             // Arrange
-            var paciente = new Paciente();
-            _pacienteServiceMock
-                .Setup(s => s.RegistrarAsync(It.IsAny<Paciente>(), It.IsAny<string>(), It.IsAny<string>()))
+            var paciente = new Paciente
+            {
+                CorreoElectronico = "test@example.com",
+                NombreCompleto = "Test User",
+                NumeroDocumento = "12345678",
+                Telefono = "3001234567",
+                TipoDocumento = "CC"
+            };
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync(It.IsAny<string>()))
                 .ThrowsAsync(new Exception("Error de prueba"));
 
             // Act
-            var resultado = await _controller.Registro(paciente, "pass", "pass");
+            var resultado = await _controller.Registro(paciente, "Password123!", "Password123!");
 
             // Assert
-            var viewResult = Assert.IsType<ViewResult>(resultado);
-            Assert.Contains("Error de prueba", _controller.ViewBag.Error);
+            Assert.IsType<ViewResult>(resultado);
+            Assert.Contains("Error de prueba", _controller.ViewBag.Error.ToString());
         }
 
         #endregion
@@ -116,11 +146,13 @@ namespace MedCitas.Tests.Controllers
             {
                 Id = Guid.NewGuid(),
                 NombreCompleto = "Test User",
-                CorreoElectronico = "test@example.com"
+                CorreoElectronico = "test@example.com",
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword("Password123!"),
+                EstaVerificado = true
             };
 
-            _pacienteServiceMock
-                .Setup(s => s.LoginAsync("test@example.com", "Password123!"))
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync("test@example.com"))
                 .ReturnsAsync(paciente);
 
             // Act
@@ -136,15 +168,15 @@ namespace MedCitas.Tests.Controllers
         public async Task LoginPost_ConCredencialesInvalidas_DeberiaRetornarViewConError()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.LoginAsync(It.IsAny<string>(), It.IsAny<string>()))
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync(It.IsAny<string>()))
                 .ReturnsAsync((Paciente?)null);
 
             // Act
             var resultado = await _controller.Login("test@example.com", "WrongPass");
 
             // Assert
-            var viewResult = Assert.IsType<ViewResult>(resultado);
+            Assert.IsType<ViewResult>(resultado);
             Assert.Equal("Credenciales incorrectas.", _controller.ViewBag.Error);
         }
 
@@ -170,8 +202,21 @@ namespace MedCitas.Tests.Controllers
         public async Task VerificarOTPPost_ConOTPValido_DeberiaRedirigirALogin()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.VerificarOTPAsync("test@example.com", "123456"))
+            var paciente = new Paciente
+            {
+                CorreoElectronico = "test@example.com",
+                CodigoOTP = "123456",
+                OTPExpiracion = DateTime.UtcNow.AddMinutes(15),
+                IntentosOTPFallidos = 0,
+                EstaVerificado = false
+            };
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync("test@example.com"))
+                .ReturnsAsync(paciente);
+
+            _pacienteRepositoryMock
+                .Setup(r => r.VerificarOTPAsync("test@example.com", "123456"))
                 .ReturnsAsync(true);
 
             // Act
@@ -186,16 +231,33 @@ namespace MedCitas.Tests.Controllers
         public async Task VerificarOTPPost_ConOTPInvalido_DeberiaRetornarViewConError()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.VerificarOTPAsync("test@example.com", "000000"))
+            var paciente = new Paciente
+            {
+                CorreoElectronico = "test@example.com",
+                CodigoOTP = "123456",
+                OTPExpiracion = DateTime.UtcNow.AddMinutes(15),
+                IntentosOTPFallidos = 0,
+                EstaVerificado = false
+            };
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync("test@example.com"))
+                .ReturnsAsync(paciente);
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ActualizarOTPAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+
+            _pacienteRepositoryMock
+                .Setup(r => r.VerificarOTPAsync("test@example.com", "000000"))
                 .ReturnsAsync(false);
 
             // Act
             var resultado = await _controller.VerificarOTP("test@example.com", "000000");
 
             // Assert
-            var viewResult = Assert.IsType<ViewResult>(resultado);
-            Assert.Contains("OTP inválido", _controller.ViewBag.Error);
+            Assert.IsType<ViewResult>(resultado);
+            Assert.Contains("OTP inválido", _controller.ViewBag.Error.ToString());
         }
 
         #endregion
@@ -206,8 +268,23 @@ namespace MedCitas.Tests.Controllers
         public async Task ReenviarOTP_Exitoso_DeberiaRetornarViewConMensaje()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.ReenviarOTPAsync("test@example.com"))
+            var paciente = new Paciente
+            {
+                CorreoElectronico = "test@example.com",
+                NombreCompleto = "Test User",
+                EstaVerificado = false
+            };
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync("test@example.com"))
+                .ReturnsAsync(paciente);
+
+            _pacienteRepositoryMock
+                .Setup(r => r.ActualizarOTPAsync(It.IsAny<Paciente>()))
+                .Returns(Task.CompletedTask);
+
+            _emailServiceMock
+                .Setup(e => e.EnviarOTPAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .Returns(Task.CompletedTask);
 
             // Act
@@ -216,23 +293,23 @@ namespace MedCitas.Tests.Controllers
             // Assert
             var viewResult = Assert.IsType<ViewResult>(resultado);
             Assert.Equal("VerificarOTP", viewResult.ViewName);
-            Assert.Contains("reenviado", _controller.ViewBag.Mensaje);
+            Assert.Contains("reenviado", _controller.ViewBag.Mensaje.ToString());
         }
 
         [Fact]
         public async Task ReenviarOTP_ConExcepcion_DeberiaRetornarViewConError()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.ReenviarOTPAsync(It.IsAny<string>()))
+            _pacienteRepositoryMock
+                .Setup(r => r.ObtenerPorCorreoAsync(It.IsAny<string>()))
                 .ThrowsAsync(new Exception("Error al reenviar"));
 
             // Act
             var resultado = await _controller.ReenviarOTP("test@example.com");
 
             // Assert
-            var viewResult = Assert.IsType<ViewResult>(resultado);
-            Assert.Contains("Error al reenviar", _controller.ViewBag.Error);
+            Assert.IsType<ViewResult>(resultado);
+            Assert.Contains("Error al reenviar", _controller.ViewBag.Error.ToString());
         }
 
         #endregion
@@ -243,32 +320,32 @@ namespace MedCitas.Tests.Controllers
         public async Task VerificarCuenta_ConTokenValido_DeberiaRetornarViewConExito()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.ActivarCuentaAsync("token-valido"))
+            _pacienteRepositoryMock
+                .Setup(r => r.ActivarCuentaAsync("token-valido"))
                 .ReturnsAsync(true);
 
             // Act
             var resultado = await _controller.VerificarCuenta("token-valido");
 
             // Assert
-            var viewResult = Assert.IsType<ViewResult>(resultado);
-            Assert.Contains("activada correctamente", _controller.ViewBag.Resultado);
+            Assert.IsType<ViewResult>(resultado);
+            Assert.Contains("activada correctamente", _controller.ViewBag.Resultado.ToString());
         }
 
         [Fact]
         public async Task VerificarCuenta_ConTokenInvalido_DeberiaRetornarViewConError()
         {
             // Arrange
-            _pacienteServiceMock
-                .Setup(s => s.ActivarCuentaAsync("token-invalido"))
+            _pacienteRepositoryMock
+                .Setup(r => r.ActivarCuentaAsync("token-invalido"))
                 .ReturnsAsync(false);
 
             // Act
             var resultado = await _controller.VerificarCuenta("token-invalido");
 
             // Assert
-            var viewResult = Assert.IsType<ViewResult>(resultado);
-            Assert.Contains("inválido", _controller.ViewBag.Resultado);
+            Assert.IsType<ViewResult>(resultado);
+            Assert.Contains("inválido", _controller.ViewBag.Resultado.ToString());
         }
 
         #endregion

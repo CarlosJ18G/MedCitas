@@ -223,45 +223,7 @@ UseSession22 
  
 (:: 
 ):: 
-;:: ¸
-PC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Models\ErrorViewModel.cs
-	namespace 	
-MedCitas
- 
-. 
-Web 
-. 
-Models 
-; 
-public 
-class 
-ErrorViewModel 
-{ 
-public 
-
-string 
-? 
-	RequestId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-
-bool 
-ShowRequestId 
-=>  
-!! "
-string" (
-.( )
-IsNullOrEmpty) 6
-(6 7
-	RequestId7 @
-)@ A
-;A B
-} ·'
+;:: ·'
 [C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Pages\Cuenta\VerificarOTP.cshtml.cs
 	namespace 	
 MedCitas
@@ -554,7 +516,45 @@ verificado,, 
 ;OO 
 }PP 	
 }QQ 
-}RR À[
+}RR ¸
+PC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Models\ErrorViewModel.cs
+	namespace 	
+MedCitas
+ 
+. 
+Web 
+. 
+Models 
+; 
+public 
+class 
+ErrorViewModel 
+{ 
+public 
+
+string 
+? 
+	RequestId 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public 
+
+bool 
+ShowRequestId 
+=>  
+!! "
+string" (
+.( )
+IsNullOrEmpty) 6
+(6 7
+	RequestId7 @
+)@ A
+;A B
+} À[
 YC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Web\Controllers\PacienteController.cs
 	namespace		 	
 MedCitas		

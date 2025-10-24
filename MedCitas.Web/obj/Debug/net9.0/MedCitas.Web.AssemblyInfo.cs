@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("c21fa7d0-fe89-486b-a1c2-5f4086da538f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedCitas.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a052427f4030342df250b9ba7d259e4fc2d3176d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+348a2a78c3d7f93fe584f2f065915e87991d52f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedCitas.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedCitas.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,7 +8,7 @@ using Xunit;
 
 namespace MedCitas.Tests.Repositories
 {
-    public class EfPacienteRepositorioTests : IDisposable
+    public class EfPacienteRepositorioTests :IDisposable
     {
         private readonly MedCitasDbContext _context;
         private readonly EfPacienteRepositorio _repositorio;
@@ -28,6 +28,7 @@ namespace MedCitas.Tests.Repositories
         {
             _context.Database.EnsureDeleted();
             _context.Dispose();
+            GC.SuppressFinalize(this);
         }
 
         #region ObtenerPorDocumentoAsync

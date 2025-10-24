@@ -107,24 +107,7 @@ ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRe
 
  
 
-) 1¶
-TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
-
-		 "
-
- *
-
-2 >
-
-G X
-
- 
-
-# )
-
-2 ;
-
-D RÛ
+) 1Û
 MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs
 
 
@@ -175,4 +158,21 @@ MC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Entities\Paciente.cs
 
 UU +
 UU3 ;WW 
-UUD JXX  &
+UUD JXX  &¶
+TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
+
+		 "
+
+ *
+
+2 >
+
+G X
+
+ 
+
+# )
+
+2 ;
+
+D R

@@ -919,89 +919,7 @@ OtpService
 üü 	
 }
 †† 
-}°° »
-ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
-	namespace 	
-MedCitas
- 
-. 
-Core 
-. 
-
-Interfaces "
-{		 
-public
-
- 
-
-	interface
-
- 
-IPacienteRepository
-
- (
-{ 
-Task 
-< 
-Paciente 
-? 
-> $
-ObtenerPorDocumentoAsync 0
-(0 1
-string1 7
-numeroDocumento8 G
-)G H
-;H I
-Task 
-< 
-Paciente 
-? 
-> !
-ObtenerPorCorreoAsync -
-(- .
-string. 4
-correoElectronico5 F
-)F G
-;G H
-Task 
-RegistrarAsync 
-( 
-Paciente $
-paciente% -
-)- .
-;. /
-Task 
-< 
-bool 
-> 
-ActivarCuentaAsync %
-(% &
-string& ,
-tokenVerificacion- >
-)> ?
-;? @
-Task 
-< 
-bool 
-> 
-VerificarOTPAsync $
-($ %
-string% +
-correo, 2
-,2 3
-string4 :
-	codigoOTP; D
-)D E
-;E F
-Task 
-ActualizarOTPAsync 
-(  
-Paciente  (
-paciente) 1
-)1 2
-;2 3
-} 
-} Û
+}°° Û
 OC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Services\OtpService.cs
 	namespace 	
 MedCitas
@@ -1136,7 +1054,89 @@ expiracion" ,
 ;""0 1
 }## 	
 }$$ 
-}%% ù
+}%% »
+ZC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IPacienteRepository.cs
+	namespace 	
+MedCitas
+ 
+. 
+Core 
+. 
+
+Interfaces "
+{		 
+public
+
+ 
+
+	interface
+
+ 
+IPacienteRepository
+
+ (
+{ 
+Task 
+< 
+Paciente 
+? 
+> $
+ObtenerPorDocumentoAsync 0
+(0 1
+string1 7
+numeroDocumento8 G
+)G H
+;H I
+Task 
+< 
+Paciente 
+? 
+> !
+ObtenerPorCorreoAsync -
+(- .
+string. 4
+correoElectronico5 F
+)F G
+;G H
+Task 
+RegistrarAsync 
+( 
+Paciente $
+paciente% -
+)- .
+;. /
+Task 
+< 
+bool 
+> 
+ActivarCuentaAsync %
+(% &
+string& ,
+tokenVerificacion- >
+)> ?
+;? @
+Task 
+< 
+bool 
+> 
+VerificarOTPAsync $
+($ %
+string% +
+correo, 2
+,2 3
+string4 :
+	codigoOTP; D
+)D E
+;E F
+Task 
+ActualizarOTPAsync 
+(  
+Paciente  (
+paciente) 1
+)1 2
+;2 3
+} 
+} ù
 TC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Core\Interfaces\IEmailService.cs
 	namespace 	
 MedCitas

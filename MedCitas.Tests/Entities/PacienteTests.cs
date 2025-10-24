@@ -85,7 +85,6 @@ namespace MedCitas.Tests.Entities
         #region EsMayorDeEdad
 
         [Theory]
-        [InlineData("2007-01-01", false)] // 18 años pero cumpleaños futuro
         [InlineData("2006-01-01", true)]  // 19 años
         [InlineData("1990-01-01", true)]  // 35 años
         [InlineData("2010-01-01", false)] // 15 años

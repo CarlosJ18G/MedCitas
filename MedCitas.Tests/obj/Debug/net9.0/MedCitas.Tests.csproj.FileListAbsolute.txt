@@ -500,3 +500,4 @@ C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\refin
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\MedCitas.Tests.pdb
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\MedCitas.Tests.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\obj\Debug\net9.0\ref\MedCitas.Tests.dll
+C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedCitas.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a052427f4030342df250b9ba7d259e4fc2d3176d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+348a2a78c3d7f93fe584f2f065915e87991d52f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedCitas.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedCitas.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -134,5 +134,125 @@ namespace MedCitas.Tests.Services
             // Assert
             Assert.Null(exception);
         }
+
+        #region EnviarOTPAsync
+
+        [Fact]
+        public async Task EnviarOTPAsync_DeberiaCompletarseSinError()
+        {
+            // Arrange
+            var correo = "test@example.com";
+            var codigoOTP = "123456";
+            var nombreCompleto = "Carlos Jimenez";
+
+            // Act
+            var exception = await Record.ExceptionAsync(async () =>
+                await _emailService.EnviarOTPAsync(correo, codigoOTP, nombreCompleto));
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task EnviarOTPAsync_DeberiaRetornarTaskCompletado()
+        {
+            // Arrange
+            var correo = "usuario@example.com";
+            var codigoOTP = "654321";
+            var nombreCompleto = "Maria Lopez";
+
+            // Act
+            var task = _emailService.EnviarOTPAsync(correo, codigoOTP, nombreCompleto);
+            await task;
+
+            // Assert
+            Assert.True(task.IsCompletedSuccessfully);
+        }
+
+        [Theory]
+        [InlineData("carlos@example.com", "123456", "Carlos Jimenez")]
+        [InlineData("maria@gmail.com", "654321", "Maria Lopez")]
+        [InlineData("test@hotmail.com", "999888", "Test Usuario")]
+        public async Task EnviarOTPAsync_ConDiferentesDatos_DeberiaCompletarse(
+            string correo,
+            string codigoOTP,
+            string nombreCompleto)
+        {
+            // Act
+            var exception = await Record.ExceptionAsync(async () =>
+                await _emailService.EnviarOTPAsync(correo, codigoOTP, nombreCompleto));
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task EnviarOTPAsync_ConCorreoVacio_DeberiaCompletarse()
+        {
+            // Arrange
+            var correo = "";
+            var codigoOTP = "123456";
+            var nombreCompleto = "Test User";
+
+            // Act
+            var exception = await Record.ExceptionAsync(async () =>
+                await _emailService.EnviarOTPAsync(correo, codigoOTP, nombreCompleto));
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task EnviarOTPAsync_ConOTPVacio_DeberiaCompletarse()
+        {
+            // Arrange
+            var correo = "test@example.com";
+            var codigoOTP = "";
+            var nombreCompleto = "Test User";
+
+            // Act
+            var exception = await Record.ExceptionAsync(async () =>
+                await _emailService.EnviarOTPAsync(correo, codigoOTP, nombreCompleto));
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task EnviarOTPAsync_ConNombreVacio_DeberiaCompletarse()
+        {
+            // Arrange
+            var correo = "test@example.com";
+            var codigoOTP = "123456";
+            var nombreCompleto = "";
+
+            // Act
+            var exception = await Record.ExceptionAsync(async () =>
+                await _emailService.EnviarOTPAsync(correo, codigoOTP, nombreCompleto));
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task EnviarOTPAsync_LlamadasMultiples_DeberiaCompletarseTodasSinError()
+        {
+            // Arrange
+            var envios = new[]
+            {
+                ("usuario1@example.com", "123456", "Usuario Uno"),
+                ("usuario2@example.com", "654321", "Usuario Dos"),
+                ("usuario3@example.com", "999888", "Usuario Tres")
+            };
+
+            // Act & Assert
+            foreach (var (correo, otp, nombre) in envios)
+            {
+                var exception = await Record.ExceptionAsync(async () =>
+                    await _emailService.EnviarOTPAsync(correo, otp, nombre));
+                Assert.Null(exception);
+            }
+        }
+        #endregion
     }
 }

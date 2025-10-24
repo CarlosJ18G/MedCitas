@@ -18,9 +18,20 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+
+// Leer la contraseña desde User Secrets
+var dbPassword = builder.Configuration["ConnectionStrings:DbPassword"];
+var baseConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Construir la cadena de conexión completa
+var connectionString = string.IsNullOrEmpty(dbPassword)
+    ? baseConnectionString
+    : $"{baseConnectionString};Password={dbPassword}";
+
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", false);
+// Configurar DbContext con la cadena de conexión completa
 builder.Services.AddDbContext<MedCitasDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(connectionString));
 
 
 // ---------------------------------------------------------
