@@ -362,7 +362,7 @@ obj/
 
 ## 👥 Equipo
 
-Desarrollado por estudiantes de **Ingeniería de Software** - Universidad IUE
+Desarrollado por estudiantes de **Ingeniería Informatica** del curso **Calidad de software** - Universidad IUE
 
 - **Carlos Jiménez** - [@CarlosJ18G](https://github.com/CarlosJ18G)
 - **Juan Pablo Ríos Ortiz** - [@elrios893](https://github.com/elrios893)
