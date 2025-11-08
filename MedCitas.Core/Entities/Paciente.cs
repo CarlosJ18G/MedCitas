@@ -50,8 +50,10 @@ namespace MedCitas.Core.Entities
         public string? TokenVerificacion { get; set; }
         public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
 
+        // ✅ NUEVAS PROPIEDADES PARA RECUPERACIÓN DE CONTRASEÑA
+        public string? TokenRecuperacion { get; set; }
+        public DateTime? TokenRecuperacionExpiracion { get; set; }
 
-        
         public string ToStringPaciente()
         {
             
@@ -88,6 +90,14 @@ namespace MedCitas.Core.Entities
             CorreoElectronico = correo;
         }
 
+        // MÉTODO PARA VALIDAR TOKEN DE RECUPERACIÓN
+        public bool EsTokenRecuperacionValido()
+        {
+            if (string.IsNullOrEmpty(TokenRecuperacion) || !TokenRecuperacionExpiracion.HasValue)
+                return false;
+
+            return DateTime.UtcNow <= TokenRecuperacionExpiracion.Value;
+        }
     }
 
 }

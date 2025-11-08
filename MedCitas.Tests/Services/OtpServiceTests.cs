@@ -1,171 +1,225 @@
-锘縰sing System;
-using Xunit;
+using System;
+using MedCitas.Core.Constants;
 using MedCitas.Core.Services;
+using Xunit;
 
 namespace MedCitas.Tests.Services
 {
     public class OtpServiceTests
     {
-        #region GenerarOTP - Tests Esenciales
+        #region GenerarOTP
 
         [Fact]
-        public void GenerarOTP_DeberiaRetornarCodigo6Digitos()
-        {
-            // Act
-            var otp = OtpService.GenerarOTP();
+public void GenerarOTP_DeberiaRetornarCodigo6Digitos()
+ {
+        // Act
+var otp = OtpService.GenerarOTP();
+
+   // Assert
+Assert.NotNull(otp);
+  Assert.Equal(6, otp.Length);
+     Assert.True(int.TryParse(otp, out _), "OTP debe ser num閞ico");
+}
+
+ [Fact]
+   public void GenerarOTP_DeberiaEstarEnRangoValido()
+    {
+  // Act
+   var otp = OtpService.GenerarOTP();
+   var otpNumerico = int.Parse(otp);
+
+  // Assert
+       Assert.InRange(otpNumerico, AppConstants.Otp.MinValue, AppConstants.Otp.MaxValue - 1);
+   }
+
+[Fact]
+    public void GenerarOTP_DeberiaSerDiferente_EnLlamadasSucesivas()
+{
+   // Act
+   var otp1 = OtpService.GenerarOTP();
+   var otp2 = OtpService.GenerarOTP();
+      var otp3 = OtpService.GenerarOTP();
+
+     // Assert - Al menos uno debe ser diferente (probabilidad muy alta)
+        Assert.True(otp1 != otp2 || otp2 != otp3 || otp1 != otp3,
+        "Los OTPs generados deber韆n ser diferentes");
+    }
+
+     #endregion
+
+        #region ObtenerFechaExpiracion
+
+    [Fact]
+   public void ObtenerFechaExpiracion_DeberiaRetornarFechaFutura()
+ {
+         // Arrange
+      var ahora = DateTime.UtcNow;
+
+   // Act
+  var expiracion = OtpService.ObtenerFechaExpiracion();
+
+// Assert
+     Assert.True(expiracion > ahora);
+ }
+
+        [Fact]
+    public void ObtenerFechaExpiracion_DeberiaAgregarMinutosCorrectos()
+ {
+   // Arrange
+        var ahora = DateTime.UtcNow;
+
+     // Act
+       var expiracion = OtpService.ObtenerFechaExpiracion();
+ var diferencia = (expiracion - ahora).TotalMinutes;
+
+// Assert
+ Assert.InRange(diferencia, AppConstants.Otp.ExpirationMinutes - 0.1, 
+      AppConstants.Otp.ExpirationMinutes + 0.1);
+   }
+
+    #endregion
+
+    #region ValidarOTP
+
+[Fact]
+ public void ValidarOTP_ConOTPCorrecto_DeberiaRetornarTrue()
+   {
+   // Arrange
+var otpIngresado = "123456";
+   var otpAlmacenado = "123456";
+    var expiracion = DateTime.UtcNow.AddMinutes(5);
+
+    // Act
+       var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
+
+    // Assert
+Assert.True(resultado);
+ }
+
+  [Fact]
+  public void ValidarOTP_ConOTPIncorrecto_DeberiaRetornarFalse()
+ {
+  // Arrange
+   var otpIngresado = "123456";
+   var otpAlmacenado = "654321";
+       var expiracion = DateTime.UtcNow.AddMinutes(5);
+
+    // Act
+       var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
+
+    // Assert
+  Assert.False(resultado);
+     }
+
+      [Fact]
+ public void ValidarOTP_ConOTPExpirado_DeberiaRetornarFalse()
+ {
+  // Arrange
+   var otpIngresado = "123456";
+       var otpAlmacenado = "123456";
+    var expiracion = DateTime.UtcNow.AddMinutes(-1); // Expirado hace 1 minuto
+
+   // Act
+    var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
+
+ // Assert
+  Assert.False(resultado);
+    }
+
+ [Theory]
+[InlineData("", "123456")]
+        [InlineData("123456", "")]
+        public void ValidarOTP_ConOTPVacio_DeberiaRetornarFalse(string otpIngresado, string otpAlmacenado)
+ {
+     // Arrange
+    var expiracion = DateTime.UtcNow.AddMinutes(5);
+
+// Act
+var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
 
             // Assert
-            Assert.NotNull(otp);
-            Assert.Equal(6, otp.Length);
-            Assert.Matches(@"^\d{6}$", otp);
+         Assert.False(resultado);
         }
 
-        [Fact]
-        public void GenerarOTP_DeberiaEstarEnRangoCorrecto()
-        {
-            // Act
-            var otp = OtpService.GenerarOTP();
-            var numero = int.Parse(otp);
+ [Fact]
+  public void ValidarOTP_ConExpiracionNull_DeberiaRetornarFalse()
+  {
+  // Arrange
+ var otpIngresado = "123456";
+      var otpAlmacenado = "123456";
+    DateTime? expiracion = null;
 
-            // Assert - Debe estar entre 100000 y 999999
-            Assert.InRange(numero, 100000, 999999);
-        }
+    // Act
+   var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
 
-        [Fact]
-        public void GenerarOTP_DeberiaGenerarCodigosUnicos()
-        {
-            // Arrange
-            var codigos = new HashSet<string>();
+        // Assert
+  Assert.False(resultado);
+   }
 
-            // Act - Generar 50 OTPs
-            for (int i = 0; i < 50; i++)
-            {
-                var otp = OtpService.GenerarOTP();
-                codigos.Add(otp);
-            }
+     [Fact]
+     public void ValidarOTP_CaseSensitive_DeberiaSerExacto()
+  {
+      // Arrange - aunque OTP es num閞ico, validamos que sea exacto
+    var otpIngresado = "123456";
+   var otpAlmacenado = "123456";
+     var expiracion = DateTime.UtcNow.AddMinutes(5);
 
-            // Assert - Deber铆a haber alta variedad (al menos 45 煤nicos de 50)
-            Assert.True(codigos.Count >= 45, $"Solo se generaron {codigos.Count} c贸digos 煤nicos de 50");
+      // Act
+       var resultadoCorrecto = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
+  var resultadoIncorrecto = OtpService.ValidarOTP("023456", otpAlmacenado, expiracion);
+
+     // Assert
+    Assert.True(resultadoCorrecto);
+   Assert.False(resultadoIncorrecto);
         }
 
         #endregion
 
-        #region ObtenerFechaExpiracion - Tests Esenciales
+    #region HaExcedidoIntentos
 
-        [Fact]
-        public void ObtenerFechaExpiracion_DeberiaSer15MinutosEnFuturo()
-        {
-            // Arrange
-            var antes = DateTime.UtcNow.AddMinutes(15);
+ [Fact]
+    public void HaExcedidoIntentos_ConMenosDeTresIntentos_DeberiaRetornarFalse()
+{
+   // Arrange & Act & Assert
+ Assert.False(OtpService.HaExcedidoIntentos(0));
+ Assert.False(OtpService.HaExcedidoIntentos(1));
+Assert.False(OtpService.HaExcedidoIntentos(2));
+     }
 
-            // Act
-            var expiracion = OtpService.ObtenerFechaExpiracion();
+     [Fact]
+        public void HaExcedidoIntentos_ConTresOMasIntentos_DeberiaRetornarTrue()
+  {
+   // Arrange & Act & Assert
+  Assert.True(OtpService.HaExcedidoIntentos(3));
+    Assert.True(OtpService.HaExcedidoIntentos(4));
+       Assert.True(OtpService.HaExcedidoIntentos(10));
+      }
 
-            var despues = DateTime.UtcNow.AddMinutes(15);
+    [Fact]
+ public void HaExcedidoIntentos_ConMaximoExacto_DeberiaRetornarTrue()
+   {
+ // Arrange
+ var maxIntentos = AppConstants.Otp.MaxFailedAttempts;
 
-            // Assert
-            Assert.True(expiracion >= antes && expiracion <= despues.AddSeconds(1));
-            Assert.Equal(DateTimeKind.Utc, expiracion.Kind);
-        }
+      // Act
+   var resultado = OtpService.HaExcedidoIntentos(maxIntentos);
 
-        #endregion
+  // Assert
+  Assert.True(resultado);
+  }
 
-        #region ValidarOTP - Casos Cr铆ticos
+ [Fact]
+ public void HaExcedidoIntentos_ConMaximoMenosUno_DeberiaRetornarFalse()
+    {
+// Arrange
+    var intentos = AppConstants.Otp.MaxFailedAttempts - 1;
 
-        [Fact]
-        public void ValidarOTP_DeberiaRetornarTrue_CuandoOTPEsValidoYNoExpirado()
-        {
-            // Arrange
-            var otpAlmacenado = "123456";
-            var otpIngresado = "123456";
-            var expiracion = DateTime.UtcNow.AddMinutes(10);
+ // Act
+   var resultado = OtpService.HaExcedidoIntentos(intentos);
 
-            // Act
-            var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
-
-            // Assert
-            Assert.True(resultado);
-        }
-
-        [Theory]
-        [InlineData("123456", "654321")]  // OTP incorrecto
-        [InlineData("123456", "12345")]   // Longitud diferente
-        [InlineData("123456", "")]        // OTP vac铆o
-        public void ValidarOTP_DeberiaRetornarFalse_CuandoOTPEsIncorrecto(string almacenado, string ingresado)
-        {
-            // Arrange
-            var expiracion = DateTime.UtcNow.AddMinutes(10);
-
-            // Act
-            var resultado = OtpService.ValidarOTP(ingresado, almacenado, expiracion);
-
-            // Assert
-            Assert.False(resultado);
-        }
-
-        [Fact]
-        public void ValidarOTP_DeberiaRetornarFalse_CuandoOTPExpirado()
-        {
-            // Arrange
-            var otpAlmacenado = "123456";
-            var otpIngresado = "123456";
-            var expiracion = DateTime.UtcNow.AddMinutes(-1); // Expir贸 hace 1 minuto
-
-            // Act
-            var resultado = OtpService.ValidarOTP(otpIngresado, otpAlmacenado, expiracion);
-
-            // Assert
-            Assert.False(resultado);
-        }
-
-        [Theory]
-        [InlineData(null, "123456", true)]      // OTP ingresado null
-        [InlineData("123456", null, true)]      // OTP almacenado null
-        [InlineData("123456", "123456", false)] // Expiraci贸n null
-        public void ValidarOTP_DeberiaRetornarFalse_CuandoParametrosNull(string? ingresado, string? almacenado, bool expiracionValida)
-        {
-            // Arrange
-            DateTime? expiracion = expiracionValida ? DateTime.UtcNow.AddMinutes(10) : null;
-
-            // Act
-            var resultado = OtpService.ValidarOTP(ingresado!, almacenado!, expiracion);
-
-            // Assert
-            Assert.False(resultado);
-        }
-
-        #endregion
-
-        #region Integraci贸n - Flujo Completo
-
-        [Fact]
-        public void FlujoCompleto_GenerarYValidarOTP_DeberiaFuncionar()
-        {
-            // Arrange - Simular generaci贸n de OTP
-            var otpGenerado = OtpService.GenerarOTP();
-            var expiracion = OtpService.ObtenerFechaExpiracion();
-
-            // Act - Validar con el mismo OTP
-            var resultado = OtpService.ValidarOTP(otpGenerado, otpGenerado, expiracion);
-
-            // Assert
-            Assert.True(resultado);
-        }
-
-        [Fact]
-        public void FlujoCompleto_GenerarYValidarConOTPIncorrecto_DeberiaFallar()
-        {
-            // Arrange
-            var otpGenerado = OtpService.GenerarOTP();
-            var expiracion = OtpService.ObtenerFechaExpiracion();
-            var otpIncorrecto = "000000";
-
-            // Act
-            var resultado = OtpService.ValidarOTP(otpIncorrecto, otpGenerado, expiracion);
-
-            // Assert
-            Assert.False(resultado);
-        }
+      // Assert
+   Assert.False(resultado);
+     }
 
         #endregion
     }

@@ -48,6 +48,11 @@ namespace MedCitas.Infrastructure.DataDb
                     .HasColumnType("timestamp with time zone");
 
                 entity.Property(e => e.IntentosOTPFallidos).HasDefaultValue(0);
+
+                // ✅ CONFIGURACIÓN PARA RECUPERACIÓN DE CONTRASEÑA
+                entity.Property(e => e.TokenRecuperacion).HasMaxLength(64);
+                entity.Property(e => e.TokenRecuperacionExpiracion)
+                    .HasColumnType("timestamp with time zone");
             });
 
             base.OnModelCreating(modelBuilder);

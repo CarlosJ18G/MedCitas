@@ -10,5 +10,6 @@ namespace MedCitas.Core.Interfaces
     {
         Task EnviarCorreoVerificacionAsync(string destinatario, string tokenVerificacion);
         Task EnviarOTPAsync(string correo, string codigoOTP, string nombreCompleto);
+        Task EnviarCorreoRecuperacionAsync(string correo, string nombreCompleto, string urlRecuperacion);
     }
 }

@@ -12,6 +12,13 @@
                         <p class="text-muted">Accede a tu cuenta</p>
                     </div>
 
+                    @if (!string.IsNullOrEmpty(ViewBag.Mensaje))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @ViewBag.Mensaje
+                        </div>
+                    }
+
                     @if (ViewBag.Error != null)
                     {
                         <div class="alert alert-danger" role="alert">
@@ -49,8 +56,14 @@
 
                     <div class="text-center mt-3">
                         <small class="text-muted">
+                            ¿Olvidaste tu contraseña?
+                            <a asp-action="RecuperarPassword" asp-controller="Paciente" class="text-decoration-none fw-bold">Recupérala aquí</a>
+                        </small>
+                    </div>
+                    <div class="text-center mt-3">
+                        <small class="text-muted">
                             ¿No tienes cuenta?
-                            <a asp-action="Registro" class="text-decoration-none">Regístrate aquí</a>
+                            <a asp-action="Registro" asp-controller="Paciente" class="text-decoration-none">Regístrate aquí</a>
                         </small>
                     </div>
                 </div>

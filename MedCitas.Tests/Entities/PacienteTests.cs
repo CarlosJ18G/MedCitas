@@ -234,5 +234,206 @@ namespace MedCitas.Tests.Entities
         }
 
         #endregion
+
+        #region ToStringPaciente
+
+        [Fact]
+        public void ToStringPaciente_DeberiaRetornarInformacionCompleta()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Juan Perez",
+                TipoDocumento = "CC",
+                NumeroDocumento = "12345678",
+                FechaNacimiento = new DateTime(1990, 1, 1),
+                Sexo = "M",
+                Telefono = "3001234567",
+                CorreoElectronico = "juan@test.com",
+                Eps = "SURA",
+                TipoSangre = "O+",
+                EstaVerificado = true,
+                FechaRegistro = new DateTime(2024, 1, 1)
+            };
+
+            // Act
+            var result = paciente.ToStringPaciente();
+
+            // Assert
+            Assert.Contains("Juan Perez", result);
+            Assert.Contains("CC", result);
+            Assert.Contains("12345678", result);
+            Assert.Contains("3001234567", result);
+            Assert.Contains("juan@test.com", result);
+            Assert.Contains("SURA", result);
+            Assert.Contains("O+", result);
+            Assert.Contains("True", result);
+        }
+
+        #endregion
+
+        #region ObtenerResumenContacto
+
+        [Fact]
+        public void ObtenerResumenContacto_DeberiaRetornarFormatoEsperado()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                NombreCompleto = "Maria Garcia",
+                Telefono = "3009876543",
+                CorreoElectronico = "maria@test.com"
+            };
+
+            // Act
+            var resumen = paciente.ObtenerResumenContacto();
+
+            // Assert
+            Assert.Contains("Maria Garcia", resumen);
+            Assert.Contains("3009876543", resumen);
+            Assert.Contains("maria@test.com", resumen);
+            Assert.Contains("Tel:", resumen);
+            Assert.Contains("Email:", resumen);
+        }
+
+        #endregion
+
+        #region ActualizarDatosContacto
+
+        [Fact]
+        public void ActualizarDatosContacto_DeberiaActualizarTelefonoYCorreo()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                Telefono = "3001111111",
+                CorreoElectronico = "old@test.com"
+            };
+
+            // Act
+            paciente.ActualizarDatosContacto("3002222222", "new@test.com");
+
+            // Assert
+            Assert.Equal("3002222222", paciente.Telefono);
+            Assert.Equal("new@test.com", paciente.CorreoElectronico);
+        }
+
+        #endregion
+
+        #region EsTokenRecuperacionValido
+
+        [Fact]
+        public void EsTokenRecuperacionValido_ConTokenNulo_DeberiaRetornarFalse()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                TokenRecuperacion = null,
+                TokenRecuperacionExpiracion = DateTime.UtcNow.AddMinutes(15)
+            };
+
+            // Act
+            var result = paciente.EsTokenRecuperacionValido();
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void EsTokenRecuperacionValido_ConTokenVacio_DeberiaRetornarFalse()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                TokenRecuperacion = string.Empty,
+                TokenRecuperacionExpiracion = DateTime.UtcNow.AddMinutes(15)
+            };
+
+            // Act
+            var result = paciente.EsTokenRecuperacionValido();
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void EsTokenRecuperacionValido_ConExpiracionNula_DeberiaRetornarFalse()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                TokenRecuperacion = "token123",
+                TokenRecuperacionExpiracion = null
+            };
+
+            // Act
+            var result = paciente.EsTokenRecuperacionValido();
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void EsTokenRecuperacionValido_ConTokenExpirado_DeberiaRetornarFalse()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                TokenRecuperacion = "token123",
+                TokenRecuperacionExpiracion = DateTime.UtcNow.AddMinutes(-1)
+            };
+
+            // Act
+            var result = paciente.EsTokenRecuperacionValido();
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void EsTokenRecuperacionValido_ConTokenValido_DeberiaRetornarTrue()
+        {
+            // Arrange
+            var paciente = new Paciente
+            {
+                TokenRecuperacion = "token123",
+                TokenRecuperacionExpiracion = DateTime.UtcNow.AddMinutes(15)
+            };
+
+            // Act
+            var result = paciente.EsTokenRecuperacionValido();
+
+            // Assert
+            Assert.True(result);
+        }
+
+        #endregion
+
+        #region PropiedadesPorDefecto
+
+        [Fact]
+        public void Constructor_DeberiaInicializarPropiedadesPorDefecto()
+        {
+            // Act
+            var paciente = new Paciente();
+
+            // Assert
+            Assert.NotEqual(Guid.Empty, paciente.Id);
+            Assert.Equal(0, paciente.IntentosOTPFallidos);
+            Assert.False(paciente.EstaVerificado);
+            Assert.True(paciente.FechaRegistro <= DateTime.UtcNow);
+            Assert.True(paciente.FechaRegistro > DateTime.UtcNow.AddSeconds(-5));
+            Assert.Empty(paciente.NombreCompleto);
+            Assert.Empty(paciente.TipoDocumento);
+            Assert.Empty(paciente.NumeroDocumento);
+            Assert.Empty(paciente.Sexo);
+            Assert.Empty(paciente.Telefono);
+            Assert.Empty(paciente.CorreoElectronico);
+            Assert.Empty(paciente.PasswordHash);
+            Assert.Empty(paciente.Eps);
+            Assert.Empty(paciente.TipoSangre);
+        }
+
+        #endregion
     }
 }

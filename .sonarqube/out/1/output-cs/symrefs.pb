@@ -1,49 +1,102 @@
-§
-_C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Services\FakeEmailService.cs
- !! 1( 82
-   '' ,, (
-3 :    // 
-: @ 
+¬	
+VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Services\EmailService.cs
+ ! -$ 0Z
+/ 6  
+	 >> DD `` 	dd jj x
+, 3	  H OAA CC JJ" )JJ4 ;NN( /NN: AUU #UU/ 6
+2 8 
+W ] 
 
- 1
-9 E; G
-N _V g
-   , 3
+"" 7
+""? K)) '
+""T e%%= N
+$$ ))) /
+%%	 ''3 B
+'' ))1 ;
 
-$$ "
-$$* 0((B H
-$$9 B**@ I
-$$K Y))$ 2
-&& //, 3Ø
-hC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
+,, &
+,,. 411 %
+,,= F//< E
+,,O ]//, :
+.. 11' -
+// 11/ 9
 
- &x
-+ .> A    ""! $&& 44 << BB CC 
-7 9D F
+44 7
+44? E99# )
+44N \770 >
+44e t77@ O
+66 99+ 1
+77 993 =(
+<< +))
+ 11 99 "F
+<<3 ?>>H T\\+ 7``J Vee kk $llE Q
+<<H N>>V \VV 
+<<W aWW	 
+CC	 DDM TEEO V
+JJ
+ ^^ 
+SS \\ ^^ '
+qq 5'' 2
+qq= L
+‡‡, ;
 
-% =
-E TN ]
-4 59 :
-% :,,! 6
-B SZ k
-4 59 :
+ ,// +
 
- ((
-2 : + 3 &
+4 B
+¤¤ %
 
-    2
-  : K""_ p(
-"" ## $$ %% 
-""C D""H I
+K T
+¦¦ &
 
-**  1
-**9 ?,,7 =
-**H Q//& /d
-,, -- // 00 11" *33 88 99 :: ;; 
+¯¯ 577 /
 
-@@ ,
-@@6 >BB! )Ç
-uC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022032706_ConfigurarDateTimeUTC.cs
+¯¯= K
+ÄÄ 
+
+¯¯T c
+ÆÆ- <È
+cC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
+
+ &ª
++ .> A  !! ""
+ '' !.. ?? GG OO PP UU aa bb oo 	pp 
+7 9D F
+
+% =
+E TH W
+. /3 4
+ 344 ,
+; L5 F
+  
+
+ ((
+2 :  !! 
+
+%%  2
+%%: K''\ m(
+'' ((
+ ,, 	-- 
+''@ A''E F
+
+22 .
+226 <44- 3
+22E N::& /d
+44 55 :: ;; <<" *>>
+ CC DD EE FF 
+
+KK ,
+KK6 >MM, 4OO! )
+
+TT% E
+TTM RUUP U
+UU4 5UU9 :
+
+WW :2
+WWD LYY+ 3\\% -^^Y aaa! )
+
+ee 12
+ee; Cgg$ ,jj% -llV ^oo #Â
+pC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251022032706_ConfigurarDateTimeUTC.cs
 
 		 .
 
@@ -51,8 +104,17 @@ uC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 4 D 
 
   $
-6 F ­
-wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
+6 F Ü
+vC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251106235209_AgregarRecuperacionPassword.cs
+
+		 4
+
+  "
+4 D  
+
+  $
+6 F ## ¨
+rC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
 
  0
 
@@ -60,8 +122,8 @@ wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 4 D     )) 33 << 
 
 HH  $F
-HH6 FJJ SS ]] ff pp yy ê
-pC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
+HH6 FJJ SS ]] ff pp yy å
+kC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
 
 		 )
 
@@ -69,8 +131,8 @@ pC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 4 D   
 
 ##  $(
-##6 F%% )) -- „
-mC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
+##6 F%% )) -- ÿ
+hC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
 
 		 &
 
@@ -81,16 +143,16 @@ mC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 ##5 6##: ;
 
 ((  $
-((6 F** ñ
-^C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\DataDb\MedCitasDbContext.cs
+((6 F** ¬
+YC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\DataDb\MedCitasDbContext.cs
  "2 C
 E LU \
 
  (
 
   /
-= I 55! -´
-* 0         !! "" ## $$ %% && )) ,, // 22 
+= I ::! -È
+* 0         !! "" ## $$ %% && )) ,, // 22 55 66 
  # $
   !% &
   !% &
@@ -107,4 +169,6 @@ mC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\2
 ))  !))% &
 ,,  !,,% &
 //  !//% &
-22  !22% &
+22  !22% &
+55  !55% &
+66  !66% &

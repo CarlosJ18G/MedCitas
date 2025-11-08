@@ -1,1 +1,1 @@
-wRaC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\MedCitas.Infrastructure.csproj¢net9.0òCSharp13
+rR\C:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\MedCitas.Infrastructure.csproj¢net9.0òCSharp13

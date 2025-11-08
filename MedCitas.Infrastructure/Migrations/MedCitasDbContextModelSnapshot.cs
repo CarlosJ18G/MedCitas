@@ -91,6 +91,13 @@ namespace MedCitas.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("TokenRecuperacion")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.Property<DateTime?>("TokenRecuperacionExpiracion")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("TokenVerificacion")
                         .HasColumnType("text");
 

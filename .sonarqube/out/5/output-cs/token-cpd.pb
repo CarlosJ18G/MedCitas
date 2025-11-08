@@ -1,564 +1,1350 @@
-è
-_C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Services\FakeEmailService.cs
-	namespace		 	
-MedCitas		
- 
-.		 
-Infrastructure		 !
-.		! "
-Services		" *
-{
-
- 
-public 
-
-class 
-FakeEmailService !
-:" #
-IEmailService$ 1
-{ 
-private 
-const 
-string 
-V 
-=  
-$str! K
-;K L
-private 
-readonly 
-ILogger  
-<  !
-FakeEmailService! 1
->1 2
-_logger3 :
-;: ;
-public 
-FakeEmailService 
-(  
-ILogger  '
-<' (
-FakeEmailService( 8
->8 9
-logger: @
-)@ A
-{ 	
-_logger 
-= 
-logger 
-; 
-} 	
-public 
-Task )
-EnviarCorreoVerificacionAsync 1
-(1 2
-string2 8
-destinatario9 E
-,E F
-stringG M
-tokenVerificacionN _
-)_ `
-{ 	
-var 
-mensaje 
-= 
-new 
-StringBuilder +
-(+ ,
-), -
-. 
-
-AppendLine 
-( 
-V 
-) 
-. 
-
-AppendLine 
-( 
-$" 
-$str :
-{: ;
-destinatario; G
-}G H
-"H I
-)I J
-. 
-
-AppendLine 
-( 
-$" 
-$str U
-{U V
-tokenVerificacionV g
-}g h
-"h i
-)i j
-. 
-
-AppendLine 
-( 
-V 
-) 
-. 
-ToString 
-( 
-) 
-; 
-_logger   
-.   
-
-LogWarning   
-(   
-$str   *
-,  * +
-mensaje  , 3
-)  3 4
-;  4 5
-return!! 
-Task!! 
-.!! 
-CompletedTask!! %
-;!!% &
-}"" 	
-public$$ 
-Task$$ 
-EnviarOTPAsync$$ "
-($$" #
-string$$# )
-correo$$* 0
-,$$0 1
-string$$2 8
-	codigoOTP$$9 B
-,$$B C
-string$$D J
-nombreCompleto$$K Y
-)$$Y Z
-{%% 	
-var&& 
-mensaje&& 
-=&& 
-new&& 
-StringBuilder&& +
-(&&+ ,
-)&&, -
-.'' 
-
-AppendLine'' 
-('' 
-V'' 
-)'' 
-.(( 
-
-AppendLine(( 
-((( 
-$"(( 
-$str(( A
-{((A B
-correo((B H
-}((H I
-"((I J
-)((J K
-.)) 
-
-AppendLine)) 
-()) 
-$")) 
-$str)) #
-{))# $
-nombreCompleto))$ 2
-}))2 3
-$str))3 4
-"))4 5
-)))5 6
-.** 
-
-AppendLine** 
-(** 
-$"** 
-$str** ?
-{**? @
-	codigoOTP**@ I
-}**I J
-"**J K
-)**K L
-.++ 
-
-AppendLine++ 
-(++ 
-$str++ A
-)++A B
-.,, 
-
-AppendLine,, 
-(,, 
-V,, 
-),, 
-.-- 
-ToString-- 
-(-- 
-)-- 
-;-- 
-_logger// 
-.// 
-
-LogWarning// 
-(// 
-$str// *
-,//* +
-mensaje//, 3
-)//3 4
-;//4 5
-return00 
-Task00 
-.00 
-CompletedTask00 %
-;00% &
-}11 	
-}22 
-}33 á2
-hC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
+ºW
+VC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Services\EmailService.cs
 	namespace 	
 MedCitas
  
 . 
 Infrastructure !
-.! "
-Repositories" .
+.! "
+Services" *
 { 
 public 
 
-class !
-EfPacienteRepositorio &
-:' (
-IPacienteRepository) <
+class 
+EmailService 
+: 
+IEmailService  -
 { 
 private 
-readonly 
-MedCitasDbContext *
-_db+ .
-;. /
-public !
-EfPacienteRepositorio $
-($ %
-MedCitasDbContext% 6
-db7 9
-)9 :
-=>; =
-_db> A
-=B C
-dbD F
-;F G
-public 
-async 
-Task 
-< 
-Paciente "
-?" #
-># $$
-ObtenerPorDocumentoAsync% =
-(= >
-string> D
-numeroDocumentoE T
-)T U
-=>V X
-await 
-_db 
-. 
-	Pacientes 
-.  
-FirstOrDefaultAsync  3
-(3 4
-p4 5
-=>6 8
-p9 :
-.: ;
-NumeroDocumento; J
-==K M
-numeroDocumentoN ]
-)] ^
-;^ _
-public 
-async 
-Task 
-< 
-Paciente "
-?" #
-># $!
-ObtenerPorCorreoAsync% :
-(: ;
-string; A
-correoElectronicoB S
-)S T
-=>U W
+readonly 
+ILogger  
+<  !
+EmailService! -
+>- .
+_logger/ 6
+;6 7
+private 
+readonly 
+EmailConfiguration +
+_config, 3
+;3 4
+public 
+EmailService 
+( 
+ILogger #
+<# $
+EmailService$ 0
+>0 1
+logger2 8
+,8 9
+IOptions: B
+<B C
+EmailConfigurationC U
+>U V
+configW ]
+)] ^
+{ 
+_logger 
+= 
+logger 
+; 
+_config	 
+= 
+config 
+. 
+Value 
+;  
+if 
+( 
+! 
+_config 
+. 
+IsValid 
+( 
+) 
+) 
+{ 
+_logger 
+
+.
+ 
+
+LogWarning 
+( 
+$str F
+,F G
+_configH O
+.O P
+GetValidationErrorsP c
+(c d
+)d e
+)e f
+;f g
+}	 
+
+else 
+{ 
+_logger	 
+. 
+LogInformation 
+(  
+$str  K
+)K L
+;L M
+} 
+}   	
+public"" 
+async"" 
+Task"" )
+EnviarCorreoVerificacionAsync"" 7
+(""7 8
+string""8 >
+destinatario""? K
+,""K L
+string""M S
+tokenVerificacion""T e
+)""e f
+{## 	
+var$$ 
+asunto$$ 
+=$$ 
+$str$$ 8
+;$$8 9
+var%% 
+urlVerificacion%%	 
+=%% 
+$"%% 
+$str%% <
+{%%< =
+tokenVerificacion%%= N
+}%%N O
+"%%O P
+;%%P Q
+var''
+ 
+
+cuerpoHtml'' 
+='' #
+GenerarHtmlVerificacion'' 2
+(''2 3
+urlVerificacion''3 B
+)''B C
+;''C D
+await)) 	
+EnviarEmailAsync))
+ 
+()) 
+destinatario)) '
+,))' (
+asunto))) /
+,))/ 0
+
+cuerpoHtml))1 ;
+))); <
+;))< =
+}** 	
+public,, 
+async,, 
+Task,, 
+EnviarOTPAsync,, &
+(,,& '
+string,,' -
+correo,,. 4
+,,,4 5
+string,,6 <
+	codigoOTP,,= F
+,,,F G
+string,,H N
+nombreCompleto,,O ]
+),,] ^
+{-- 	
+var.. 
+asunto.. 
+=.. 
+$str.. <
+;..< =
+var// 
+
+cuerpoHtml// 
+=// 
+GenerarHtmlOTP// +
+(//+ ,
+nombreCompleto//, :
+,//: ;
+	codigoOTP//< E
+)//E F
+;//F G
+await11 
+EnviarEmailAsync11 
+(11 
+correo11 %
+,11% &
+asunto11' -
+,11- .
+
+cuerpoHtml11/ 9
+)119 :
+;11: ;
+}22 
+public44 
+async44 
+Task44 )
+EnviarCorreoRecuperacionAsync44 7
+(447 8
+string448 >
+correo44? E
+,44E F
+string44G M
+nombreCompleto44N \
+,44\ ]
+string44^ d
+urlRecuperacion44e t
+)44t u
+{55 	
+var66	 
+asunto66 
+=66 
+$str66 =
+;66= >
+var77 
+
+
+cuerpoHtml77 
+=77 #
+GenerarHtmlRecuperacion77 /
+(77/ 0
+nombreCompleto770 >
+,77> ?
+urlRecuperacion77@ O
+)77O P
+;77P Q
+await99 
+EnviarEmailAsync99 "
+(99" #
+correo99# )
+,99) *
+asunto99+ 1
+,991 2
+
+cuerpoHtml993 =
+)99= >
+;99> ?
+}:: 	
+private<< 
+async<< 
+Task<< 
+EnviarEmailAsync<< +
+(<<+ ,
+string<<, 2
+destinatario<<3 ?
+,<<? @
+string<<A G
+asunto<<H N
+,<<N O
+string<<P V
+
+cuerpoHtml<<W a
+)<<a b
+{== 	
+_logger>> 
+.>> 	
+LogInformation>>	 
+(>> 
+$str>> F
+,>>F G
+destinatario>>H T
+,>>T U
+asunto>>V \
+)>>\ ]
+;>>] ^
+ifAA 
+(AA 
+!AA 
+_configAA 
+.AA 
+IsValidAA 
+(AA 
+)AA 
+)AA 
+{BB 
+varCC 
+erroresCC	 
+=CC 
+_configCC 
+.CC 
+GetValidationErrorsCC .
+(CC. /
+)CC/ 0
+;CC0 1
+_loggerDD 
+.DD 
+LogErrorDD 
+(DD 
+$strDD K
+,DDK L
+erroresDDM T
+)DDT U
+;DDU V
+throwEE 
+newEE 
+%
+InvalidOperationExceptionEE $
+(EE$ %
+$"EE% '
+$strEE' N
+{EEN O
+erroresEEO V
+}EEV W
+"EEW X
+)EEX Y
+;EEY Z
+}FF 
+tryHH 
+{II 
+usingJJ 
+varJJ 	
+clientJJ
+ 
+=JJ 
+newJJ 
+
+SmtpClientJJ !
+(JJ! "
+_configJJ" )
+.JJ) *
+SmtpHostJJ* 2
+,JJ2 3
+_configJJ4 ;
+.JJ; <
+SmtpPortJJ< D
+)JJD E
+{KK 	
+	EnableSslLL 
+=LL 
+trueLL 
+,LL !
+UseDefaultCredentialsMM 
+=MM 
+falseMM "
+,MM" #
+CredentialsNN 
+=NN 
+newNN 
+NetworkCredentialNN '
+(NN' (
+_configNN( /
+.NN/ 0
+SmtpUserNN0 8
+,NN8 9
+_configNN: A
+.NNA B
+SmtpPasswordNNB N
+)NNN O
+,NNO P
+DeliveryMethodOO 
+=OO 
+SmtpDeliveryMethodOO %
+.OO% &
+NetworkOO& -
+,OO- .
+TimeoutPP	 
+=PP 
+AppConstantsPP 
+.PP  
+EmailPP  %
+.PP% &
+SmtpTimeoutPP& 1
+}QQ 
+;QQ 
+varSS 
+
+mailMessageSS 
+=SS 
+newSS 
+MailMessageSS (
+{TT 	
+FromUU 	
+=UU
+ 
+newUU 
+MailAddressUU 
+(UU 
+_configUU #
+.UU# $
+	FromEmailUU$ -
+,UU- .
+_configUU/ 6
+.UU6 7
+FromNameUU7 ?
+)UU? @
+,UU@ A
+SubjectVV 
+=VV 
+asuntoVV 
+,VV 
+BodyWW 
+=WW 
+
+cuerpoHtmlWW	 
+,WW 
+
+IsBodyHtmlXX 
+=XX 
+trueXX 
+,XX 
+PriorityYY	 
+=YY 
+MailPriorityYY  
+.YY  !
+NormalYY! '
+}ZZ	 
+
+;ZZ
+ 
+mailMessage\\ 
+.\\ 
+To\\ 
+.\\ 
+Add\\ 
+(\\ 
+new\\ 
+MailAddress\\ *
+(\\* +
+destinatario\\+ 7
+)\\7 8
+)\\8 9
+;\\9 :
+await^^ 
+client^^ 
+.^^ 
+SendMailAsync^^ 
+(^^ 
+mailMessage^^ '
+)^^' (
+;^^( )
+_logger`` 	
+.``	 
+
+LogInformation``
+ 
+(`` 
+$str`` H
+,``H I
+destinatario``J V
+)``V W
+;``W X
+}aa 
+catchbb 
+(bb 
+SmtpExceptionbb 
+smtpExbb !
+)bb! "
+{cc 
+_loggerdd 
+.dd 
+LogErrordd 
+(dd 
+smtpExdd 
+,dd 
+$strdd f
+,ddf g
+destinatarioee 
+,ee 
+smtpExee 
+.ee 
+
+StatusCodeee #
+)ee# $
+;ee$ %
+throwff 
+newff %
+InvalidOperationExceptionff %
+(ff% &
+$"ff& (
+$strff( D
+{ffD E
+smtpExffE K
+.ffK L
+MessageffL S
+}ffS T
+"ffT U
+,ffU V
+smtpExffW ]
+)ff] ^
+;ff^ _
+}gg 
+catchhh 
+(hh 
+	Exceptionhh 
+exhh 
+)hh  
+whenhh! %
+(hh& '
+exhh' )
+ishh* ,
+nothh- 0
+SmtpExceptionhh1 >
+)hh> ?
+{ii 
+_loggerjj 
+.jj 
+LogErrorjj  
+(jj  !
+exjj! #
+,jj# $
+$strjj% c
+,jjc d
+exkk 
+.kk 
+GetTypekk 
+(kk 
+)kk 
+.kk 
+Namekk 
+,kk 
+destinatariokk $
+)kk$ %
+;kk% &
+throwll 
+newll %
+InvalidOperationExceptionll )
+(ll) *
+$"ll* ,
+$strll, D
+{llD E
+destinatariollE Q
+}llQ R
+$strllR T
+{llT U
+exllU W
+.llW X
+MessagellX _
+}ll_ `
+"ll` a
+,lla b
+exllc e
+)lle f
+;llf g
+}mm 
+}nn 	
+privateqq 
+staticqq 
+stringqq #
+GenerarHtmlVerificacionqq 5
+(qq5 6
+stringqq6 <
+urlVerificacionqq= L
+)qqL M
+{rr 
+returnss 
+$@"ss 
+$str	sá +
+{
+áá+ ,
+urlVerificacion
+áá, ;
+}
+áá; <
+$str
+áå< 
+"
+åå 
+;
+åå 	
+}
+çç 
+private
+èè 
+static
+èè 
+string
+èè 
+GenerarHtmlOTP
+èè ,
+(
+èè, -
+string
+èè- 3
+nombreCompleto
+èè4 B
+,
+èèB C
+string
+èèD J
+	codigoOTP
+èèK T
+)
+èèT U
+{
+êê 
+return
+ëë 
+$@"
+ëë 
+$str
+ë§ 
+{
+§§ 
+nombreCompleto
+§§ %
+}
+§§% &
+$str
+§¶& 
+{
+¶¶ 
+	codigoOTP
+¶¶ &
+}
+¶¶& '
+$str
+¶ß' V
+{
+ßßV W
+AppConstants
+ßßW c
+.
+ßßc d
+Otp
+ßßd g
+.
+ßßg h
+ExpirationMinutes
+ßßh y
+}
+ßßy z
+$str
+ß¨z 
+"
+¨¨ 
+;
+¨¨ 	
+}
+≠≠ 	
+private
+ØØ 
+static
+ØØ 
+string
+ØØ %
+GenerarHtmlRecuperacion
+ØØ 5
+(
+ØØ5 6
+string
+ØØ6 <
+nombreCompleto
+ØØ= K
+,
+ØØK L
+string
+ØØM S
+urlRecuperacion
+ØØT c
+)
+ØØc d
+{
+∞∞ 
+return
+±± 
+
+$@"
+±± 
+$str
+±ƒ 
+{
+ƒƒ 
+nombreCompleto
+ƒƒ 
+}
+ƒƒ 
+$str
+ƒ∆ ,
+{
+∆∆, -
+urlRecuperacion
+∆∆- <
+}
+∆∆< =
+$str
+∆«= Q
+{
+««Q R
+AppConstants
+««R ^
+.
+««^ _
+RecoveryToken
+««_ l
+.
+««l m
+ExpirationMinutes
+««m ~
+}
+««~ 
+$str
+«Ã 
+"
+ÃÃ 
+;
+ÃÃ 	
+}
+ÕÕ 	
+}
+ŒŒ 
+}œœ éK
+cC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Repositories\EfPacienteRepositorio.cs
+	namespace		 	
+MedCitas		
+ 
+.		 
+Infrastructure		 !
+.		! "
+Repositories		" .
+{
+
+ 
+public 
+
+class !
+EfPacienteRepositorio &
+:' (
+IPacienteRepository) <
+{ 
+private 
+readonly 
+MedCitasDbContext *
+_db+ .
+;. /
+public !
+EfPacienteRepositorio $
+($ %
+MedCitasDbContext% 6
+db7 9
+)9 :
+=>; =
+_db> A
+=B C
+dbD F
+;F G
+public 
+async 
+Task 
+< 
+Paciente "
+?" #
+># $$
+ObtenerPorDocumentoAsync% =
+(= >
+string> D
+numeroDocumentoE T
+)T U
+=>V X
+await 
+_db 
+. 
+	Pacientes 
+. 
+FirstOrDefaultAsync -
+(- .
+p. /
+=>0 2
+p3 4
+.4 5
+NumeroDocumento5 D
+==E G
+numeroDocumentoH W
+)W X
+;X Y
+[ 	
+SuppressMessage	 
+( 
+$str $
+,$ %
+$str& -
+,- .
+Justification/ <
+== >
+$str? q
+)q r
+]r s
+public 
+async 
+Task 
+< 
+Paciente 
+? 
+> !
+ObtenerPorCorreoAsync 3
+(3 4
+string4 :
+correoElectronico; L
+)L M
+=>N P
 await 
 _db 
 . 
 	Pacientes 
-.  
-FirstOrDefaultAsync  3
-(3 4
-p4 5
-=>6 8
-p9 :
-.: ;
-CorreoElectronico; L
-.L M
-ToLowerM T
-(T U
-)U V
-==W Y
-correoElectronicoZ k
-.k l
-ToLowerl s
-(s t
-)t u
-)u v
-;v w
-public 
-async 
-Task 
-RegistrarAsync (
-(( )
-Paciente) 1
-paciente2 :
-): ;
-{ 	
-if 
-( 
-paciente 
-. 
-Id 
-== 
-Guid #
-.# $
-Empty$ )
-)) *
-paciente+ 3
-.3 4
-Id4 6
-=7 8
-Guid9 =
-.= >
-NewGuid> E
-(E F
-)F G
-;G H
-_db 
-. 
-	Pacientes 
-. 
-Add 
-( 
-paciente &
-)& '
-;' (
-await 
-_db 
-. 
-SaveChangesAsync &
-(& '
-)' (
-;( )
-} 	
-public   
-async   
-Task   
-<   
-bool   
->   
-ActivarCuentaAsync    2
-(  2 3
-string  3 9
-tokenVerificacion  : K
-)  K L
-{!! 	
-var"" 
-paciente"" 
-="" 
-await""  
-_db""! $
-.""$ %
-	Pacientes""% .
-."". /
-FirstOrDefaultAsync""/ B
-(""B C
-p""C D
-=>""E G
-p""H I
-.""I J
-TokenVerificacion""J [
-==""\ ^
-tokenVerificacion""_ p
-)""p q
-;""q r
-if## 
-(## 
-paciente## 
-==## 
-null##  
-)##  !
-return##" (
-false##) .
-;##. /
-paciente$$ 
-.$$ 
-EstaVerificado$$ #
-=$$$ %
-true$$& *
-;$$* +
-paciente%% 
-.%% 
-TokenVerificacion%% &
-=%%' (
-null%%) -
-;%%- .
-await&& 
-_db&& 
-.&& 
-SaveChangesAsync&& &
-(&&& '
-)&&' (
-;&&( )
-return'' 
-true'' 
-;'' 
-}(( 	
-public** 
-async** 
-Task** 
-<** 
-bool** 
->** 
-VerificarOTPAsync**  1
-(**1 2
-string**2 8
-correo**9 ?
-,**? @
-string**A G
-	codigoOTP**H Q
-)**Q R
-{++ 	
-var,, 
-paciente,, 
-=,, 
-await,,  !
-ObtenerPorCorreoAsync,,! 6
-(,,6 7
-correo,,7 =
-),,= >
-;,,> ?
-if-- 
-(-- 
-paciente-- 
-==-- 
-null--  
-)--  !
-return--" (
-false--) .
-;--. /
-if// 
-(// 
-paciente// 
-.// 
-	CodigoOTP// "
-!=//# %
-	codigoOTP//& /
-||//0 2
-paciente00 
-.00 
-OTPExpiracion00 &
-==00' )
-null00* .
-||00/ 1
-DateTime11 
-.11 
-UtcNow11 
->11  !
-paciente11" *
-.11* +
-OTPExpiracion11+ 8
-)118 9
-{22 
-paciente33 
-.33 
-IntentosOTPFallidos33 ,
-++33, .
-;33. /
-await44 
-_db44 
-.44 
-SaveChangesAsync44 *
-(44* +
-)44+ ,
-;44, -
-return55 
-false55 
-;55 
-}66 
-paciente88 
-.88 
-EstaVerificado88 #
-=88$ %
-true88& *
-;88* +
-paciente99 
-.99 
-	CodigoOTP99 
-=99  
-null99! %
-;99% &
-paciente:: 
-.:: 
-OTPExpiracion:: "
-=::# $
-null::% )
-;::) *
-paciente;; 
-.;; 
-IntentosOTPFallidos;; (
-=;;) *
-$num;;+ ,
-;;;, -
-await<< 
-_db<< 
-.<< 
-SaveChangesAsync<< &
-(<<& '
-)<<' (
-;<<( )
-return== 
-true== 
-;== 
-}>> 	
-public@@ 
-async@@ 
-Task@@ 
-ActualizarOTPAsync@@ ,
-(@@, -
-Paciente@@- 5
-paciente@@6 >
-)@@> ?
-{AA 	
-_dbBB 
-.BB 
-	PacientesBB 
-.BB 
-UpdateBB  
-(BB  !
-pacienteBB! )
-)BB) *
-;BB* +
-awaitCC 
-_dbCC 
-.CC 
-SaveChangesAsyncCC &
-(CC& '
-)CC' (
-;CC( )
-}DD 	
-}EE 
-}FF ì
-uC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022032706_ConfigurarDateTimeUTC.cs
+. 	
+Where	 
+( 
+p 
+=> 
+p 
+. 
+CorreoElectronico '
+.' (
+ToLower( /
+(/ 0
+)0 1
+==2 4
+correoElectronico5 F
+.F G
+ToLowerG N
+(N O
+)O P
+)P Q
+. 
+FirstOrDefaultAsync $
+($ %
+)% &
+;& '
+public 
+async 
+Task 
+RegistrarAsync (
+(( )
+Paciente) 1
+paciente2 :
+): ;
+{ 	
+if 
+( 
+paciente 
+. 
+Id 
+== 
+Guid #
+.# $
+Empty$ )
+)) *
+{ 
+paciente 
+. 
+Id 
+= 
+Guid 
+. 
+NewGuid "
+(" #
+)# $
+;$ %
+}   
+_db!! 
+.!! 
+	Pacientes!! 
+.!! 
+Add!! 
+(!! 
+paciente!! 
+)!! 
+;!!  
+await"" 	
+_db""
+ 
+."" 
+SaveChangesAsync"" 
+("" 
+)""  
+;""  !
+}## 
+public%% 
+async%% 
+Task%% 
+<%% 
+bool%% 
+>%% 
+ActivarCuentaAsync%%  2
+(%%2 3
+string%%3 9
+tokenVerificacion%%: K
+)%%K L
+{&& 
+var''	 
+paciente'' 
+='' 
+await'' 
+_db'' !
+.''! "
+	Pacientes''" +
+.''+ ,
+FirstOrDefaultAsync'', ?
+(''? @
+p''@ A
+=>''B D
+p''E F
+.''F G
+TokenVerificacion''G X
+==''Y [
+tokenVerificacion''\ m
+)''m n
+;''n o
+if(( 
+(((	 
+
+paciente((
+ 
+==(( 
+null(( 
+)(( 
+{)) 
+return**	 
+false** 
+;** 
+}++ 
+paciente,, 	
+.,,	 
+
+EstaVerificado,,
+ 
+=,, 
+true,, 
+;,,  
+paciente-- 
+.-- 
+TokenVerificacion-- 
+=--  !
+null--" &
+;--& '
+await.. 
+_db.. 
+... 
+SaveChangesAsync..  
+(..  !
+)..! "
+;.." #
+return// 
+true// 
+;// 
+}00 
+public22 
+async22 
+Task22 
+<22 
+bool22 
+>22 
+VerificarOTPAsync22 .
+(22. /
+string22/ 5
+correo226 <
+,22< =
+string22> D
+	codigoOTP22E N
+)22N O
+{33 
+var44 
+paciente44 
+=44 
+await44 !
+ObtenerPorCorreoAsync44 ,
+(44, -
+correo44- 3
+)443 4
+;444 5
+if55 
+(55 
+paciente55 
+==55 
+null55 
+)55 
+{66 
+return77 
+false77 
+;77 
+}88 
+if:: 
+(:: 
+paciente:: 
+.:: 
+	CodigoOTP:: "
+!=::# %
+	codigoOTP::& /
+||::0 2
+paciente;; 
+.;; 
+OTPExpiracion;; 
+==;;  
+null;;! %
+||;;& (
+DateTime<< 
+.<< 
+UtcNow<< 
+><<  !
+paciente<<" *
+.<<* +
+OTPExpiracion<<+ 8
+)<<8 9
+{== 
+paciente>>
+ 
+.>> 
+IntentosOTPFallidos>> &
+++>>& (
+;>>( )
+await?? 
+_db?? 
+.?? 
+SaveChangesAsync?? !
+(??! "
+)??" #
+;??# $
+return@@ 
+false@@ 
+;@@ 
+}AA 
+pacienteCC 
+.CC 
+EstaVerificadoCC 
+=CC 
+trueCC #
+;CC# $
+pacienteDD 
+.DD 
+	CodigoOTPDD 
+=DD  
+nullDD! %
+;DD% &
+pacienteEE 
+.EE 
+OTPExpiracionEE "
+=EE# $
+nullEE% )
+;EE) *
+pacienteFF 
+.FF 
+IntentosOTPFallidosFF  
+=FF! "
+$numFF# $
+;FF$ %
+awaitGG 
+_dbGG 
+.GG 
+SaveChangesAsyncGG  
+(GG  !
+)GG! "
+;GG" #
+returnHH 
+trueHH 
+;HH 
+}II 
+publicKK 
+asyncKK 
+TaskKK 
+ActualizarOTPAsyncKK ,
+(KK, -
+PacienteKK- 5
+pacienteKK6 >
+)KK> ?
+{LL !
+ArgumentNullExceptionMM
+ 
+.MM  
+ThrowIfNullMM  +
+(MM+ ,
+pacienteMM, 4
+)MM4 5
+;MM5 6
+_dbOO 
+.OO 
+	PacientesOO 
+.OO 
+UpdateOO  
+(OO  !
+pacienteOO! )
+)OO) *
+;OO* +
+awaitPP	 
+_dbPP 
+.PP 
+SaveChangesAsyncPP #
+(PP# $
+)PP$ %
+;PP% &
+}QQ 	
+publicTT 
+asyncTT 
+TaskTT 
+<TT 
+PacienteTT "
+?TT" #
+>TT# $,
+ ObtenerPorTokenRecuperacionAsyncTT% E
+(TTE F
+stringTTF L
+tokenTTM R
+)TTR S
+=>TTT V
+awaitUU 
+_dbUU 
+.UU 
+	PacientesUU 
+.UU  
+FirstOrDefaultAsyncUU  3
+(UU3 4
+pUU4 5
+=>UU6 8
+pUU9 :
+.UU: ;
+TokenRecuperacionUU; L
+==UUM O
+tokenUUP U
+)UUU V
+;UUV W
+publicWW 
+asyncWW 
+TaskWW ,
+ ActualizarTokenRecuperacionAsyncWW :
+(WW: ;
+PacienteWW; C
+pacienteWWD L
+)WWL M
+{XX !
+ArgumentNullExceptionYY	 
+.YY 
+ThrowIfNullYY *
+(YY* +
+pacienteYY+ 3
+)YY3 4
+;YY4 5
+if\\ 
+(\\ 
+string\\ 
+.\\ 
+IsNullOrEmpty\\ $
+(\\$ %
+paciente\\% -
+.\\- .
+TokenRecuperacion\\. ?
+)\\? @
+)\\@ A
+{]] 
+throw^^ 	
+new^^
+ 
+ArgumentException^^ 
+(^^  
+$str^^  P
+,^^P Q
+nameof^^R X
+(^^X Y
+paciente^^Y a
+)^^a b
+)^^b c
+;^^c d
+}__ 
+_dbaa 
+.aa 
+	Pacientesaa 
+.aa 
+Updateaa  
+(aa  !
+pacienteaa! )
+)aa) *
+;aa* +
+awaitbb 
+_dbbb 
+.bb 
+SaveChangesAsyncbb !
+(bb! "
+)bb" #
+;bb# $
+}cc 
+publicee 
+asyncee 
+Taskee #
+ActualizarPasswordAsyncee 1
+(ee1 2
+Pacienteee2 :
+pacienteee; C
+)eeC D
+{ff 	!
+ArgumentNullExceptiongg 
+.gg 
+ThrowIfNullgg #
+(gg# $
+pacientegg$ ,
+)gg, -
+;gg- .
+ifjj 
+(jj 
+stringjj 
+.jj 
+IsNullOrEmptyjj $
+(jj$ %
+pacientejj% -
+.jj- .
+PasswordHashjj. :
+)jj: ;
+)jj; <
+{kk 
+throwll 	
+newll
+ 
+ArgumentExceptionll 
+(ll  
+$strll  M
+,llM N
+nameofllO U
+(llU V
+pacientellV ^
+)ll^ _
+)ll_ `
+;ll` a
+}mm 
+_dboo 	
+.oo	 
+
+	Pacientesoo
+ 
+.oo 
+Updateoo 
+(oo 
+pacienteoo #
+)oo# $
+;oo$ %
+awaitpp 
+_dbpp 
+.pp 
+SaveChangesAsyncpp &
+(pp& '
+)pp' (
+;pp( )
+}qq 	
+}rr 
+}ss £
+vC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251106235209_AgregarRecuperacionPassword.cs
+	namespace 	
+MedCitas
+ 
+. 
+Infrastructure !
+.! "
+
+Migrations" ,
+{ 
+public		 
+
+partial		 
+class		 '
+AgregarRecuperacionPassword		 4
+:		5 6
+	Migration		7 @
+{
+
+ 
+	protected 
+override 
+void 
+Up  "
+(" #
+MigrationBuilder# 3
+migrationBuilder4 D
+)D E
+{ 	
+migrationBuilder 
+. 
+	AddColumn &
+<& '
+string' -
+>- .
+(. /
+name 
+: 
+$str )
+,) *
+table 
+: 
+$str "
+," #
+type 
+: 
+$str -
+,- .
+	maxLength 
+: 
+$num 
+, 
+nullable 
+: 
+true 
+) 
+;  
+migrationBuilder 
+. 
+	AddColumn &
+<& '
+DateTime' /
+>/ 0
+(0 1
+name 
+: 
+$str 3
+,3 4
+table 
+: 
+$str "
+," #
+type 
+: 
+$str 0
+,0 1
+nullable 
+: 
+true 
+) 
+;  
+} 	
+	protected 
+override 
+void 
+Down  $
+($ %
+MigrationBuilder% 5
+migrationBuilder6 F
+)F G
+{ 	
+migrationBuilder 
+. 
+
+DropColumn '
+(' (
+name   
+:   
+$str   )
+,  ) *
+table!! 
+:!! 
+$str!! "
+)!!" #
+;!!# $
+migrationBuilder## 
+.## 
+
+DropColumn## '
+(##' (
+name$$ 
+:$$ 
+$str$$ 3
+,$$3 4
+table%% 
+:%% 
+$str%% "
+)%%" #
+;%%# $
+}&& 	
+}'' 
+}(( é
+pC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251022032706_ConfigurarDateTimeUTC.cs
 	namespace 	
 MedCitas
  
@@ -671,8 +1457,8 @@ oldClrType 
 ;    !
 }!! 	
 }"" 
-}## ´J
-wC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
+}## ¶J
+rC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251022031055_AjustarLongitudesCampos.cs
 	namespace 	
 MedCitas
  
@@ -1226,8 +2012,8 @@ oldClrType~~ 
 ÇÇ 	
 }
 ÉÉ 
-}ÑÑ ú
-pC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
+}ÑÑ ó
+kC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251022023702_AgregarCamposOTP.cs
 	namespace 	
 MedCitas
  
@@ -1386,8 +2172,8 @@ DropColumn-- '
 ;//# $
 }00 	
 }11 
-}22 ﬁ0
-mC:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
+}22 Ÿ0
+hC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\Migrations\20251020203133_InitialCreate.cs
 	namespace 	
 MedCitas
  
@@ -1743,8 +2529,8 @@ PrimaryKey## $
 ;++" #
 },, 	
 }-- 
-}.. ª1
-^C:\Users\Usuario\Desktop\medcitas\MedCitas\MedCitas.Infrastructure\DataDb\MedCitasDbContext.cs
+}.. ˜5
+YC:\Users\Carlos\source\repos\MedCitas\MedCitas.Infrastructure\DataDb\MedCitasDbContext.cs
 	namespace		 	
 MedCitas		
  
@@ -2100,17 +2886,49 @@ IsRequired$$3 =
 (22K L
 $num22L M
 )22M N
-;22N O
-}33 
-)33 
-;33 
-base55 
-.55 
-OnModelCreating55  
-(55  !
-modelBuilder55! -
-)55- .
-;55. /
-}66 	
-}77 
-}88 
+;22N O
+entity55 
+.55 
+Property55 
+(55  
+e55  !
+=>55" $
+e55% &
+.55& '
+TokenRecuperacion55' 8
+)558 9
+.559 :
+HasMaxLength55: F
+(55F G
+$num55G I
+)55I J
+;55J K
+entity66 
+.66 
+Property66 
+(66  
+e66  !
+=>66" $
+e66% &
+.66& ''
+TokenRecuperacionExpiracion66' B
+)66B C
+.77 
+HasColumnType77 "
+(77" #
+$str77# =
+)77= >
+;77> ?
+}88 
+)88 
+;88 
+base:: 
+.:: 
+OnModelCreating::  
+(::  !
+modelBuilder::! -
+)::- .
+;::. /
+};; 	
+}<< 
+}== 

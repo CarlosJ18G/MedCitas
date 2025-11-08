@@ -1,3 +1,4 @@
+using MedCitas.Core.Configuration;
 using MedCitas.Core.Interfaces;
 using MedCitas.Core.Services;
 using MedCitas.Infrastructure.Repositories;
@@ -16,8 +17,11 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // ? SEGURIDAD: Solo HTTPS
 });
 
+// ? CONFIGURACIÓN DE EMAIL CON OPTIONS PATTERN
+builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("Email"));
 
 // Leer la contraseña desde User Secrets
 var dbPassword = builder.Configuration["ConnectionStrings:DbPassword"];
@@ -29,17 +33,23 @@ var connectionString = string.IsNullOrEmpty(dbPassword)
     : $"{baseConnectionString};Password={dbPassword}";
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", false);
+
 // Configurar DbContext con la cadena de conexión completa
 builder.Services.AddDbContext<MedCitasDbContext>(options =>
     options.UseNpgsql(connectionString));
-
 
 // ---------------------------------------------------------
 // INYECCIÓN DE DEPENDENCIAS
 // ---------------------------------------------------------
 builder.Services.AddScoped<IPacienteRepository, EfPacienteRepositorio>();
-builder.Services.AddScoped<IEmailService, FakeEmailService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<PacienteService>();
+
+// ? SEGURIDAD: Agregar AntiForgery
+builder.Services.AddAntiforgery(options =>
+{
+    options.HeaderName = "X-CSRF-TOKEN";
+});
 
 // ---------------------------------------------------------
 // CONSTRUCCIÓN DE LA APP
@@ -56,13 +66,23 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles(); // Necesario para cargar CSS, JS, imágenes, etc.
+app.UseStaticFiles();
 app.UseRouting();
-app.UseSession(); // Importante: antes de Authorization si usas sesiones
+app.UseSession();
 app.UseAuthorization();
 
+// ? SEGURIDAD: Headers de seguridad
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
+    context.Response.Headers.Append("X-Frame-Options", "DENY");
+    context.Response.Headers.Append("X-XSS-Protection", "1; mode=block");
+    context.Response.Headers.Append("Referrer-Policy", "strict-origin-when-cross-origin");
+    await next();
+});
+
 app.MapControllerRoute(
-    name: "default",
+  name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
 

@@ -4,11 +4,11 @@
   "runs": [
     {
       "tool": {
-        "name": "Compilador de Microsoft (R) Visual C#",
+        "name": "Microsoft (R) Visual C# Compiler",
         "version": "4.14.0.0",
         "fileVersion": "4.14.0-3.25465.8 (b0a9adbf)",
         "semanticVersion": "4.14.0",
-        "language": "es-ES"
+        "language": "en-US"
       },
       "results": [
         {
@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
                 "region": {
                   "startLine": 16,
                   "startColumn": 24,
@@ -31,7 +31,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
                 "region": {
                   "startLine": 22,
                   "startColumn": 24,
@@ -42,7 +42,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
                 "region": {
                   "startLine": 29,
                   "startColumn": 24,
@@ -53,7 +53,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
                 "region": {
                   "startLine": 39,
                   "startColumn": 24,
@@ -64,7 +64,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
                 "region": {
                   "startLine": 43,
                   "startColumn": 24,
@@ -75,7 +75,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022023702_AgregarCamposOTP.cs",
                 "region": {
                   "startLine": 47,
                   "startColumn": 24,
@@ -99,11 +99,72 @@
         {
           "ruleId": "S1192",
           "level": "warning",
+          "message": "Define a constant instead of using this literal 'Pacientes' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251106235209_AgregarRecuperacionPassword.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 24,
+                  "endLine": 16,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251106235209_AgregarRecuperacionPassword.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251106235209_AgregarRecuperacionPassword.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 24,
+                  "endLine": 33,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251106235209_AgregarRecuperacionPassword.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 24,
+                  "endLine": 37,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
           "message": "Define a constant instead of using this literal 'Pacientes' 12 times.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 15,
                   "startColumn": 24,
@@ -116,7 +177,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 24,
                   "startColumn": 24,
@@ -127,7 +188,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 34,
                   "startColumn": 24,
@@ -138,7 +199,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 43,
                   "startColumn": 24,
@@ -149,7 +210,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 53,
                   "startColumn": 24,
@@ -160,7 +221,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 62,
                   "startColumn": 24,
@@ -171,7 +232,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 76,
                   "startColumn": 24,
@@ -182,7 +243,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 85,
                   "startColumn": 24,
@@ -193,7 +254,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 95,
                   "startColumn": 24,
@@ -204,7 +265,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 104,
                   "startColumn": 24,
@@ -215,7 +276,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 114,
                   "startColumn": 24,
@@ -226,7 +287,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 123,
                   "startColumn": 24,
@@ -260,7 +321,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 54,
                   "startColumn": 23,
@@ -273,7 +334,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 58,
                   "startColumn": 26,
@@ -284,7 +345,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 115,
                   "startColumn": 23,
@@ -295,7 +356,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251022031055_AjustarLongitudesCampos.cs",
                 "region": {
                   "startLine": 118,
                   "startColumn": 26,
@@ -317,16 +378,16 @@
         {
           "ruleId": "CA1862",
           "level": "note",
-          "message": "Prefiera usar \"string.Equals(string, StringComparison)\" para realizar una comparación sin distinción de mayúsculas y minúsculas, pero tenga en cuenta que esto puede provocar cambios sutiles en el comportamiento, por lo que asegúrese de realizar pruebas exhaustivas después de aplicar la sugerencia, o si no se requiere una comparación culturalmente confidencial, considere la posibilidad de usar \"StringComparison.OrdinalIgnoreCase\"",
+          "message": "Prefer using 'string.Equals(string, StringComparison)' to perform a case-insensitive comparison, but keep in mind that this might cause subtle changes in behavior, so make sure to conduct thorough testing after applying the suggestion, or if culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/Usuario/Desktop/medcitas/MedCitas/MedCitas.Infrastructure/Repositories/EfPacienteRepositorio.cs",
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Repositories/EfPacienteRepositorio.cs",
                 "region": {
-                  "startLine": 23,
-                  "startColumn": 58,
-                  "endLine": 23,
-                  "endColumn": 118
+                  "startLine": 24,
+                  "startColumn": 21,
+                  "endLine": 24,
+                  "endColumn": 81
                 }
               }
             }
@@ -343,8 +404,8 @@
       "rules": {
         "CA1862": {
           "id": "CA1862",
-          "shortDescription": "Use las sobrecargas del método \"StringComparison\" para realizar comparaciones de cadenas sin distinción de mayúsculas y minúsculas",
-          "fullDescription": "Evite llamar a \"ToLower\", \"ToUpper\", \"ToLowerInvariant\" y \"ToUpperInvariant\" para realizar comparaciones de cadenas sin distinción de mayúsculas y minúsculas, como en \"string.ToLower() == string.ToLower()\" porque dan lugar a una asignación. En su lugar, use \"string\". Equals(string, StringComparison)\" para realizar comparaciones sin distinción de mayúsculas y minúsculas. Si cambia a una sobrecarga que toma una \"StringComparison\", es posible que se produzcan cambios sutiles en el comportamiento, por lo que es importante realizar pruebas exhaustivas después de aplicar la sugerencia. Además, si no se requiere una comparación culturalmente confidencial, considere la posibilidad de usar \"StringComparison.OrdinalIgnoreCase\".",
+          "shortDescription": "Use the 'StringComparison' method overloads to perform case-insensitive string comparisons",
+          "fullDescription": "Avoid calling 'ToLower', 'ToUpper', 'ToLowerInvariant' and 'ToUpperInvariant' to perform case-insensitive string comparisons, as in 'string.ToLower() == string.ToLower()', because they lead to an allocation. Instead, use 'string.Equals(string, StringComparison)' to perform case-insensitive comparisons. Switching to using an overload that takes a 'StringComparison' might cause subtle changes in behavior, so it's important to conduct thorough testing after applying the suggestion. Additionally, if a culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'.",
           "defaultLevel": "note",
           "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1862",
           "properties": {

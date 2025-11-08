@@ -15,6 +15,11 @@ namespace MedCitas.Core.Interfaces
         Task<bool> ActivarCuentaAsync(string tokenVerificacion);
         Task<bool> VerificarOTPAsync(string correo, string codigoOTP);
         Task ActualizarOTPAsync(Paciente paciente);
+        
+        // ✅ NUEVOS MÉTODOS PARA RECUPERACIÓN DE CONTRASEÑA
+        Task<Paciente?> ObtenerPorTokenRecuperacionAsync(string token);
+        Task ActualizarTokenRecuperacionAsync(Paciente paciente);
+        Task ActualizarPasswordAsync(Paciente paciente);
     }
 }
 
