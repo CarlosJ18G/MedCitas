@@ -22,6 +22,114 @@ namespace MedCitas.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("MedCitas.Core.Entities.Appointment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("DoctorId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<DateTime?>("FechaCancelacion")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("FechaCita")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<TimeSpan>("HoraFin")
+                        .HasColumnType("interval");
+
+                    b.Property<TimeSpan>("HoraInicio")
+                        .HasColumnType("interval");
+
+                    b.Property<string>("Modalidad")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<string>("MotivoCancelacion")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("MotivoConsulta")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("Observaciones")
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
+
+                    b.Property<Guid>("PacienteId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SpecialtyId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SpecialtyId");
+
+                    b.HasIndex("DoctorId", "FechaCita", "Estado");
+
+                    b.HasIndex("PacienteId", "FechaCita", "Estado");
+
+                    b.ToTable("Appointments");
+                });
+
+            modelBuilder.Entity("MedCitas.Core.Entities.Doctor", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CorreoElectronico")
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<bool>("EstaActivo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true);
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NombreCompleto")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("NumeroLicencia")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<Guid>("SpecialtyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Telefono")
+                        .HasMaxLength(15)
+                        .HasColumnType("character varying(15)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NumeroLicencia")
+                        .IsUnique();
+
+                    b.HasIndex("SpecialtyId");
+
+                    b.ToTable("Doctors");
+                });
+
             modelBuilder.Entity("MedCitas.Core.Entities.Paciente", b =>
                 {
                     b.Property<Guid>("Id")
@@ -103,7 +211,93 @@ namespace MedCitas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CorreoElectronico")
+                        .IsUnique();
+
+                    b.HasIndex("NumeroDocumento")
+                        .IsUnique();
+
                     b.ToTable("Pacientes");
+                });
+
+            modelBuilder.Entity("MedCitas.Core.Entities.Specialty", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<int>("DuracionConsultaMinutos")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("EstaActiva")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Specialties");
+                });
+
+            modelBuilder.Entity("MedCitas.Core.Entities.Appointment", b =>
+                {
+                    b.HasOne("MedCitas.Core.Entities.Doctor", "Doctor")
+                        .WithMany("Appointments")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MedCitas.Core.Entities.Paciente", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("PacienteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MedCitas.Core.Entities.Specialty", "Specialty")
+                        .WithMany()
+                        .HasForeignKey("SpecialtyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Paciente");
+
+                    b.Navigation("Specialty");
+                });
+
+            modelBuilder.Entity("MedCitas.Core.Entities.Doctor", b =>
+                {
+                    b.HasOne("MedCitas.Core.Entities.Specialty", "Specialty")
+                        .WithMany("Doctors")
+                        .HasForeignKey("SpecialtyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Specialty");
+                });
+
+            modelBuilder.Entity("MedCitas.Core.Entities.Doctor", b =>
+                {
+                    b.Navigation("Appointments");
+                });
+
+            modelBuilder.Entity("MedCitas.Core.Entities.Specialty", b =>
+                {
+                    b.Navigation("Doctors");
                 });
 #pragma warning restore 612, 618
         }

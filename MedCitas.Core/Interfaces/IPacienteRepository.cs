@@ -9,14 +9,16 @@ namespace MedCitas.Core.Interfaces
 {
     public interface IPacienteRepository
     {
+        Task<Paciente?> ObtenerPorIdAsync(Guid id);
         Task<Paciente?> ObtenerPorDocumentoAsync(string numeroDocumento);
         Task<Paciente?> ObtenerPorCorreoAsync(string correoElectronico);
         Task RegistrarAsync(Paciente paciente);
         Task<bool> ActivarCuentaAsync(string tokenVerificacion);
         Task<bool> VerificarOTPAsync(string correo, string codigoOTP);
         Task ActualizarOTPAsync(Paciente paciente);
+        Task ActualizarAsync(Paciente paciente);
         
-        // ✅ NUEVOS MÉTODOS PARA RECUPERACIÓN DE CONTRASEÑA
+        // Métodos para recuperación de contraseña
         Task<Paciente?> ObtenerPorTokenRecuperacionAsync(string token);
         Task ActualizarTokenRecuperacionAsync(Paciente paciente);
         Task ActualizarPasswordAsync(Paciente paciente);

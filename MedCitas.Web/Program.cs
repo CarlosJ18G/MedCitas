@@ -42,8 +42,12 @@ builder.Services.AddDbContext<MedCitasDbContext>(options =>
 // INYECCIÓN DE DEPENDENCIAS
 // ---------------------------------------------------------
 builder.Services.AddScoped<IPacienteRepository, EfPacienteRepositorio>();
+builder.Services.AddScoped<IAppointmentRepository, EfAppointmentRepository>();
+builder.Services.AddScoped<IDoctorRepository, EfDoctorRepository>();
+builder.Services.AddScoped<ISpecialtyRepository, EfSpecialtyRepository>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<PacienteService>();
+builder.Services.AddScoped<AppointmentService>();
 
 // ? SEGURIDAD: Agregar AntiForgery
 builder.Services.AddAntiforgery(options =>

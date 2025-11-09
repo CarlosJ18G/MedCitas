@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedCitas.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0d927de00c96139ee1075b02388208660a5e76b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f498cb8314d9ce83dd5bd473fc83c2ee2e7511a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedCitas.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedCitas.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

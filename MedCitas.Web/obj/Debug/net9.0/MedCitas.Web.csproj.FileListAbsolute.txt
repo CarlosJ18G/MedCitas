@@ -625,4 +625,3 @@ C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\refint\MedCi
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.pdb
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\MedCitas.Web.genruntimeconfig.cache
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\ref\MedCitas.Web.dll
-C:\Users\Carlos\source\repos\MedCitas\MedCitas.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

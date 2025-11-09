@@ -1,10 +1,16 @@
 ﻿C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Configuration\EmailConfigurationTests.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Controllers\CitaControllerTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Controllers\HomeControllerTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Controllers\PacienteControllerTests.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\DTOs\ActualizarPerfilDtoTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Entities\PacienteTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Helpers\ValidationHelperTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Models\ErrorViewModelTests.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\EfAppointmentRepositoryTests.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\EfDoctorRepositoryTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\EFPacienteRepositorioTests.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Repositories\EfSpecialtyRepositoryTests.cs
+C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\AppointmentServiceTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\EmailServiceTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\OtpServiceTests.cs
 C:\Users\Carlos\source\repos\MedCitas\MedCitas.Tests\Services\PacienteServiceTests.cs

@@ -109,14 +109,14 @@ public void LoginGet_DeberiaRetornarView()
       [Fact]
         public async Task LoginPost_ConCredencialesValidas_DeberiaRedirigirAHome()
    {
-        var paciente = new Paciente
+  var paciente = new Paciente
 {
-              Id = Guid.NewGuid(),
-                NombreCompleto = "Test User",
+   Id = Guid.NewGuid(),
+  NombreCompleto = "Test User",
       CorreoElectronico = "test@example.com",
       PasswordHash = BCrypt.Net.BCrypt.HashPassword("Password123!"),
-                EstaVerificado = true
-       };
+        EstaVerificado = true
+   };
 
        _pacienteRepositoryMock
        .Setup(r => r.ObtenerPorCorreoAsync("test@example.com"))
@@ -124,9 +124,9 @@ public void LoginGet_DeberiaRetornarView()
 
           var resultado = await _controller.Login("test@example.com", "Password123!");
 
-            var redirectResult = Assert.IsType<RedirectToActionResult>(resultado);
-            Assert.Equal("Index", redirectResult.ActionName);
-         Assert.Equal("Home", redirectResult.ControllerName);
+ var redirectResult = Assert.IsType<RedirectToActionResult>(resultado);
+     Assert.Equal("Dashboard", redirectResult.ActionName);
+   Assert.Null(redirectResult.ControllerName); // Dashboard está en el mismo controlador (Paciente)
         }
 
         #endregion

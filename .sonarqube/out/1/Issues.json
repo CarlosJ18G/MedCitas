@@ -376,18 +376,313 @@
           }
         },
         {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Specialties' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 41,
+                  "endLine": 48,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 41,
+                  "endLine": 90,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 135,
+                  "startColumn": 24,
+                  "endLine": 135,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 150,
+                  "startColumn": 23,
+                  "endLine": 150,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Doctors' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 41,
+                  "endLine": 78,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 24,
+                  "endLine": 124,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 130,
+                  "startColumn": 24,
+                  "endLine": 130,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 147,
+                  "startColumn": 23,
+                  "endLine": 147,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Appointments' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 23,
+                  "endLine": 54,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 24,
+                  "endLine": 109,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 24,
+                  "endLine": 114,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 24,
+                  "endLine": 119,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 144,
+                  "startColumn": 23,
+                  "endLine": 144,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Pacientes' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 41,
+                  "endLine": 84,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 24,
+                  "endLine": 97,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 24,
+                  "endLine": 103,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 24,
+                  "endLine": 154,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 158,
+                  "startColumn": 24,
+                  "endLine": 158,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
           "ruleId": "CA1862",
           "level": "note",
           "message": "Prefer using 'string.Equals(string, StringComparison)' to perform a case-insensitive comparison, but keep in mind that this might cause subtle changes in behavior, so make sure to conduct thorough testing after applying the suggestion, or if culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Repositories/EfPacienteRepositorio.cs",
                 "region": {
-                  "startLine": 24,
-                  "startColumn": 21,
-                  "endLine": 24,
-                  "endColumn": 81
+                  "startLine": 29,
+                  "startColumn": 31,
+                  "endLine": 29,
+                  "endColumn": 91
                 }
               }
             }
@@ -399,9 +694,72 @@
               "RightOffendingMethod": "ToLower"
             }
           }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 26,
+                  "endLine": 110,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "columns"
+            }
+          }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Carlos/source/repos/MedCitas/MedCitas.Infrastructure/Migrations/20251108164728_AgregarEntidadesCitas.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 26,
+                  "endLine": 115,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "columns"
+            }
+          }
         }
       ],
       "rules": {
+        "CA1861": {
+          "id": "CA1861",
+          "shortDescription": "Avoid constant arrays as arguments",
+          "fullDescription": "Constant arrays passed as arguments are not reused when called repeatedly, which implies a new array is created each time. Consider extracting them to 'static readonly' fields to improve performance if the passed array is not mutated within the called method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1861",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
         "CA1862": {
           "id": "CA1862",
           "shortDescription": "Use the 'StringComparison' method overloads to perform case-insensitive string comparisons",

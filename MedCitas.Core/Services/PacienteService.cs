@@ -310,14 +310,123 @@ throw new InvalidOperationException("La cuenta ya está verificada.");
         {
           byte[] tokenBytes = new byte[AppConstants.RecoveryToken.TokenSizeBytes];
             using (var rng = RandomNumberGenerator.Create())
-            {
-         rng.GetBytes(tokenBytes);
+  {
+   rng.GetBytes(tokenBytes);
  }
-            return Convert.ToBase64String(tokenBytes)
+        return Convert.ToBase64String(tokenBytes)
          .Replace("+", "-", StringComparison.Ordinal)
  .Replace("/", "_", StringComparison.Ordinal)
-                .Replace("=", "", StringComparison.Ordinal);
+       .Replace("=", "", StringComparison.Ordinal);
         }
+
+      // -----------------------------------------
+        // ACTUALIZACIÓN DE PERFIL
+        // -----------------------------------------
+        /// <summary>
+        /// Actualiza el perfil de un paciente autenticado
+/// </summary>
+ public async Task<Paciente> ActualizarPerfilAsync(Guid pacienteId, MedCitas.Core.DTOs.ActualizarPerfilDto dto)
+      {
+   // 1. Validar que el paciente existe
+     var paciente = await _repo.ObtenerPorIdAsync(pacienteId);
+   ArgumentNullException.ThrowIfNull(paciente);
+
+   // 2. Validar unicidad de correo y documento
+    await ValidarUnicidadAsync(paciente, dto);
+
+       // 3. Si cambia contraseña, validar actual y hashear nueva
+   await ActualizarPasswordSiEsNecesarioAsync(paciente, dto);
+
+// 4. Validar teléfono
+    if (!ValidationHelper.EsTelefonoValido(dto.Telefono))
+   {
+       throw new ArgumentException("El teléfono debe tener entre 7 y 15 dígitos");
+}
+
+ // 5. Actualizar campos permitidos
+    paciente.NombreCompleto = dto.NombreCompleto;
+  paciente.TipoDocumento = dto.TipoDocumento;
+  paciente.NumeroDocumento = dto.NumeroDocumento;
+     paciente.Telefono = dto.Telefono;
+ 
+ bool correoCambio = !string.Equals(dto.CorreoElectronico, paciente.CorreoElectronico, StringComparison.OrdinalIgnoreCase);
+ paciente.CorreoElectronico = dto.CorreoElectronico;
+
+   // 6. Persistir cambios
+  await _repo.ActualizarAsync(paciente);
+
+// 7. Enviar notificación si cambió email o password
+  bool passwordCambio = !string.IsNullOrWhiteSpace(dto.NuevaPassword);
+      if (correoCambio || passwordCambio)
+      {
+  await _emailService.EnviarNotificacionCambiosSensiblesAsync(
+   paciente.CorreoElectronico,
+    paciente.NombreCompleto);
+        }
+
+    return paciente;
+   }
+
+        private async Task ValidarUnicidadAsync(Paciente paciente, MedCitas.Core.DTOs.ActualizarPerfilDto dto)
+    {
+   // Validar correo
+    bool correoCambio = !string.Equals(dto.CorreoElectronico, paciente.CorreoElectronico, StringComparison.OrdinalIgnoreCase);
+   if (correoCambio)
+            {
+     var existeCorreo = await _repo.ObtenerPorCorreoAsync(dto.CorreoElectronico);
+      if (existeCorreo != null && existeCorreo.Id != paciente.Id)
+            {
+    throw new InvalidOperationException("El correo ya está registrado");
+         }
+            }
+
+            // Validar documento
+   bool documentoCambio = dto.NumeroDocumento != paciente.NumeroDocumento;
+         if (documentoCambio)
+ {
+    var existeDocumento = await _repo.ObtenerPorDocumentoAsync(dto.NumeroDocumento);
+      if (existeDocumento != null && existeDocumento.Id != paciente.Id)
+      {
+       throw new InvalidOperationException("El documento ya está registrado");
+            }
+      }
+    }
+
+        private static async Task ActualizarPasswordSiEsNecesarioAsync(Paciente paciente, MedCitas.Core.DTOs.ActualizarPerfilDto dto)
+        {
+   bool passwordCambio = !string.IsNullOrWhiteSpace(dto.NuevaPassword);
+     if (!passwordCambio)
+ {
+           return;
+    }
+
+    if (string.IsNullOrWhiteSpace(dto.PasswordActual))
+   {
+              throw new ArgumentException("Debes ingresar tu contraseña actual");
+}
+
+  if (!BCrypt.Net.BCrypt.Verify(dto.PasswordActual, paciente.PasswordHash))
+            {
+       throw new ArgumentException("La contraseña actual es incorrecta");
+      }
+
+  if (!ValidationHelper.EsPasswordValido(dto.NuevaPassword!))
+   {
+ throw new ArgumentException(AppConstants.Password.ValidationMessage);
+   }
+
+     paciente.PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.NuevaPassword);
+
+        await Task.CompletedTask; // Para mantener la firma async
+      }
+
+   /// <summary>
+ /// Obtiene un paciente por su ID
+ /// </summary>
+        public async Task<Paciente?> ObtenerPorIdAsync(Guid id)
+      {
+            return await _repo.ObtenerPorIdAsync(id);
+   }
  }
 }
 
