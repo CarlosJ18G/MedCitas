@@ -1,6 +1,0 @@
-projectKey=MedCitas
-serverUrl=http://localhost:9000
-serverVersion=25.10.0.114319
-dashboardUrl=http://localhost:9000/dashboard?id=MedCitas
-ceTaskId=edc43f4f-de90-4910-b058-da4c7ee6309e
-ceTaskUrl=http://localhost:9000/api/ce/task?id=edc43f4f-de90-4910-b058-da4c7ee6309e
