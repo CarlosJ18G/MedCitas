@@ -20,6 +20,7 @@ namespace MedCitas.Infrastructure.DataDb
         public DbSet<Specialty> Specialties { get; set; } = null!;
         public DbSet<Doctor> Doctors { get; set; } = null!;
         public DbSet<Appointment> Appointments { get; set; } = null!;
+        public DbSet<Admin> Admin { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -72,6 +73,7 @@ namespace MedCitas.Infrastructure.DataDb
                 entity.Property(e => e.CorreoElectronico).HasMaxLength(100);
                 entity.Property(e => e.Telefono).HasMaxLength(15);
                 entity.Property(e => e.EstaActivo).HasDefaultValue(true);
+                entity.Property(e => e.PasswordHash).HasMaxLength(100);
                 entity.Property(e => e.FechaRegistro).HasColumnType(TimestampColumnType);
 
                 entity.HasOne(d => d.Specialty)
@@ -115,6 +117,24 @@ namespace MedCitas.Infrastructure.DataDb
                 // Índices para mejorar consultas
                 entity.HasIndex(e => new { e.DoctorId, e.FechaCita, e.Estado });
                 entity.HasIndex(e => new { e.PacienteId, e.FechaCita, e.Estado });
+            });
+
+            modelBuilder.Entity<Admin>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.NombreCompleto).IsRequired();
+                entity.Property(e => e.CorreoElectronico).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.Telefono).IsRequired().HasMaxLength(15);
+                entity.Property(e => e.PasswordHash).HasMaxLength(100);
+                entity.Property(e => e.FechaRegistro).HasColumnType(TimestampColumnType);
+                entity.Property(e => e.EstaActivo).HasDefaultValue(true);
+                entity.Property(e => e.EstaVerificado).HasDefaultValue(false);
+                entity.Property(e => e.CodigoOTP).HasMaxLength(6);
+                entity.Property(e => e.OTPExpiracion).HasColumnType(TimestampColumnType);
+                entity.Property(e => e.IntentosOTPFallidos).HasDefaultValue(0);
+
+                entity.HasIndex(e => e.CorreoElectronico).IsUnique();
+
             });
 
             base.OnModelCreating(modelBuilder);

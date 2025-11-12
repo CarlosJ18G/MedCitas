@@ -13,21 +13,21 @@ namespace MedCitas.Web.Controllers
 #pragma warning disable S6934
     public class PacienteController : Controller
 #pragma warning restore S6934
-  {
+    {
         private readonly PacienteService _pacienteService;
         private readonly ILogger<PacienteController> _logger;
 
         // Constantes para nombres de acciones
-    private const string LoginAction = "Login";
+        private const string LoginAction = "Login";
         private const string VerificarOTPView = "VerificarOTP";
-  private const string MensajeExitoKey = "MensajeExito";
+        private const string MensajeExitoKey = "MensajeExito";
         private const string ErrorMessageKey = "ErrorMessage";
         private const string PacienteIdSessionKey = "PacienteId";
 
         public PacienteController(PacienteService pacienteService, ILogger<PacienteController> logger)
-     {
-  _pacienteService = pacienteService;
-    _logger = logger;
+        {
+            _pacienteService = pacienteService;
+            _logger = logger;
         }
 
         // -------------------------------------
@@ -45,34 +45,34 @@ namespace MedCitas.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Registro(Paciente model, string password, string confirmarPassword)
         {
-    try
-       {
- if (!ModelState.IsValid)
-  {
-return View(model);
-       }
-
-        var nuevoPaciente = await _pacienteService.RegistrarAsync(model, password, confirmarPassword);
-
-          TempData["Mensaje"] = $"¡Registro exitoso! Te hemos enviado un código de verificación a {nuevoPaciente.CorreoElectronico}";
-       TempData["CorreoRegistrado"] = nuevoPaciente.CorreoElectronico;
-
-    return RedirectToAction(VerificarOTPView);
-            }
-          catch (DbUpdateException dbEx)
-    {
-       // Error específico de base de datos
-            ViewBag.Error = $"Error de BD: {dbEx.InnerException?.Message ?? dbEx.Message}";
-            return View(model);
-            }
-         catch (Exception ex)
+            try
             {
-    ViewBag.Error = $"Error: {ex.Message}";
-      if (ex.InnerException != null)
-    {
-           ViewBag.Error += $" | Inner: {ex.InnerException.Message}";
+                if (!ModelState.IsValid)
+                {
+                    return View(model);
+                }
+
+                var nuevoPaciente = await _pacienteService.RegistrarAsync(model, password, confirmarPassword);
+
+                TempData["Mensaje"] = $"¡Registro exitoso! Te hemos enviado un código de verificación a {nuevoPaciente.CorreoElectronico}";
+                TempData["CorreoRegistrado"] = nuevoPaciente.CorreoElectronico;
+
+                return RedirectToAction(VerificarOTPView);
             }
-        return View(model);
+            catch (DbUpdateException dbEx)
+            {
+                // Error específico de base de datos
+                ViewBag.Error = $"Error de BD: {dbEx.InnerException?.Message ?? dbEx.Message}";
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = $"Error: {ex.Message}";
+                if (ex.InnerException != null)
+                {
+                    ViewBag.Error += $" | Inner: {ex.InnerException.Message}";
+                }
+                return View(model);
             }
         }
 
@@ -92,36 +92,36 @@ return View(model);
         // -------------------------------------
         [HttpPost]
         public async Task<IActionResult> VerificarOTP(string correo, string codigoOTP)
- {
+        {
             if (!ModelState.IsValid)
             {
-            ViewBag.Error = "Datos inválidos";
-        ViewBag.Correo = correo;
-   return View();
-      }
+                ViewBag.Error = "Datos inválidos";
+                ViewBag.Correo = correo;
+                return View();
+            }
 
             try
-     {
-      var resultado = await _pacienteService.VerificarOTPAsync(correo, codigoOTP);
+            {
+                var resultado = await _pacienteService.VerificarOTPAsync(correo, codigoOTP);
 
-   if (resultado)
+                if (resultado)
                 {
-        TempData[MensajeExitoKey] = "¡Cuenta verificada exitosamente! Ya puedes iniciar sesión.";
-         return RedirectToAction(LoginAction);
-        }
-         else
-        {
-         ViewBag.Error = "Código OTP inválido o expirado. Intenta nuevamente.";
-         ViewBag.Correo = correo;
-        return View();
-  }
-         }
-        catch (Exception ex)
+                    TempData[MensajeExitoKey] = "¡Cuenta verificada exitosamente! Ya puedes iniciar sesión.";
+                    return RedirectToAction(LoginAction);
+                }
+                else
+                {
+                    ViewBag.Error = "Código OTP inválido o expirado. Intenta nuevamente.";
+                    ViewBag.Correo = correo;
+                    return View();
+                }
+            }
+            catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-          ViewBag.Correo = correo;
-return View();
-      }
+                ViewBag.Correo = correo;
+                return View();
+            }
         }
 
         // -------------------------------------
@@ -161,32 +161,32 @@ return View();
         [HttpPost]
         public async Task<IActionResult> Login(string correoElectronico, string password)
         {
- if (!ModelState.IsValid)
-    {
-      ViewBag.Error = "Por favor ingresa tu correo y contraseña";
-        return View();
-          }
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Error = "Por favor ingresa tu correo y contraseña";
+                return View();
+            }
 
             try
-        {
-           var paciente = await _pacienteService.LoginAsync(correoElectronico, password);
+            {
+                var paciente = await _pacienteService.LoginAsync(correoElectronico, password);
 
-            if (paciente == null)
-{
-           ViewBag.Error = "Credenciales incorrectas.";
-     return View();
-              }
+                if (paciente == null)
+                {
+                    ViewBag.Error = "Credenciales incorrectas.";
+                    return View();
+                }
 
-            HttpContext.Session.SetString(PacienteIdSessionKey, paciente.Id.ToString());
-            HttpContext.Session.SetString("PacienteNombre", paciente.NombreCompleto);
+                HttpContext.Session.SetString(PacienteIdSessionKey, paciente.Id.ToString());
+                HttpContext.Session.SetString("PacienteNombre", paciente.NombreCompleto);
 
-       return RedirectToAction(nameof(Dashboard));
-     }
-          catch (Exception ex)
- {
-      ViewBag.Error = ex.Message;
-   return View();
-   }
+                return RedirectToAction(nameof(Dashboard));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View();
+            }
         }
 
         // -------------------------------------
@@ -225,13 +225,14 @@ return View();
         // -------------------------------------
         // POST: /Paciente/Logout
         // -------------------------------------
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public IActionResult Logout()
         {
+            // Limpiar la sesión
             HttpContext.Session.Clear();
-            TempData["MensajeExito"] = "Has cerrado sesión exitosamente";
-            return RedirectToAction(LoginAction);
+
+            TempData["Mensaje"] = "Sesión cerrada exitosamente.";
+            return RedirectToAction("Index", "Home");
         }
 
         // -------------------------------------
@@ -262,121 +263,121 @@ return View();
         public async Task<IActionResult> RecuperarPassword(string correoElectronico)
         {
             if (!ModelState.IsValid)
-   {
-     ViewBag.ErrorMessage = "Por favor ingresa un correo válido";
-            return View();
-      }
+            {
+                ViewBag.ErrorMessage = "Por favor ingresa un correo válido";
+                return View();
+            }
 
-      try
-{
-          if (string.IsNullOrWhiteSpace(correoElectronico))
-      {
-      ViewBag.ErrorMessage = "Por favor ingresa tu correo electrónico.";
-     return View();
+            try
+            {
+                if (string.IsNullOrWhiteSpace(correoElectronico))
+                {
+                    ViewBag.ErrorMessage = "Por favor ingresa tu correo electrónico.";
+                    return View();
                 }
 
-            // Obtener la URL base
- string urlBase = $"{Request.Scheme}://{Request.Host}";
-    _logger.LogInformation("Solicitando recuperación de contraseña para: {Correo} con URL base: {UrlBase}", correoElectronico, urlBase);
+                // Obtener la URL base
+                string urlBase = $"{Request.Scheme}://{Request.Host}";
+                _logger.LogInformation("Solicitando recuperación de contraseña para: {Correo} con URL base: {UrlBase}", correoElectronico, urlBase);
 
                 await _pacienteService.SolicitarRecuperacionPasswordAsync(correoElectronico, urlBase);
 
-        ViewBag.SuccessMessage = "Te hemos enviado un enlace de recuperación a tu correo electrónico. Revisa tu bandeja de entrada.";
+                ViewBag.SuccessMessage = "Te hemos enviado un enlace de recuperación a tu correo electrónico. Revisa tu bandeja de entrada.";
 
-        return View();
- }
+                return View();
+            }
             catch (InvalidOperationException ex)
-  {
-              _logger.LogWarning(ex, "Error de operación al recuperar contraseña para: {Correo}", correoElectronico);
-    ViewBag.ErrorMessage = ex.Message;
-return View();
+            {
+                _logger.LogWarning(ex, "Error de operación al recuperar contraseña para: {Correo}", correoElectronico);
+                ViewBag.ErrorMessage = ex.Message;
+                return View();
             }
             catch (Exception ex)
             {
-  _logger.LogError(ex, "Error inesperado al procesar recuperación de contraseña para: {Correo}", correoElectronico);
+                _logger.LogError(ex, "Error inesperado al procesar recuperación de contraseña para: {Correo}", correoElectronico);
                 ViewBag.ErrorMessage = "Ocurrió un error al procesar tu solicitud. Por favor intenta nuevamente.";
-         return View();
+                return View();
             }
-   }
+        }
 
         // -------------------------------------
         // NUEVO: GET - Mostrar formulario para restablecer contraseña
         // -------------------------------------
-    [HttpGet]
-  public IActionResult RestablecerPassword(string token)
+        [HttpGet]
+        public IActionResult RestablecerPassword(string token)
         {
             try
-   {
-         if (string.IsNullOrWhiteSpace(token))
-       {
-     _logger.LogWarning("Intento de acceso a RestablecerPassword sin token");
-           TempData[ErrorMessageKey] = "El enlace de recuperación es inválido o ha expirado.";
-    return RedirectToAction(LoginAction);
-    }
+            {
+                if (string.IsNullOrWhiteSpace(token))
+                {
+                    _logger.LogWarning("Intento de acceso a RestablecerPassword sin token");
+                    TempData[ErrorMessageKey] = "El enlace de recuperación es inválido o ha expirado.";
+                    return RedirectToAction(LoginAction);
+                }
 
-   ViewBag.Token = token;
-    return View();
-       }
- catch (Exception ex)
-  {
-          _logger.LogError(ex, "Error al cargar vista RestablecerPassword");
-        TempData[ErrorMessageKey] = "Ocurrió un error. Por favor solicita un nuevo enlace de recuperación.";
-      return RedirectToAction(LoginAction);
-    }
+                ViewBag.Token = token;
+                return View();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al cargar vista RestablecerPassword");
+                TempData[ErrorMessageKey] = "Ocurrió un error. Por favor solicita un nuevo enlace de recuperación.";
+                return RedirectToAction(LoginAction);
+            }
         }
 
         // -------------------------------------
         // NUEVO: POST - Procesar nueva contraseña
         // -------------------------------------
         [HttpPost]
-  public async Task<IActionResult> RestablecerPassword(string token, string nuevaPassword, string confirmarPassword)
+        public async Task<IActionResult> RestablecerPassword(string token, string nuevaPassword, string confirmarPassword)
         {
             if (!ModelState.IsValid)
-      {
-       ViewBag.Error = "Por favor completa todos los campos correctamente";
-       ViewBag.Token = token;
-         return View();
-    }
+            {
+                ViewBag.Error = "Por favor completa todos los campos correctamente";
+                ViewBag.Token = token;
+                return View();
+            }
 
             try
-   {
-              if (string.IsNullOrWhiteSpace(token))
-       {
-    _logger.LogWarning("Intento de restablecer contraseña sin token");
-             TempData[ErrorMessageKey] = "El enlace de recuperación es inválido.";
-               return RedirectToAction(LoginAction);
-      }
+            {
+                if (string.IsNullOrWhiteSpace(token))
+                {
+                    _logger.LogWarning("Intento de restablecer contraseña sin token");
+                    TempData[ErrorMessageKey] = "El enlace de recuperación es inválido.";
+                    return RedirectToAction(LoginAction);
+                }
 
-              _logger.LogInformation("Intentando restablecer contraseña con token");
+                _logger.LogInformation("Intentando restablecer contraseña con token");
 
-    await _pacienteService.RestablecerPasswordAsync(token, nuevaPassword, confirmarPassword);
+                await _pacienteService.RestablecerPasswordAsync(token, nuevaPassword, confirmarPassword);
 
-   TempData[MensajeExitoKey] = "¡Contraseña restablecida exitosamente! Ya puedes iniciar sesión con tu nueva contraseña.";
-       _logger.LogInformation("Contraseña restablecida exitosamente");
+                TempData[MensajeExitoKey] = "¡Contraseña restablecida exitosamente! Ya puedes iniciar sesión con tu nueva contraseña.";
+                _logger.LogInformation("Contraseña restablecida exitosamente");
 
-     return RedirectToAction(LoginAction);
-        }
-    catch (ArgumentException ex)
-     {
-  _logger.LogWarning(ex, "Error de validación al restablecer contraseña");
-      ViewBag.Error = ex.Message;
-      ViewBag.Token = token;
-       return View();
-          }
+                return RedirectToAction(LoginAction);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Error de validación al restablecer contraseña");
+                ViewBag.Error = ex.Message;
+                ViewBag.Token = token;
+                return View();
+            }
             catch (InvalidOperationException ex)
-      {
-   _logger.LogWarning(ex, "Error de operación al restablecer contraseña");
-     ViewBag.Error = ex.Message;
-    ViewBag.Token = token;
-              return View();
- }
+            {
+                _logger.LogWarning(ex, "Error de operación al restablecer contraseña");
+                ViewBag.Error = ex.Message;
+                ViewBag.Token = token;
+                return View();
+            }
             catch (Exception ex)
-       {
-_logger.LogError(ex, "Error inesperado al restablecer contraseña");
-     ViewBag.Error = "Ocurrió un error al restablecer tu contraseña. Por favor intenta nuevamente.";
-            ViewBag.Token = token;
-          return View();
-      }
+            {
+                _logger.LogError(ex, "Error inesperado al restablecer contraseña");
+                ViewBag.Error = "Ocurrió un error al restablecer tu contraseña. Por favor intenta nuevamente.";
+                ViewBag.Token = token;
+                return View();
+            }
         }
 
         // -------------------------------------
@@ -415,37 +416,39 @@ _logger.LogError(ex, "Error inesperado al restablecer contraseña");
         [HttpPost]
         public async Task<IActionResult> ActualizarPerfil(MedCitas.Core.DTOs.ActualizarPerfilDto dto)
         {
-     var pacienteId = HttpContext.Session.GetString(PacienteIdSessionKey);
-   if (string.IsNullOrEmpty(pacienteId))
+            var pacienteId = HttpContext.Session.GetString(PacienteIdSessionKey);
+            if (string.IsNullOrEmpty(pacienteId))
             {
-              return RedirectToAction(LoginAction);
-     }
+                return RedirectToAction(LoginAction);
+            }
 
-       try
- {
-     if (!ModelState.IsValid)
-              {
-      ViewBag.Error = "Por favor corrige los errores del formulario";
-   return View("Perfil", dto);
-         }
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    ViewBag.Error = "Por favor corrige los errores del formulario";
+                    return View("Perfil", dto);
+                }
 
- await _pacienteService.ActualizarPerfilAsync(Guid.Parse(pacienteId), dto);
+                await _pacienteService.ActualizarPerfilAsync(Guid.Parse(pacienteId), dto);
 
-  TempData[MensajeExitoKey] = "Perfil actualizado exitosamente";
-      return RedirectToAction(nameof(Perfil));
-    }
-       catch (InvalidOperationException ex)
-   {
-        _logger.LogWarning(ex, "Error de validación al actualizar perfil");
-         ViewBag.Error = ex.Message;
-         return View("Perfil", dto);
-  }
+                TempData[MensajeExitoKey] = "Perfil actualizado exitosamente";
+                return RedirectToAction(nameof(Perfil));
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex, "Error de validación al actualizar perfil");
+                ViewBag.Error = ex.Message;
+                return View("Perfil", dto);
+            }
             catch (Exception ex)
- {
-     _logger.LogError(ex, "Error inesperado al actualizar perfil");
-      ViewBag.Error = "Error al actualizar el perfil";
-         return View("Perfil", dto);
+            {
+                _logger.LogError(ex, "Error inesperado al actualizar perfil");
+                ViewBag.Error = "Error al actualizar el perfil";
+                return View("Perfil", dto);
             }
         }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MedCitas.Core.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,12 +46,14 @@ namespace MedCitas.Core.Interfaces
          /// <summary>
         /// Envía notificación de cancelación de cita
         /// </summary>
-        Task EnviarNotificacionCancelacionAsync(
-                string correo,
-         string nombrePaciente,
-       string nombreDoctor,
-       string especialidad,
-        DateTime fechaCita,
-                TimeSpan horaCita);
+        Task EnviarNotificacionCancelacionAsync(string correo, string nombrePaciente, string nombreDoctor, string especialidad,
+        DateTime fechaCita, TimeSpan horaCita);
+
+        /// <summary>
+        /// Envía un correo de contacto desde el formulario web
+        /// </summary>
+        Task EnviarCorreoContactoAsync(ContactoDTO contacto);
+
     }
+
 }

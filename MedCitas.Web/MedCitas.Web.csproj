@@ -8,6 +8,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\img\citas-image.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MedCitas.Core\MedCitas.Core.csproj" />
     <ProjectReference Include="..\MedCitas.Infrastructure\MedCitas.Infrastructure.csproj" />
   </ItemGroup>

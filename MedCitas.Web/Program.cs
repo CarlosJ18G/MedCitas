@@ -45,9 +45,12 @@ builder.Services.AddScoped<IPacienteRepository, EfPacienteRepositorio>();
 builder.Services.AddScoped<IAppointmentRepository, EfAppointmentRepository>();
 builder.Services.AddScoped<IDoctorRepository, EfDoctorRepository>();
 builder.Services.AddScoped<ISpecialtyRepository, EfSpecialtyRepository>();
+builder.Services.AddScoped<IAdminRepository, EfAdminRepository>();
+
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<PacienteService>();
 builder.Services.AddScoped<AppointmentService>();
+builder.Services.AddScoped<AdminService>();
 
 // ? SEGURIDAD: Agregar AntiForgery
 builder.Services.AddAntiforgery(options =>
