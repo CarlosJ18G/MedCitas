@@ -114,12 +114,31 @@ namespace MedCitas.Infrastructure.Services
             }
         }
 
+        //public async Task EnviarCorreoContactoAsync(ContactoDTO contacto)
+        //{
+        //    var asunto = $"Contacto desde Web: {contacto.Nombre}";
+        //    var cuerpoHtml = GenerarHtmlContacto(contacto);
+
+        //    await EnviarEmailAsync(_config.FromEmail, asunto, cuerpoHtml);
+        //}
+
         public async Task EnviarCorreoContactoAsync(ContactoDTO contacto)
         {
-            var asunto = $"Contacto desde Web: {contacto.Nombre}";
+            var asunto = $"Nuevo Mensaje de Contacto: {contacto.Nombre}";
             var cuerpoHtml = GenerarHtmlContacto(contacto);
 
+            // Enviar al correo principal (FromEmail)
             await EnviarEmailAsync(_config.FromEmail, asunto, cuerpoHtml);
+
+            // ✅ NUEVO: Enviar también al correo del administrador si está configurado
+            if (!string.IsNullOrWhiteSpace(_config.AdminNotificationEmail) &&
+                _config.AdminNotificationEmail != _config.FromEmail)
+            {
+                _logger.LogInformation("Enviando copia de contacto a administrador: {AdminEmail}",
+                    _config.AdminNotificationEmail);
+
+                await EnviarEmailAsync(_config.AdminNotificationEmail, asunto, cuerpoHtml);
+            }
         }
 
         private static string GenerarHtmlContacto(ContactoDTO contacto)

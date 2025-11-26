@@ -1,9 +1,9 @@
-using System.Collections.Generic;
+Ôªøusing System.Collections.Generic;
 
 namespace MedCitas.Core.Configuration
 {
     /// <summary>
-    /// ConfiguraciÛn de email para evitar hardcodear valores
+    /// Configuraci√≥n de email para evitar hardcodear valores
     /// </summary>
     public class EmailConfiguration
     {
@@ -14,9 +14,10 @@ namespace MedCitas.Core.Configuration
         public string FromEmail { get; set; } = string.Empty;
         public string FromName { get; set; } = string.Empty;
         public bool EnableSsl { get; set; } = true;
+        public string AdminNotificationEmail { get; set; } = string.Empty;
 
         /// <summary>
-        /// Valida que la configuraciÛn estÈ completa
+        /// Valida que la configuraci√≥n est√© completa
         /// </summary>
         public bool IsValid()
         {
@@ -28,7 +29,7 @@ namespace MedCitas.Core.Configuration
         }
 
         /// <summary>
-        /// Obtiene mensajes de validaciÛn si la configuraciÛn es inv·lida
+        /// Obtiene mensajes de validaci√≥n si la configuraci√≥n es inv√°lida
         /// </summary>
         public string GetValidationErrors()
         {
